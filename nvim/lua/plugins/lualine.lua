@@ -1,34 +1,34 @@
 require'lualine'.setup{
-	options = {
-		section_separators = '',
-		component_separators = '',
-	},
-	
-	sections = {
-		lualine_a = {
-			'mode'
-		},
+  options = {
+    section_separators = '',
+    component_separators = '',
+  },
 
-		lualine_b = {
-			'branch', 'diff', 'diagnostics'
-		},
+  sections = {
+    lualine_a = {
+      'mode'
+    },
 
-		lualine_c = {
-			{'filename', padding=1},
-			{'filetype', icon_only = true, padding=0},
-		},
-		
-		lualine_x = {
-			'encoding',
-			'fileformat',
-			'filetype'
-		},
+    lualine_b = {
+      'branch', 'diff', 'diagnostics'
+    },
 
-		lualine_y = {},
+    lualine_c = {
+      {'filename', padding=1},
+      {'filetype', icon_only = true, padding=0},
+    },
 
-		lualine_z = {
-			'location'
-		}
-	}
+    lualine_x = {
+      'encoding',
+      'fileformat',
+      'filetype'
+    },
+
+    lualine_y = {},
+
+    lualine_z = {
+      'location'
+    }
+  }
 }
 

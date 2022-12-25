@@ -10,14 +10,14 @@ require('nvim-tree').setup({
       resize_window = true
     }
   },
-  
+
   view = {
-		width = 20,
+    width = 20,
     adaptive_size = true
   },
 
   renderer = {
-		indent_width = 2,
+    indent_width = 2,
     icons = {
       show = {
         file = false,
@@ -30,20 +30,20 @@ require('nvim-tree').setup({
 })
 
 map('n', '<A-e>', function()
-	local name = vim.api.nvim_buf_get_name(0)
-	if string.find(name, 'NvimTree') then
-		input('<C-w>l')
-	else
-		input(':NvimTreeFocus<CR>')
-	end
+  local name = vim.api.nvim_buf_get_name(0)
+  if string.find(name, 'NvimTree') then
+    input('<C-w>l')
+  else
+    input(':NvimTreeFocus<CR>')
+  end
 end)
 
 map('n', '<A-E>', function()
-	local name = vim.api.nvim_buf_get_name(0)
-	if string.find(name, 'NvimTree') then
-		input(':NvimTreeClose<CR>')
-	else
-		input(':NvimTreeToggle<CR>')
-	end
+  local name = vim.api.nvim_buf_get_name(0)
+  if string.find(name, 'NvimTree') then
+    input(':NvimTreeClose<CR>')
+  else
+    input(':NvimTreeToggle<CR>')
+  end
 end)
 

@@ -3,9 +3,13 @@ set noswapfile
 set number
 set relativenumber
 
-set noexpandtab
 set tabstop=2
+set softtabstop=2
 set shiftwidth=2
+set expandtab
+
+" set list
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 set colorcolumn=79
 

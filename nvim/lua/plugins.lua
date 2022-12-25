@@ -1,7 +1,7 @@
 require('nvim-web-devicons').setup()
 require('onedark').load()
 require('Comment').setup({
-	sticky = true
+  sticky = true
 })
 
 
