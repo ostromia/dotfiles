@@ -1,33 +1,35 @@
+local cbase16 = require'lualine.themes.base16'
+cbase16.normal.c.bg = "#21252B"
+
 require'lualine'.setup{
   options = {
+    theme = cbase16,
     section_separators = '',
-    component_separators = '',
+    component_separators = ''
   },
 
   sections = {
-    lualine_a = {
-      'mode'
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+
+    lualine_x = {
+      'filetype',
+      'encoding',
+      'fileformat',
     },
 
-    lualine_b = {
+    lualine_y = {
       'branch', 'diff', 'diagnostics'
     },
 
-    lualine_c = {
-      {'filename', padding=1},
-      {'filetype', icon_only = true, padding=0},
-    },
-
-    lualine_x = {
-      'encoding',
-      'fileformat',
-      'filetype'
-    },
-
-    lualine_y = {},
-
     lualine_z = {
-      'location'
+      'location',
+
+      {
+        'mode',
+        padding = { left = 0, right = 3 }
+      },
     }
   }
 }
