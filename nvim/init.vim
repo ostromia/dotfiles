@@ -15,6 +15,8 @@ set colorcolumn=79
 
 set laststatus=3
 
+set termguicolors
+
 call plug#begin()
 Plug 'navarasu/onedark.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
@@ -29,9 +31,10 @@ Plug 'vimpostor/vim-tpipeline'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 :lua require('plugins')
 :lua require('keybindings')
-:lua require('theme')
+:lua require('colorscheme')
 

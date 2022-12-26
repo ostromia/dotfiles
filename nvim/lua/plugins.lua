@@ -9,6 +9,8 @@ require("indent_blankline").setup({
   show_current_context = true,
 })
 
+require'colorizer'.setup()
+
 -- ~/.config/nvim/lua/plugins/*
 require('plugins.barbar')
 require('plugins.lualine')
