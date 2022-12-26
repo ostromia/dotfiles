@@ -1,6 +1,3 @@
-local map = vim.keymap.set
-local input = vim.api.nvim_input
-
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -29,6 +26,10 @@ require('nvim-tree').setup({
   }
 })
 
+-- keybindings
+local map = vim.keymap.set
+local input = vim.api.nvim_input
+
 map('n', '<A-e>', function()
   local name = vim.api.nvim_buf_get_name(0)
   if string.find(name, 'NvimTree') then
@@ -38,12 +39,5 @@ map('n', '<A-e>', function()
   end
 end)
 
-map('n', '<A-E>', function()
-  local name = vim.api.nvim_buf_get_name(0)
-  if string.find(name, 'NvimTree') then
-    input(':NvimTreeClose<CR>')
-  else
-    input(':NvimTreeToggle<CR>')
-  end
-end)
+map('n', '<A-E>', ':NvimTreeToggle<CR>')
 
