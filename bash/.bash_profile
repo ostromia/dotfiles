@@ -1,5 +1,3 @@
-# .bash_profile -> .bash_login -> .profile
-
 # if running bash include .bashrc if it exists
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
@@ -7,28 +5,20 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+# alias definition
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
 fi
 
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-# manual configurations
-w="/mnt/c/users/berka/OneDrive/"
-
-alias lsl='ls -1 -a'
-alias tas='tmux attach-session -t'
+#configurations
+w="/mnt/c/users/berka/OneDrive"
 
 bind 'set completion-ignore-case on'
 
+eval "$(oh-my-posh init bash --config ~/.config/nvim/fonts/kali.omp.json)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-eval "$(oh-my-posh init bash --config ~/.config/nvim/fonts/kali.omp.json)"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
