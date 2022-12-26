@@ -9,7 +9,7 @@ set shiftwidth=2
 set expandtab
 
 " set list
-:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 set colorcolumn=79
 
@@ -25,6 +25,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'folke/neodev.nvim'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'vimpostor/vim-tpipeline'
 call plug#end()
 
 :lua require('plugins')
