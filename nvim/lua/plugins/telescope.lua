@@ -1,9 +1,6 @@
-local map = vim.keymap.set
-local input = vim.api.nvim_input
-
 require('telescope').setup()
 
-local builtin = require('telescope.builtin')
-
+-- keybindgs
+local map = vim.keymap.set
 map('n', '<A-f>', ":Telescope find_files<CR>")
 
