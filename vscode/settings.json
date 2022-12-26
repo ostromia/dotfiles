@@ -1,61 +1,100 @@
 {
-    // GENERAL
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.startupEditor": "none",
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.tips.enabled": false,
-    "editor.accessibilitySupport": "off",
-    "workbench.enableExperiments": false,
+  // SIDEBAR
+  "workbench.colorCustomizations": {
+    "focusBorder": "#0000",
+  },
 
-    // EXPLORER
-    "workbench.colorCustomizations":{"focusBorder":"#0000"},
-    "explorer.sortOrder": "type",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "workbench.tree.indent": 12,
-    "workbench.tree.renderIndentGuides": "always",
+  "explorer.sortOrder": "type",
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
 
-    // EDITOR
-    "editor.fontSize": 16,
-    "editor.tabSize": 2,
-    "editor.scrollBeyondLastLine": false,
-    "editor.rulers": [80, 120],
-    "editor.detectIndentation": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
 
-    "editor.quickSuggestions":{"other": "off","comments":"off", "strings":"off"},
-    "editor.suggestOnTriggerCharacters": false,
+  // EDITOR
+  "editor.fontSize": 16,
+  "editor.scrollBeyondLastLine": false,
+  "editor.rulers": [79, 100],
+  "editor.folding": false,
+  "editor.lineNumbers": "relative",
+  "breadcrumbs.enabled": false,
+  "workbench.editor.tabSizing": "shrink",
 
-    "editor.autoClosingQuotes": "never",
-    "editor.autoClosingBrackets": "never",
-    "editor.bracketPairColorization.enabled": false,
-    "editor.colorDecorators": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
 
-    // FILE HANDLING
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
+  "editor.renderWhitespace": "none",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
 
-    // UPDATES
-    "update.mode": "none",
-    "update.enableWindowsBackgroundUpdates": false,
-    "extensions.autoUpdate": false,
-    "extensions.autoCheckUpdates": false,
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingBrackets": "never",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.colorDecorators": true,
 
-    // EXTENSIONS > SVELTE
-    "svelte.ask-to-enable-ts-plugin": false,
-    "svelte.plugin.svelte.note-new-transformation": false,
-    "svelte.plugin.svelte.format.config.svelteStrictMode": true,
+  "editor.renderLineHighlight": "gutter",
 
-    "svelte.plugin.css.hover.enable": false,
-    "svelte.plugin.html.hover.enable": false,
-    "svelte.plugin.html.tagComplete.enable": false,
-    "svelte.plugin.typescript.hover.enable": false,
+  // "editor.hover.enabled": false, // this is the one that disables pop ups
+  // "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments":"off",
+    "strings":"off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
 
-    // OTHER
-    "workbench.layoutControl.enabled": false,
-    "breadcrumbs.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "git.ignoreMissingGitWarning": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "workbench.activityBar.visible": false,
-  }
+  // GENERAL
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "vs-seti",
+
+  "window.restoreWindows": "none",
+
+  "workbench.startupEditor": "none",
+  "workbench.editor.untitled.hint": "hidden",
+
+  "workbench.layoutControl.enabled": false,
+
+  "workbench.enableExperiments": false,
+
+  "editor.accessibilitySupport": "off",
+
+  // UPDATES
+  "update.mode": "none",
+  "update.enableWindowsBackgroundUpdates": false,
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "telemetry.telemetryLevel": "off",
+
+  // EXTENSIONS > VIM
+  "vim.useSystemClipboard": true,
+
+  // "vim.handleKeys": {
+  //   "<C-w>": false,
+  // },
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["Tab"], "commands": ["tab"] },
+    { "before": ["<S-Tab>"], "commands": ["outdent"] }
+  ],
+
+  // EXTENSIONS > SVELTE
+  "svelte.ask-to-enable-ts-plugin": false,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "svelte.plugin.svelte.format.config.svelteStrictMode": true,
+
+  "svelte.plugin.css.hover.enable": false,
+  "svelte.plugin.html.hover.enable": false,
+  "svelte.plugin.html.tagComplete.enable": false,
+  "svelte.plugin.typescript.hover.enable": false,
+
+  // BARRIER
+  "extensions.ignoreRecommendations": true,
+  "git.ignoreMissingGitWarning": true,
+  "html.autoClosingTags": false,
+  "window.autoDetectHighContrast": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.tips.enabled": false,
+  "workbench.activityBar.visible": false,
+}
