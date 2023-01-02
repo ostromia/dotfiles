@@ -13,7 +13,7 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 set colorcolumn=79
 
-set laststatus=3
+" set laststatus=3
 
 set termguicolors
 
@@ -27,14 +27,16 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'folke/neodev.nvim'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'vimpostor/vim-tpipeline'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 call plug#end()
 
-:lua require('plugins')
-:lua require('keybindings')
-:lua require('colorscheme')
+lua << EOF
+require('plugins')
+require('keybindings')
+require('colorscheme')
+EOF
 
