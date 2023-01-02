@@ -32,11 +32,13 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 lua << EOF
 require('plugins')
 require('keybindings')
 require('colorscheme')
+require('lsp')
 EOF
 

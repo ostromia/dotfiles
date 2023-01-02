@@ -21,7 +21,7 @@ require'lualine'.setup{
 
     lualine_x = {'filetype', 'encoding', 'fileformat'},
 
-    lualine_y = {'branch', 'diff'},
+    lualine_y = {'diagnostics', 'branch', 'diff'},
 
     lualine_z = {
       'location',
