@@ -5,7 +5,7 @@ require'bufferline'.setup{
   maximum_padding = 0,
 
   closable = false,
-  icon_separator_active = '|',
+  icon_separator_active = '',
   icon_separator_inactive = ''
 }
 
@@ -27,7 +27,7 @@ end)
 
 -- keybindings
 local map = vim.keymap.set
-map({'n', 'i'}, '<A-l>', '<Cmd>BufferNext<CR>')
-map({'n', 'i'}, '<A-h>', '<Cmd>BufferPrevious<CR>')
-map('n', '<A-c>', '<Cmd>BufferClose<CR>')
+map({'n', 'i'}, '<A-l>', ':BufferNext<CR>')
+map({'n', 'i'}, '<A-h>', ':BufferPrevious<CR>')
+map('n', '<A-c>', ':BufferClose<CR>')
 

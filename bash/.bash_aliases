@@ -4,7 +4,7 @@ alias lf='ls -lAvs'
 
 alias n='nvim'
 
-alias config='nvim ~/.bashrc ~/.bash_profile ~/.bash_aliases'
+alias config='nvim ~/.bashrc ~/.bash_profile ~/.bash_aliases ~/.tmux.conf'
 
 alias rewind='source ~/.bash_profile'
 

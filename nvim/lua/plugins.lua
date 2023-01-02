@@ -11,6 +11,9 @@ require("indent_blankline").setup({
 
 require'colorizer'.setup()
 
+require'toggleterm'.setup {}
+
+
 -- ~/.config/nvim/lua/plugins/*
 require('plugins.barbar')
 require('plugins.lualine')
