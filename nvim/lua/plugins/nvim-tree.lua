@@ -2,27 +2,32 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require('nvim-tree').setup({
+    sort_by = "type",
+    
+  view = {
+    width = 20,
+    adaptive_size = true,
+    cursorline = false,
+  },
+  
   actions = {
     open_file = {
       resize_window = true
     }
   },
 
-  view = {
-    width = 20,
-    adaptive_size = true
-  },
-
   renderer = {
     indent_width = 2,
     icons = {
+      git_placement = "after",
       show = {
         file = false,
         folder = false,
         folder_arrow = false,
         git = true
       }
-    }
+    },
+    special_files = {}
   }
 })
 

@@ -20,25 +20,34 @@ set termguicolors
 call plug#begin()
 Plug 'navarasu/onedark.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
+
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'romgrk/barbar.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-Plug 'nvim-lua/plenary.nvim'
-Plug 'numToStr/Comment.nvim'
-Plug 'folke/neodev.nvim'
 Plug 'nvim-lualine/lualine.nvim'
+
+Plug 'numToStr/Comment.nvim'
+
+Plug 'junegunn/fzf'
+
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-Plug 'neovim/nvim-lspconfig'
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'folke/neodev.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+" Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
 
 lua << EOF
 require('plugins')
 require('keybindings')
 require('colorscheme')
-require('lsp')
+-- require('lsp')
 EOF
 
