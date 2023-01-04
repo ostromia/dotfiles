@@ -1,10 +1,10 @@
-local cbase16 = require'lualine.themes.base16'
-cbase16.normal.c.bg = "#21252B"
+-- local cbase16 = require'lualine.themes.base16'
+-- cbase16.normal.c.bg = "#21252B"
 
 require'lualine'.setup{
   options = {
     globalstatus = true,
-    theme = cbase16,
+    -- theme = cbase16,
 
     section_separators = '',
     component_separators = '',

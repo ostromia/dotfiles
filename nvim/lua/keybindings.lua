@@ -5,6 +5,10 @@ local input = vim.api.nvim_input
 map('n', 'w', 'b')
 map({'n', 'i', 'v'}, '<S-w>', '<C-w>')
 
+
+map('n', '<A-f>', ":FZF")
+
+
 -- :tnoremap <Esc> <C-\><C-n>
 
 map('t', '<Esc>', '<C-\\><C-n>')
