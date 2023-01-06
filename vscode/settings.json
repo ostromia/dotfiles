@@ -1,100 +1,110 @@
 {
-  // SIDEBAR
-  "workbench.colorCustomizations": {
-    "focusBorder": "#0000",
-  },
+    // THEME
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.iconTheme": "vs-minimal",
 
-  "explorer.sortOrder": "type",
-  "workbench.tree.indent": 12,
-  "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorCustomizations": {
+        "focusBorder": "#0000",
+        "scrollbar.shadow": "#0000",
+        "scrollbarSlider.background": "#0000",
+    },
 
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
+    // GENERAL
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "none",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.tips.enabled": false,
 
-  // EDITOR
-  "editor.fontSize": 16,
-  "editor.scrollBeyondLastLine": false,
-  "editor.rulers": [79, 100],
-  "editor.folding": false,
-  "editor.lineNumbers": "relative",
-  "breadcrumbs.enabled": false,
-  "workbench.editor.tabSizing": "shrink",
+    "editor.accessibilitySupport": "off",
 
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
+    "workbench.enableExperiments": false,
 
-  "editor.renderWhitespace": "none",
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
+    // UPDATES
+    "update.mode": "none",
+    "update.enableWindowsBackgroundUpdates": false,
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "telemetry.telemetryLevel": "off",
 
-  "editor.autoClosingQuotes": "never",
-  "editor.autoClosingBrackets": "never",
-  "editor.bracketPairColorization.enabled": false,
-  "editor.colorDecorators": true,
+    // TITLEBAR
+    "workbench.layoutControl.enabled": false,
 
-  "editor.renderLineHighlight": "gutter",
+    // EXPLORER
+    "workbench.tree.renderIndentGuides": "none",
+    "workbench.tree.indent": 10,
+    "explorer.sortOrder": "type",
 
-  // "editor.hover.enabled": false, // this is the one that disables pop ups
-  // "editor.parameterHints.enabled": false,
-  "editor.quickSuggestions": {
-    "other": "off",
-    "comments":"off",
-    "strings":"off"
-  },
-  "editor.suggestOnTriggerCharacters": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
 
-  // GENERAL
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "vs-seti",
+    // TABBAR
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.tabSizing": "shrink",
+    "breadcrumbs.enabled": false,
 
-  "window.restoreWindows": "none",
+    // EDITOR
+    "editor.fontSize": 14,
+    "editor.scrollBeyondLastLine": false,
+    "editor.rulers": [79, 100],
+    "editor.folding": false,
+    "editor.lineNumbers": "relative",
+    "editor.renderLineHighlight": "line",
 
-  "workbench.startupEditor": "none",
-  "workbench.editor.untitled.hint": "hidden",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
 
-  "workbench.layoutControl.enabled": false,
+    "editor.renderWhitespace": "none",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
 
-  "workbench.enableExperiments": false,
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.colorDecorators": false,
 
-  "editor.accessibilitySupport": "off",
+    // "editor.hover.enabled": false, // this is the one that disables pop ups
+    // "editor.parameterHints.enabled": false,
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments":"off",
+        "strings":"off"
+    },
+    "editor.suggestOnTriggerCharacters": false,
 
-  // UPDATES
-  "update.mode": "none",
-  "update.enableWindowsBackgroundUpdates": false,
-  "extensions.autoUpdate": false,
-  "extensions.autoCheckUpdates": false,
-  "telemetry.telemetryLevel": "off",
 
-  // EXTENSIONS > VIM
-  "vim.useSystemClipboard": true,
+    // EXTENSIONS > VIM
+    "vim.useSystemClipboard": true,
 
-  // "vim.handleKeys": {
-  //   "<C-w>": false,
-  // },
+    "vim.handleKeys": {
+        "<A-p>": false,
+        "<A-f>": false,
+        "<A-v>": false,
+        "<C-f>": false,
+        "<C-n>": false,
+    },
 
-  "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["Tab"], "commands": ["tab"] },
-    { "before": ["<S-Tab>"], "commands": ["outdent"] }
-  ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["Tab"], "commands": ["tab"] },
+        { "before": ["<S-Tab>"], "commands": ["outdent"] }
+    ],
 
-  // EXTENSIONS > SVELTE
-  "svelte.ask-to-enable-ts-plugin": false,
-  "svelte.plugin.svelte.note-new-transformation": false,
-  "svelte.plugin.svelte.format.config.svelteStrictMode": true,
+    // EXTENSIONS > SVELTE
+    "svelte.ask-to-enable-ts-plugin": false,
+    "svelte.plugin.svelte.note-new-transformation": false,
+    "svelte.plugin.svelte.format.config.svelteStrictMode": true,
+    "svelte.plugin.css.hover.enable": false,
+    "svelte.plugin.html.hover.enable": false,
+    "svelte.plugin.html.tagComplete.enable": false,
+    "svelte.plugin.typescript.hover.enable": false,
 
-  "svelte.plugin.css.hover.enable": false,
-  "svelte.plugin.html.hover.enable": false,
-  "svelte.plugin.html.tagComplete.enable": false,
-  "svelte.plugin.typescript.hover.enable": false,
-
-  // BARRIER
-  "extensions.ignoreRecommendations": true,
-  "git.ignoreMissingGitWarning": true,
-  "html.autoClosingTags": false,
-  "window.autoDetectHighContrast": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.tips.enabled": false,
-  "workbench.activityBar.visible": false,
+    // BARRIER
+    "extensions.ignoreRecommendations": true,
+    "git.ignoreMissingGitWarning": true,
+    "html.autoClosingTags": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.activityBar.visible": false,
+    "npm.autoDetect": "off",
+    "npm.scriptHover": false,
 }
