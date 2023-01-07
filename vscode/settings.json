@@ -2,45 +2,36 @@
     // THEME
     "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vs-minimal",
-
     "workbench.colorCustomizations": {
-        "focusBorder": "#0000",
         "scrollbar.shadow": "#0000",
+        "focusBorder": "#0000",
         "scrollbarSlider.background": "#0000",
     },
-
-    // GENERAL
-    "window.restoreWindows": "none",
-    "workbench.startupEditor": "none",
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.tips.enabled": false,
-
-    "editor.accessibilitySupport": "off",
-
-    "workbench.enableExperiments": false,
-
-    // UPDATES
-    "update.mode": "none",
-    "update.enableWindowsBackgroundUpdates": false,
-    "extensions.autoUpdate": false,
-    "extensions.autoCheckUpdates": false,
-    "telemetry.telemetryLevel": "off",
 
     // TITLEBAR
     "workbench.layoutControl.enabled": false,
 
+    // TABBAR
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.tabSizing": "shrink",
+
+    "workbench.editor.showIcons": false,
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.tabCloseButton": "off",
+
+    "workbench.editor.decorations.colors": false,
+
     // EXPLORER
     "workbench.tree.renderIndentGuides": "none",
-    "workbench.tree.indent": 10,
+    "workbench.tree.indent": 12,
     "explorer.sortOrder": "type",
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-
-    // TABBAR
-    "workbench.editor.tabCloseButton": "off",
-    "workbench.editor.tabSizing": "shrink",
     "breadcrumbs.enabled": false,
+
+    "explorer.decorations.colors": false,
 
     // EDITOR
     "editor.fontSize": 14,
@@ -73,6 +64,20 @@
     },
     "editor.suggestOnTriggerCharacters": false,
 
+    // GENERAL
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "none",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.tips.enabled": false,
+    "editor.accessibilitySupport": "off",
+    "workbench.enableExperiments": false,
+
+    // UPDATES
+    "update.mode": "none",
+    "update.enableWindowsBackgroundUpdates": false,
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "telemetry.telemetryLevel": "off",
 
     // EXTENSIONS > VIM
     "vim.useSystemClipboard": true,
@@ -80,9 +85,10 @@
     "vim.handleKeys": {
         "<A-p>": false,
         "<A-f>": false,
+        "<A-o>": false,
         "<A-v>": false,
         "<C-f>": false,
-        "<C-n>": false,
+        "<C-n>": false
     },
 
     "vim.visualModeKeyBindingsNonRecursive": [
