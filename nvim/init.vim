@@ -25,12 +25,29 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'romgrk/barbar.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 
+" Plug 'koenverburg/cmd-palette.nvim'
+" Plug 'stevearc/dressing.nvim'
+
+
+" Plug 'othree/html5.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+Plug 'neovim/nvim-lspconfig'
+
 Plug 'numToStr/Comment.nvim'
 
 Plug 'junegunn/fzf'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+
+
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -48,6 +65,6 @@ lua << EOF
 require('plugins')
 require('keybindings')
 require('colorscheme')
--- require('lsp')
+require('lsp')
 EOF
 
