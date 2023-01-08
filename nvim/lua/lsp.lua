@@ -5,5 +5,5 @@
 --
 --
 
-require'lspconfig'.svelte.setup {}
+-- require'lspconfig'.svelte.setup {}
 

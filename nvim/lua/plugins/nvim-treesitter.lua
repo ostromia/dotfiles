@@ -1,8 +1,8 @@
-require('nvim-treesitter.configs').setup({
+require('nvim-treesitter.configs').setup {
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = true
-  },
+  }
 
   -- incremental_selection = {
   --   enable = true,
@@ -25,10 +25,5 @@ require('nvim-treesitter.configs').setup({
   --     }
   --   }
   -- }
-})
+}
 
-
-require("indent_blankline").setup({
-  show_current_context_start = false,
-  show_current_context = true,
-})

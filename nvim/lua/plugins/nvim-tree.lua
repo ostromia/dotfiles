@@ -1,7 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require('nvim-tree').setup({
+require('nvim-tree').setup {
     sort_by = "type",
     
   view = {
@@ -29,7 +29,7 @@ require('nvim-tree').setup({
     },
     special_files = {}
   }
-})
+}
 
 -- keybindings
 local map = vim.keymap.set
