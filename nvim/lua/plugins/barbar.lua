@@ -1,4 +1,4 @@
-require'bufferline'.setup{
+require('bufferline').setup {
   icons = false,
   animation = false,
 
@@ -27,7 +27,7 @@ end)
 
 -- keybindings
 local map = vim.keymap.set
-map({'n', 'i'}, '<A-l>', ':BufferNext<CR>')
-map({'n', 'i'}, '<A-h>', ':BufferPrevious<CR>')
+map({'n', 'v', 'i'}, '<A-l>', ':BufferNext<CR>')
+map({'n', 'v', 'i'}, '<A-h>', ':BufferPrevious<CR>')
 map('n', '<A-c>', ':BufferClose<CR>')
 
