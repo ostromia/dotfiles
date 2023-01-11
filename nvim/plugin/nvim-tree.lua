@@ -2,12 +2,12 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require('nvim-tree').setup {
-    sort_by = "type",
+  sort_by = "type",
     
   view = {
     width = 20,
     adaptive_size = true,
-    cursorline = false,
+    signcolumn = "yes"
   },
   
   actions = {

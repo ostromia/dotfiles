@@ -29,7 +29,7 @@ require('lualine').setup {
 
     lualine_z = {
       'location',
-      { 'mode', padding = { left = 1, right = 3 } },
+      'mode'
     }
   }
 }
