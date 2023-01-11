@@ -11,11 +11,18 @@ Plug 'akinsho/toggleterm.nvim'
 
 " treesitter & dependent plugins
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " other
 Plug 'junegunn/fzf'
 Plug 'numToStr/Comment.nvim'
+
+" svelte
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'leafgarland/typescript-vim'
+Plug 'neovim/nvim-lspconfig'
 
 " Plug 'koenverburg/cmd-palette.nvim'
 " Plug 'stevearc/dressing.nvim'
@@ -30,7 +37,6 @@ Plug 'numToStr/Comment.nvim'
 " Plug 'nvim-lua/plenary.nvim'
 " Plug 'folke/neodev.nvim'
 " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-" Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 " Plug 'neovim/nvim-lspconfig'
 call plug#end()

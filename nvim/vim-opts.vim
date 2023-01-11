@@ -14,5 +14,9 @@ set colorcolumn=79
 
 set termguicolors
 
+set nowrap
+
+
 " set laststatus=3
 " set scrolloff=1
+
