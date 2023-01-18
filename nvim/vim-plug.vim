@@ -17,13 +17,20 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " other
 Plug 'junegunn/fzf'
 Plug 'numToStr/Comment.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " svelte
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'neovim/nvim-lspconfig'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'leafgarland/typescript-vim'
-Plug 'neovim/nvim-lspconfig'
 
+
+
+
+
+" Plug 'jose-elias-alvarez/null-ls.nvim'
+" Plug 'MunifTanjim/eslint.nvim'
+" Plug 'nvim-lua/plenary.nvim'
 " Plug 'koenverburg/cmd-palette.nvim'
 " Plug 'stevearc/dressing.nvim'
 " Plug 'othree/html5.vim'
@@ -40,4 +47,3 @@ Plug 'neovim/nvim-lspconfig'
 " Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 " Plug 'neovim/nvim-lspconfig'
 call plug#end()
-
