@@ -4,6 +4,10 @@
     { "key": "alt+o", "command": "workbench.action.files.openFile" },
     { "key": "alt+v", "command": "editor.action.formatDocument" },
 
+    {"key": "alt+s", "command": "editor.action.triggerSuggest", "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"},
+
+	{"key": "alt+q", "command": "extension.vim_ctrl+["},
+
     // tab navigation
     { "key": "alt+l", "command": "workbench.action.nextEditor" },
     { "key": "alt+h", "command": "workbench.action.previousEditor" },
