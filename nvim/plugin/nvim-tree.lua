@@ -7,7 +7,6 @@ require('nvim-tree').setup {
   view = {
     width = 20,
     adaptive_size = true,
-    cursorline = false,
     signcolumn = "yes"
   },
   

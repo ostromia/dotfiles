@@ -24,10 +24,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'leafgarland/typescript-vim'
 
-
-
-
-
+" Plug 'terrortylor/nvim-comment'
 " Plug 'jose-elias-alvarez/null-ls.nvim'
 " Plug 'MunifTanjim/eslint.nvim'
 " Plug 'nvim-lua/plenary.nvim'
@@ -47,3 +44,4 @@ Plug 'leafgarland/typescript-vim'
 " Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 " Plug 'neovim/nvim-lspconfig'
 call plug#end()
+

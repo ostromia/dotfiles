@@ -1,5 +1,5 @@
--- require('lspconfig').tsserver.setup {}
--- require('lspconfig').svelte.setup {}
+require('lspconfig').tsserver.setup {}
+require('lspconfig').svelte.setup {}
 
 -- local null_ls = require("null-ls")
 -- local eslint = require("eslint")
