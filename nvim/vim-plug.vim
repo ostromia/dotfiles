@@ -19,10 +19,13 @@ Plug 'junegunn/fzf'
 Plug 'numToStr/Comment.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
 " svelte
 Plug 'neovim/nvim-lspconfig'
-Plug 'leafOfTree/vim-svelte-plugin'
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafOfTree/vim-svelte-plugin'
+" Plug 'leafgarland/typescript-vim'
 
 " Plug 'terrortylor/nvim-comment'
 " Plug 'jose-elias-alvarez/null-ls.nvim'

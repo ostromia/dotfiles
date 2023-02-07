@@ -14,6 +14,8 @@ map({'n', 'v', 'i'}, '<A-w>', '<C-w>')
 map({'n', 'v'}, '<S-y>', '"+y')
 map({'n', 'v'}, '<S-p>', '"+p')
 
+
+-- view highlight groups
 map({'n', 'v'}, '<leader>ss', function()
   local groups = " "
   for _, val in pairs(vim.fn.synstack(vim.fn.line("."), vim.fn.col("."))) do
