@@ -12,8 +12,11 @@ set nolist
 set listchars=eol:$,tab:>-,space:·
 
 set colorcolumn=79
+set signcolumn=no
 
 set termguicolors
 
 set nowrap
+
+autocmd FileType * setlocal formatoptions-=cro
 
