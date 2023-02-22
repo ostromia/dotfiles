@@ -1,3 +1,8 @@
-oh-my-posh init pwsh --config "~\OneDrive\Documents\Powershell\kali.omp.json" | Invoke-Expression
+function Prompt
+{
+	$promptString = "$(Get-Location)>"
+	Write-Host $promptString -NoNewline -ForegroundColor Magenta
+	return " "
+}
 
 Set-Location "~"
