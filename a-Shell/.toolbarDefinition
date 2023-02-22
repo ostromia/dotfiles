@@ -1,0 +1,12 @@
+arrow.right.to.line.alt insertString \u{0009}
+chevron.up.square systemAction control
+escape insertString \u{001B}
+doc.on.clipboard systemAction paste
+folder insertString pickFolder\n
+
+separator
+
+arrow.up systemAction up
+arrow.down systemAction down
+arrow.left systemAction left
+arrow.right systemAction right
