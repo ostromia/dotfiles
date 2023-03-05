@@ -1,4 +1,5 @@
 w="/mnt/c/users/berka/"
+alias pwsh='exec pwsh.exe'
 
 alias ls="ls --color=auto --group-directories-first"
 alias ll="ls  -1Av"
@@ -17,4 +18,3 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
