@@ -10,9 +10,9 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/toggleterm.nvim'
 
 " treesitter & dependent plugins
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 " other
 Plug 'junegunn/fzf'
@@ -23,7 +23,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 
 " svelte
-Plug 'neovim/nvim-lspconfig'
+" Plug 'neovim/nvim-lspconfig'
 " Plug 'leafOfTree/vim-svelte-plugin'
 " Plug 'leafgarland/typescript-vim'
 

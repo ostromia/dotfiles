@@ -1,3 +1,9 @@
+let g:loaded_netrw=1
+let g:loaded_netrwPlugin=1
+let g:loaded_python3_provider=0
+let g:loaded_pythonx_provider=0
+let g:python_recommended_style=0
+
 source ~/.config/nvim/vim-opts.vim
 source ~/.config/nvim/vim-plug.vim
 
@@ -7,11 +13,3 @@ require('theme')
 require('theme-colors')
 require('lsp')
 EOF
-
-
-" """ Conquer of Completion """
-" " trigger autocomplete suggestion
-" inoremap <silent><expr> <A-.> coc#refresh()
-" " accept selected suggestion on enter
-" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
