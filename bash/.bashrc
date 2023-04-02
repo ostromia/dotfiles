@@ -1,34 +1,33 @@
-# # don't do anything if not running interactively
-# case $- in
-#     *i*) ;;
-#       *) return;;
-# esac
+bind 'set completion-ignore-case on'
 
-# don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
 shopt -s histappend
+HISTCONTROL=ignoreboth
+HISTSIZE=
+HISTFILESIZE=
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+shopt -s checkwinsize # check the window size after each command and update LINES and COLUMNS
 
-# check the window size after each command and update LINES and COLUMNS
-shopt -s checkwinsize
+eval "$(oh-my-posh init bash --config ~/.config/bash/kali.omp.json)"
+[ -f "$XDG_CONFIG_HOME/bash/.bash_aliases" ] && . "$XDG_CONFIG_HOME/bash/.bash_aliases"
+[ -f "$XDG_CONFIG_HOME/bash/.dircolors" ] && eval "$(dircolors -b ~/.config/bash/.dircolors)"
 
-# # enable color support of ls and also add handy aliases
-# if [ -x /usr/bin/dircolors ]; then
-#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-#     
-#     alias ls='ls --color=auto'
-#     alias dir='dir --color=auto'
-#     alias vdir='vdir --color=auto'
-#
-#     alias grep='grep --color=auto'
-#     alias fgrep='fgrep --color=auto'
-#     alias egrep='egrep --color=auto'
-# fi
+# nodejs
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
+# rust
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+
+# asdf
+export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
+export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
+export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME="$XDG_CONFIG_HOME/asdf/tool-versions"
+[ -d "$XDG_DATA_HOME/asdf" ] && . "$XDG_DATA_HOME/asdf/asdf.sh"
+[ -d "$XDG_DATA_HOME/asdf" ] && . "$XDG_DATA_HOME/asdf/completions/asdf.bash"
+
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -43,15 +42,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
