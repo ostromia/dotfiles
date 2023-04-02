@@ -1,5 +1,5 @@
 require('Comment').setup {
-  padding = true,
-  sticky = true
+    padding = true,
+    sticky = true
 }
 
