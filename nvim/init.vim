@@ -35,6 +35,9 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'junegunn/fzf'
 Plug 'numToStr/Comment.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 call plug#end()
 
 

@@ -18,11 +18,11 @@ local function get_tree_size()
 end
 
 nvim_tree_events.subscribe('TreeOpen', function()
-    bufferline_api.set_offset(get_tree_size() + 1)
+    bufferline_api.set_offset(get_tree_size())
 end)
 
 nvim_tree_events.subscribe('Resize', function()
-    bufferline_api.set_offset(get_tree_size() + 1)
+    bufferline_api.set_offset(get_tree_size())
 end)
 
 nvim_tree_events.subscribe('TreeClose', function()
@@ -33,5 +33,5 @@ end)
 local map = vim.keymap.set
 map({'n', 'v', 'i'}, '<A-l>', ':BufferNext<CR>')
 map({'n', 'v', 'i'}, '<A-h>', ':BufferPrevious<CR>')
-map('n', '<A-c>', ':BufferClose<CR>')
+map('n', '<A-q>', ':BufferClose<CR>')
 

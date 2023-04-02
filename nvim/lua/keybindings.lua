@@ -2,11 +2,11 @@ vim.g.mapleader = ' '
 local map = vim.keymap.set
 local input = vim.api.nvim_input
 
-map({'n', 'v', 'i'}, '<A-q>', '<Esc>')
+map({'n', 'v', 'i'}, '<A-a>', '<Esc>')
 
 map('n', 'w', 'b')
 
-map('n', '<A-f>', ":FZF<CR>")
+map('n', '<A-o>', ":FZF<CR>")
 
 map({'n', 'v', 'i'}, '<A-w>', '<C-w>')
 
