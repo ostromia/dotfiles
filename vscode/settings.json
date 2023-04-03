@@ -1,65 +1,66 @@
 {
-    // THEME
+    // theme
     "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": null,
+    "workbench.iconTheme": "vs-seti",
+    "editor.fontFamily": "'Consolas NF'",
+    "window.zoomLevel": -0.5,
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#0000",
         "focusBorder": "#0000",
     },
 
-    // TITLEBAR & MENU BAR
+    // title bar
+    "window.title": "${activeEditorMedium}",
+    "window.menuBarVisibility": "visible",
     "workbench.layoutControl.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "window.customMenuBarAltFocus": false,
 
-    // TABBAR
+    // tab bar
     "workbench.editor.wrapTabs": true,
-    "workbench.editor.labelFormat": "default",
-    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.tabSizing": "fit",
 
+    "breadcrumbs.enabled": false,
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.tabCloseButton": "off",
     "workbench.editor.showIcons": false,
     "workbench.editor.decorations.colors": false,
     "workbench.editor.decorations.badges": false,
-    "workbench.editor.tabCloseButton": "off",
 
-    // EXPLORER
-    "workbench.tree.renderIndentGuides": "none",
-    "workbench.tree.indent": 12,
+    // explorer
     "explorer.sortOrder": "type",
-
-    "explorer.decorations.colors": false,
-
-    "explorer.excludeGitIgnore": true,
-    "explorer.autoReveal": false,
-
+    "explorer.excludeGitIgnore": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
-    // EDITOR
-    "editor.fontSize": 14,
+    "workbench.tree.indent": 12,
+    "workbench.tree.renderIndentGuides": "none",
+    "explorer.decorations.colors": true,
+    "explorer.decorations.badges": false,
+
+    // gutter
+    "editor.lineNumbers": "relative",
+    "editor.folding": false,
+    "editor.glyphMargin": false,
+    "scm.diffDecorations": "all",
+
+    // editor
+    "editor.fontSize": 16,
     "editor.rulers": [79, 100],
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "editor.detectIndentation": false,
+    "editor.detectIndentation": true,
+    "editor.guides.indentation": false,
     "editor.scrollBeyondLastLine": false,
-
-    "editor.lineNumbers": "relative",
-    "editor.glyphMargin": false,
-    "editor.folding": false,
-    "editor.minimap.enabled": false,
+    "editor.colorDecorators": false,
 
     "editor.renderWhitespace": "none",
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-
+    "editor.occurrencesHighlight": false,
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingBrackets": "never",
+    "editor.autoSurround": "never",
     "editor.bracketPairColorization.enabled": false,
-    "editor.colorDecorators": false,
-    "editor.occurrencesHighlight": false,
 
-    // "editor.hover.enabled": false,
     "editor.parameterHints.enabled": false,
     "editor.suggestOnTriggerCharacters": false,
     "editor.quickSuggestions": {
@@ -68,59 +69,70 @@
         "strings":"off"
     },
 
-    // UPDATES
-    "update.mode": "none",
+    // files
+    "files.autoSave": "off",
+    "files.eol": "auto",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": false,
+    "files.refactoring.autoSave": false,
+    "files.enableTrash": true,
+
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.untitled.hint": "hidden",
+
+    // terminal
+    "terminal.integrated.enableBell": false,
+    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "git.terminalAuthentication": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.persistentSessionScrollback": 0,
+
+    // updates
+    "update.mode": "manual",
+    "update.showReleaseNotes": true,
     "update.enableWindowsBackgroundUpdates": false,
     "extensions.autoUpdate": false,
     "extensions.autoCheckUpdates": false,
     "telemetry.telemetryLevel": "off",
+    "remote.WSL.downloadInBackground": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
 
-    // OTHER
-    "breadcrumbs.enabled": false,
-    "window.restoreWindows": "none",
-    "window.autoDetectHighContrast": false,
-    "window.zoomLevel": -0.5,
-    "workbench.activityBar.visible": false,
-    "workbench.startupEditor": "none",
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.tips.enabled": false,
-    "workbench.editor.restoreViewState": false,
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.enableExperiments": false,
-    "editor.accessibilitySupport": "off",
-    "extensions.ignoreRecommendations": true,
-    "git.ignoreMissingGitWarning": true,
-    "html.autoClosingTags": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-
-    // EXTENSIONS > VIM
+    // extensions -> vim
+    "editor.cursorBlinking": "solid",
     "vim.useSystemClipboard": true,
-    "vim.handleKeys": {
-        "<A-p>": false,
-        "<A-f>": false,
-        "<A-o>": false,
-        "<A-v>": false,
-        "<A-s>": false,
-        "<C-f>": false,
-        "<C-n>": false,
-    },
-    "vim.normalModeKeyBindings": [
+    "vim.autoindent": false,
+
+    "vim.normalModeKeyBindingsNonRecursive": [
         { "before": ["w"], "after": ["b"] }
     ],
+
     "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["w"], "after": ["b"] },
         { "before": ["Tab"], "commands": ["tab"] },
         { "before": ["<S-Tab>"], "commands": ["outdent"] }
     ],
 
-    // EXTENSIONS > SVELTE
-    "svelte.plugin.svelte.hover.enable": false,
-    "svelte.enable-ts-plugin": true,
-    // "svelte.plugin.typescript.hover.enable": false,
-    // "svelte.plugin.svelte.note-new-transformation": false,
-    // "svelte.plugin.svelte.format.config.svelteStrictMode": true,
-    // "svelte.plugin.html.tagComplete.enable": false,
-    // "svelte.plugin.html.hover.enable": false,
-    // "svelte.plugin.typescript.hover.enable": false,
-    // "svelte.plugin.css.hover.enable": false,
+    // other
+    "files.restoreUndoStack": false,
+    "workbench.tips.enabled": false,
+    "workbench.localHistory.enabled": false,
+    "workbench.editor.sharedViewState": false,
+    "workbench.editor.restoreViewState": false,
 
+    "diffEditor.ignoreTrimWhitespace": false,
+    "window.autoDetectHighContrast": false,
+    "editor.accessibilitySupport": "off",
+    "extensions.ignoreRecommendations": true,
+    "git.ignoreMissingGitWarning": true,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.enableExperiments": false,
+    "window.restoreWindows": "none",
+    "workbench.activityBar.visible": false,
 }
