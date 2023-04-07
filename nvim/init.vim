@@ -1,3 +1,8 @@
+let g:loaded_netrw=1
+let g:loaded_netrwPlugin=1
+let g:loaded_python3_provider=0
+let g:python_recommended_style=0
+
 set noswapfile
 
 set number
