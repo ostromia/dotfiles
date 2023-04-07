@@ -125,6 +125,7 @@
     "workbench.localHistory.enabled": false,
     "workbench.editor.sharedViewState": false,
     "workbench.editor.restoreViewState": false,
+    "debug.internalConsoleOptions": "neverOpen",
 
     "diffEditor.ignoreTrimWhitespace": false,
     "window.autoDetectHighContrast": false,
