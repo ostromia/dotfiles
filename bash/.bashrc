@@ -17,6 +17,7 @@ export NVM_DIR="$XDG_DATA_HOME/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export PATH="$HOME/.local/share/npm/bin:$PATH"
 
 # rust
 export CARGO_HOME="$XDG_DATA_HOME"/cargo

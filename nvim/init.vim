@@ -11,15 +11,17 @@ set expandtab
 set nolist
 set listchars=eol:$,tab:>-,space:·
 
+set signcolumn=yes
+set numberwidth=2
 set colorcolumn=79
-set signcolumn=no
 
 set termguicolors
 
 set nowrap
 
-autocmd FileType * setlocal formatoptions-=cro
+set cursorline
 
+autocmd FileType * setlocal formatoptions-=cro
 
 call plug#begin()
 " theme
@@ -36,13 +38,19 @@ Plug 'junegunn/fzf'
 Plug 'numToStr/Comment.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 
+" treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+
+" lsp & linters
+Plug 'neovim/nvim-lspconfig'
+Plug 'mfussenegger/nvim-lint'
 call plug#end()
 
 
 lua << EOF
 require('keybindings')
 require('theme')
+require('lsp')
 EOF
 
