@@ -1,4 +1,5 @@
 w="/mnt/c/users/berka/"
+alias pwsh='exec pwsh.exe'
 
 alias ls="ls --color=auto --group-directories-first"
 alias ll="ls  -1Av"
