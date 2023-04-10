@@ -22,14 +22,7 @@ export PATH="$HOME/.local/share/npm/bin:$PATH"
 # rust
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-
-# asdf
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
-export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME="$XDG_CONFIG_HOME/asdf/tool-versions"
-[ -d "$XDG_DATA_HOME/asdf" ] && . "$XDG_DATA_HOME/asdf/asdf.sh"
-[ -d "$XDG_DATA_HOME/asdf" ] && . "$XDG_DATA_HOME/asdf/completions/asdf.bash"
-
+. "$XDG_DATA_HOME/cargo/env"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
