@@ -42,4 +42,5 @@ map('n', '<A-e>', function()
 end)
 
 map('n', '<A-E>', ':NvimTreeToggle<CR>')
+map('n', '<leader>ff', '<CMD>NvimTreeFindFile<CR>')
 
