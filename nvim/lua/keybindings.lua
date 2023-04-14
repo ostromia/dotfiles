@@ -2,6 +2,8 @@ vim.g.mapleader = ' '
 local map = vim.keymap.set
 local input = vim.api.nvim_input
 
+map('n', ';', ':', {noremap=true})
+
 map({'n', 'v', 'i'}, '<A-a>', '<Esc>')
 
 map('n', 'w', 'b')
