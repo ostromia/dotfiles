@@ -1,12 +1,15 @@
 require('bufferline').setup {
-    icons = false,
     animation = false,
-
     maximum_padding = 0,
 
-    closable = false,
-    icon_separator_active = '',
-    icon_separator_inactive = ''
+    icons = {
+        button = false,
+        modified = { button = false },
+        filetype = { enabled = false },
+
+        separator = { left = '', right = '' },
+        inactive = { separator = { left = '', right = '' } }
+    }
 }
 
 -- ensure tabs begin with the shown buffer
