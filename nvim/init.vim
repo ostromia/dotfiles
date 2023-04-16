@@ -56,6 +56,8 @@ call plug#end()
 lua << EOF
 require('keybindings')
 require('theme')
-require('lsp')
+if vim.loop.os_uname().sysname == 'Linux' then
+    require('lsp')
+end
 EOF
 
