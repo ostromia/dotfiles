@@ -13,6 +13,8 @@ config.window_padding = {
     bottom = 0
 }
 
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+
 config.skip_close_confirmation_for_processes_named = {
     'bash',
     'sh',
@@ -25,8 +27,10 @@ config.skip_close_confirmation_for_processes_named = {
     'powershell.exe',
 }
 
+config.hide_tab_bar_if_only_one_tab = true
+
 config.keys = {
-  { key = 'n', mods = 'ALT', action = wezterm.action.ShowLauncher },
+    { key = '`', mods = 'ALT', action = wezterm.action.ShowLauncher },
 }
 
 config.enable_scroll_bar = true
