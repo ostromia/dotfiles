@@ -1,10 +1,21 @@
 local wezterm = require('wezterm')
+config = wezterm.config_builder and wezterm.config_builder() or {}
 
-local config = {}
-if wezterm.config_builder then
-  config = wezterm.config_builder()
-end
 
+config.enable_scroll_bar = true
+config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", '-l' }
+
+-- key bindings
+config.keys = {
+    { key = '`', mods = 'ALT', action = wezterm.action.ShowLauncher },
+}
+
+-- font
+config.font_size = 9.5
+config.font = wezterm.font('JetBrains Mono')
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+
+-- colors
 config.colors = {
     tab_bar = {
         background = 'black',
@@ -12,6 +23,10 @@ config.colors = {
         inactive_tab = { bg_color = 'black', fg_color = 'grey' }
     }
 }
+
+-- window
+config.window_close_confirmation = 'NeverPrompt'
+config.window_padding = { left = 0, bottom = 0, top = 0, right = 0 }
 
 -- tab bar
 config.show_tabs_in_tab_bar = true
@@ -25,35 +40,6 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
     return { { Text = ' ' .. tab.active_pane.title .. ' ' } }    
 end)
 
-config.font = wezterm.font('JetBrains Mono', { weight = 'Regular' })
-config.window_padding = {
-    left = 0,
-    right = 0,
-    top = 0,
-    bottom = 0
-}
-
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
-
-config.skip_close_confirmation_for_processes_named = {
-    'bash',
-    'sh',
-    'zsh',
-    'fish',
-    'tmux',
-    'nu',
-    'cmd.exe',
-    'pwsh.exe',
-    'powershell.exe',
-}
-
-
-config.keys = {
-    { key = '`', mods = 'ALT', action = wezterm.action.ShowLauncher },
-}
-
-config.enable_scroll_bar = true
-config.font_size = 9.5
-config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", '-l' }
 
 return config
+
