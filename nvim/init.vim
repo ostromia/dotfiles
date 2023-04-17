@@ -46,6 +46,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'm-demare/hlargs.nvim'
 
 " lsp & linters
 Plug 'neovim/nvim-lspconfig'

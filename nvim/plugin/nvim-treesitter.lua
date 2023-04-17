@@ -45,6 +45,9 @@ require('nvim-treesitter.configs').setup {
     }
 }
 
+require('hlargs').setup()
+require('hlargs').enable()
+
 -- keybindings
 -- local ts_repeat_move = require "nvim-treesitter.textobjects.repeatable_move"
 -- vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move_next)
