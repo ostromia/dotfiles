@@ -31,14 +31,14 @@ if !has('win')
     set slowfs=curlftpfs
 endif
 
-" ------------------------------------------------------------------------------
-" Bookmarks
-" ------------------------------------------------------------------------------
+" FILTERS
+windo filter /Application\sData|Cookies|Favorites|IntelGraphicsProfiles|Local\sSettings|My\sDocuments|NetHood|PrintHood|Recent|Searches|SendTo|Start\sMenu|Templates|NTUSER.DAT/
 
-" :mark mark /full/directory/path [filename]
+" BOOKMARKS
+nnoremap mq :cd ~/Desktop/<cr>
+nnoremap mw :cd ~/Documents/<cr>
+nnoremap me :cd ~/Downloads/<cr>
 
-mark b ~/bin/
-mark h ~/
 
 " ------------------------------------------------------------------------------
 " Commands
