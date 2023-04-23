@@ -9,3 +9,5 @@ function Prompt {
 	return " "
 }
 
+New-Alias "vifm" "$env:userprofile\.binary\vifm-w64-se-0.13-binary\vifm.exe"
+
