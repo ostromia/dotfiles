@@ -1,36 +1,35 @@
 require('lualine').setup {
     options = {
         globalstatus = true,
-
         section_separators = '',
         component_separators = '',
-
-        disabled_filetypes = {
-            statusline = {}
-        }
     },
-
     sections = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = {},
-
-        lualine_x = {
-            'filetype',
-            'encoding',
-            'fileformat'
+        lualine_a = {
+            'mode',
+            'location'
         },
-
-        lualine_y = {
-            'diagnostics',
+        lualine_b = {
             'branch',
+            'diagnostics',
             'diff'
         },
-
-        lualine_z = {
-            'location',
-            'mode'
-        }
+        lualine_c = {
+            'searchcount'
+        },
+        lualine_x = {
+            {
+                'filetype',
+                icons_enabled=false
+            },
+            'encoding',
+            {
+                'fileformat',
+                icons_enabled=false
+            },
+        },
+        lualine_y = {},
+        lualine_z = {}
     }
 }
 
