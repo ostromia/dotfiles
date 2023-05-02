@@ -13,3 +13,15 @@
     !f::SendInput "^f"       ; Search
     !g::SendInput "^h"       ; History
 
+#HotIf WinActive("ahk_exe java.exe")
+    !h::SendInput "^+{TAB}"
+    !l::SendInput "^{Tab}"
+
+    !q::SendInput "^w"
+
+    !b::SendInput "^b"
+    
+    !+e::SendInput "{F6}"
+    !j::SendInput "{F7}"
+    !m::SendInput "{F8}"
+
