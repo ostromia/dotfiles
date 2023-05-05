@@ -16,6 +16,21 @@ map({'n', 'v', 'i'}, '<A-w>', '<C-w>')
 map({'n', 'v'}, '<S-y>', '"+y')
 map({'n', 'v'}, '<S-p>', '"+p')
 
+-- window movement
+map('n', '<S-h>', '<C-w>h')
+map('n', '<S-j>', '<C-w>j')
+map('n', '<S-k>', '<C-w>k')
+map('n', '<S-l>', '<C-w>l')
+
+local rightside = false
+map('n', '<Tab>', function()
+    if rightside then
+        input('<C-w>h')
+    else
+        input('<C-w>l')
+    end
+    rightside = not rightside
+end)
 
 -- view highlight groups
 map({'n', 'v'}, '<leader>ss', function()
