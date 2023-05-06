@@ -10,4 +10,5 @@ function Prompt {
 }
 
 New-Alias "vifm" "$env:userprofile\.binary\vifm-w64-se-0.13-binary\vifm.exe"
+New-Alias "fzf" "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\junegunn.fzf_Microsoft.Winget.Source_8wekyb3d8bbwe\fzf.exe"
 
