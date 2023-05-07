@@ -9,3 +9,11 @@
 	editor = nvim
 [init]
 	defaultBranch = main
+[alias]
+	s = status
+	aa = add --all
+	c = commit -v
+	ch = checkout
+	l = log --pretty=oneline
+[advice]
+	statusHints = false
