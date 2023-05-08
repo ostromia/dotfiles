@@ -4,32 +4,44 @@ lspconfig.eslint.setup {}
 lspconfig.pyright.setup {}
 lspconfig.jedi_language_server.setup {}
 
--- use j and k for movement in completion popup
-vim.keymap.set('i', 'j', 'pumvisible() ? "<C-n>" : "j"', { expr = true })
-vim.keymap.set('i', 'k', 'pumvisible() ? "<C-p>" : "k"', { expr = true })
--- prevent newline on completion selection
-vim.keymap.set('i', '<CR>', 'pumvisible() ? "<C-Y>" : "<CR>"', { expr = true })
--- Prevent autocomplete vim-go split screen
-vim.o.completeopt="menu"
-
-local function nmap(lhs, rhs)
-    vim.keymap.set('n', lhs, rhs, {noremap = true})
+local function nnoremap(lhs, rhs)
+    vim.keymap.set('n', lhs, rhs, { noremap = true })
 end
 
-nmap('<leader>dd', '<CMD>lua vim.diagnostic.open_float()<CR>')
-nmap('<leader>do', '<CMD>lua vim.diagnostic.setloclist()<CR>')
-nmap('<leader>dj', '<CMD>lua vim.diagnostic.goto_next()<CR>')
-nmap('<leader>dk', '<CMD>lua vim.diagnostic.goto_prev()<CR>')
+local function inoremap_expr(lhs, rhs)
+    vim.keymap.set('i', lhs, rhs, { expr = true })
+end
 
-vim.api.nvim_create_autocmd('LspAttach', {
-    callback = function(args)
-        vim.keymap.set('n', '<leader>ds', vim.lsp.buf.hover, { buffer = args.buf })
-    end,
-})
+-- diagnostics keybindings
+nnoremap('<leader>dd', '<CMD>lua vim.diagnostic.open_float()<CR>')
+nnoremap('<leader>do', '<CMD>lua vim.diagnostic.setloclist()<CR>')
+nnoremap('<leader>dj', '<CMD>lua vim.diagnostic.goto_next()<CR>')
+nnoremap('<leader>dk', '<CMD>lua vim.diagnostic.goto_prev()<CR>')
 
-vim.keymap.set('n', '<leader>dv', function()
+-- toggle diagnostics virtual text
+nnoremap('<leader>dv', function()
     vim.diagnostic.config({
         virtual_text = not vim.diagnostic.config()['virtual_text']
     })
-end, {noremap=true})
+end)
+
+-- display hover information auto command
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(args)
+        vim.keymap.set('n', '<leader>ds', vim.lsp.buf.hover, { buffer = args.buf })
+    end
+})
+
+-- use j and k for movement in completion popup
+inoremap_expr('j', 'pumvisible() ? "<C-n>" : "j"')
+inoremap_expr('k', 'pumvisible() ? "<C-p>" : "k"')
+
+-- prevent newline on completion selection
+inoremap_expr('<CR>', 'pumvisible() ? "<C-Y>" : "<CR>"')
+
+-- prevent autocomplete vim-go split screen
+vim.o.completeopt="menu"
+
+-- completion menu keybinding
+vim.keymap.set('i', '<A-s>', '<C-x><C-o>', { noremap = true })
 

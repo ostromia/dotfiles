@@ -26,6 +26,8 @@ set nowrap
 
 set cursorline
 
+set noshowmode
+
 autocmd FileType * setlocal formatoptions-=cro
 
 call plug#begin()
