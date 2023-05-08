@@ -12,7 +12,7 @@ config.launch_menu = {
     },
     {
         label = 'powershell7',
-        args = { "pwsh.exe", '-l' }
+        args = { "pwsh.exe", '--NoLogo' }
     },
     {
         label = 'WSL::Debian',
