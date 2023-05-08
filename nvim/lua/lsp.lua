@@ -2,6 +2,15 @@ local lspconfig = require('lspconfig')
 lspconfig.tsserver.setup {}
 lspconfig.eslint.setup {}
 lspconfig.pyright.setup {}
+lspconfig.jedi_language_server.setup {}
+
+-- use j and k for movement in completion popup
+vim.keymap.set('i', 'j', 'pumvisible() ? "<C-n>" : "j"', { expr = true })
+vim.keymap.set('i', 'k', 'pumvisible() ? "<C-p>" : "k"', { expr = true })
+-- prevent newline on completion selection
+vim.keymap.set('i', '<CR>', 'pumvisible() ? "<C-Y>" : "<CR>"', { expr = true })
+-- Prevent autocomplete vim-go split screen
+vim.o.completeopt="menu"
 
 local function nmap(lhs, rhs)
     vim.keymap.set('n', lhs, rhs, {noremap = true})
