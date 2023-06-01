@@ -3,12 +3,12 @@ config = wezterm.config_builder and wezterm.config_builder() or {}
 
 
 config.enable_scroll_bar = true
-config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", '-l' }
+config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-Login", "-NoLogo"  }
 
 config.launch_menu = {
     {
         label = 'file explorer',
-        args = { "vifm.exe" }
+        args = { "vifm.exe"}
     },
     {
         label = 'powershell7',
@@ -19,7 +19,6 @@ config.launch_menu = {
         args = { 'wsl.exe' }
     }
 }
-
 
 -- key bindings
 config.keys = {
