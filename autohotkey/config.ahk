@@ -1,4 +1,11 @@
 ﻿#Requires AutoHotkey v2.0
+#SingleInstance Force
+
+<^>!u::{
+    Send "{Shift down}{left 4}{Shift up}^c{Del 4}"
+    Sleep 10
+    Send "{U+" . A_Clipboard . "}"
+}
 
 #HotIf WinActive("ahk_exe chrome.exe")
     !h::^+Tab
