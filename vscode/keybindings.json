@@ -1,8 +1,11 @@
 [
     { "key": "alt+p", "command": "workbench.action.showCommands" },
     { "key": "alt+o", "command": "workbench.action.quickOpen"    },
-    { "key": "alt+s", "command": "editor.action.triggerSuggest"  },
     { "key": "alt+j", "command": "workbench.action.togglePanel"  },
+
+    { "key": "alt+s", "command": "editor.action.triggerSuggest"  },
+    { "key": "k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible" },
+    { "key": "j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible" },
 
     { "key": "alt+a", "command": "extension.vim_ctrl+[" },
 
