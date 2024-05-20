@@ -1,12 +1,8 @@
 local wezterm = require("wezterm")
 config = wezterm.config_builder()
-
 config.check_for_updates = false
 
-config.enable_scroll_bar = true
-
 config.default_prog = {"C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo"}
-
 config.launch_menu = {
     { label = "pwsh.exe", args = { "pwsh.exe", "-NoLogo" } },
     { label = "wsl.exe",  args = { "wsl.exe" }             }
@@ -15,18 +11,6 @@ config.launch_menu = {
 -- key bindings
 config.keys = {
     { key = "p", mods = "ALT", action = wezterm.action.ActivateCommandPalette },
-    -- { key = "h", mods = "ALT|SHIFT", action = wezterm.action.ActivateTabRelative(1) },
-    -- { key = "l", mods = "ALT|SHIFT", action = wezterm.action.ActivateTabRelative(-1) }
-
-    -- { key = "1", mods = "ALT", action = wezterm.action.ActivateTab(0) },
-    -- { key = "2", mods = "ALT", action = wezterm.action.ActivateTab(1) },
-    -- { key = "3", mods = "ALT", action = wezterm.action.ActivateTab(2) },
-    -- { key = "4", mods = "ALT", action = wezterm.action.ActivateTab(3) },
-    -- { key = "5", mods = "ALT", action = wezterm.action.ActivateTab(4) },
-    -- { key = "6", mods = "ALT", action = wezterm.action.ActivateTab(5) },
-    -- { key = "7", mods = "ALT", action = wezterm.action.ActivateTab(6) },
-    -- { key = "8", mods = "ALT", action = wezterm.action.ActivateTab(7) },
-    -- { key = "9", mods = "ALT", action = wezterm.action.ActivateTab(8) }
 }
 
 for i = 1, 8 do
@@ -37,13 +21,12 @@ for i = 1, 8 do
   })
 end
 
-
--- font
+-- general font
 config.font_size = 9.5
 config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
--- colors
+-- general colors
 config.colors = {
     tab_bar = {
         background = "black",
@@ -67,6 +50,9 @@ config.show_tab_index_in_tab_bar = true
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
     return { { Text = " " .. tab.active_pane.title .. " " } }    
 end)
+
+-- scrollbar
+config.enable_scroll_bar = true
 
 return config
 
