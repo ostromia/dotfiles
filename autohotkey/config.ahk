@@ -11,30 +11,6 @@ SCREENHEIGHT := SysGet(79)
     Send "{U+" . A_Clipboard . "}"
 }
 
-#s::{
-    Send "{PrintScreen}" 
-    Sleep 500
-    mousepressed := 0
-    loop {
-        sleep 10
-        if (GetKeyState("Esc", "P") = 1) {
-            break
-        }
-        else if (GetKeyState("LButton","P") = 1) {
-            mousepressed := 1
-        }
-        else {
-            if (mousepressed = 1) {
-                Sleep 1000
-                MouseGetPos &mouseX, &mouseY
-                Click SCREENWIDTH - 250, SCREENHEIGHT - 250
-                MouseMove mouseX, mouseY
-                break
-            }
-        }
-    }
-}
-
 #HotIf WinActive("ahk_exe chrome.exe")
     !h::^+Tab
     !j::Down
