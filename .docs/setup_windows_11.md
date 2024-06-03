@@ -1,31 +1,35 @@
 ## Set up Windows 11
 - personal notes on automating the installation and configuration of certain software on Windows 11
 
-### 1 install PowerShell and Git
+### 1 install PowerShell
 ```powershell
-# install PowerShell and Git
+winget install -e --id Microsoft.Powershell
+```
+
+### 2 install and configure Git
+```powershell
 winget install -e --id Microsoft.Powershell
 winget install -e --id Git.Git
+git config --global user.email "66202981+berkay-yalin@users.noreply.github.com"
+git config --global user.name "berkay-yalin"
 winget install -e --id GitHub.cli
 gh auth
 ```
 
-### 2.1 clone dotfiles repository
+### 3.1 clone dotfiles repository
 ```powershell
-# clone dotfiles repository
 mkdir ~/GitHub/
 git clone https://github.com/berkay-yalin/dotfiles.git C:\Users\berka\GitHub\dotfiles
 ```
 
-### 2.2 replace Windows Terminal with WezTerm
+### 3.2 replace Windows Terminal with WezTerm
 ```powershell
-# replace Windows Terminal with WezTerm
 winget install wez.wezterm
 copy-item -path ~\GitHub\dotfiles\wezterm\.wezterm.lua -destination ~\.wezterm.lua
 winget uninstall -e --id Microsoft.WindowsTerminal
 ```
 
-### 2.3 install and configure Neovim
+### 3.3 install and configure Neovim
 ```powershell
 winget install Neovim.Neovim
 copy-item -path ~\GitHub\dotfiles\nvim -destination ~\AppData\Local\nvim -recurse
@@ -45,7 +49,7 @@ $url = "https://api.github.com/repos/berkay-yalin/open-with-nvim/releases/latest
 Invoke-WebRequest -Uri ((Invoke-RestMethod -Uri $url).assets[0].browser_download_url) -OutFile ~\AppData\Local\nvim-data\open-with-nvim.exe
 ```
 
-### 2.4 install and configure Visual Studio Code
+### 3.4 install and configure Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
 copy-item ~\GitHub\dotfiles\vscode\settings.json ~\AppData\Roaming\Code\User\settings.json
