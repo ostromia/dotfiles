@@ -91,3 +91,9 @@ copy-item ~\GitHub\dotfiles\vscode\settings.json ~\AppData\Roaming\Code\User\set
 copy-item ~\GitHub\dotfiles\vscode\keybindings.json ~\AppData\Roaming\Code\User\keybindings.json
 ```
 
+### 3.5 install and configure JPEGView
+```powershell
+winget install -e --id sylikc.JPEGView
+copy-item -path ~\GitHub\dotfiles\JPEGView\JPEGView.ini -destination ~\AppData\Roaming\JPEGView\JPEGView.ini
+```
+
