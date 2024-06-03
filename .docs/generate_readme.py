@@ -44,6 +44,13 @@ def set_section_neovim_plugins(markdownFile, configFile):
 
     markdownFile.write("\n")
 
+def set_section_setup_windows_11(markdownFile):
+    cwd = os.path.dirname(__file__)
+    with open(cwd + r"\setup_windows_11.md") as file:
+        markdownFile.write(file.read())
+
+    markdownFile.write("\n")
+
 if __name__ == "__main__":
     cwd = os.path.dirname(__file__)
     readmeMD = open( cwd + r"\..\README.md", "w+" )
@@ -52,6 +59,7 @@ if __name__ == "__main__":
     set_section_title_and_description(readmeMD)
     set_section_software(readmeMD)
     set_section_neovim_plugins(readmeMD, initVIM)
+    set_section_setup_windows_11(readmeMD)
 
     readmeMD.close()
     initVIM.close()
