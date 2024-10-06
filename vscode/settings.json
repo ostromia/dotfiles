@@ -11,23 +11,20 @@
 
     // title bar
     "window.title": "${activeEditorMedium}",
-
     "window.titleBarStyle": "custom",
     "window.menuBarVisibility": "visible",
     "window.customTitleBarVisibility": "never",
     "window.commandCenter": false,
-
     "workbench.layoutControl.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "window.customMenuBarAltFocus": false,
 
     // tab bar
+    "breadcrumbs.enabled": false,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.tabSizing": "shrink",
-
-    "breadcrumbs.enabled": false,
     "workbench.editor.labelFormat": "default",
-    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.tabActionCloseVisibility": false,
     "workbench.editor.showIcons": false,
     "workbench.editor.decorations.colors": false,
     "workbench.editor.decorations.badges": false,
@@ -39,6 +36,9 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
+    "workbench.editor.editorActionsLocation": "default",
+    "workbench.activityBar.location": "hidden",
+    "workbench.tree.enableStickyScroll": false,
     "workbench.tree.indent": 16,
     "workbench.tree.renderIndentGuides": "none",
     "explorer.decorations.colors": true,
@@ -56,18 +56,21 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
     "editor.guides.indentation": false,
     "editor.scrollBeyondLastLine": false,
     "editor.colorDecorators": false,
 
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "editor.occurrencesHighlight": "off",
     "editor.autoClosingQuotes": "never",
     "editor.autoClosingBrackets": "never",
     "editor.autoSurround": "never",
     "editor.bracketPairColorization.enabled": false,
+    "editor.codeLens": false,
 
-    "editor.lightbulb.enabled": false,
+    "editor.lightbulb.enabled": "off",
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
 
@@ -78,6 +81,11 @@
         "comments":"off",
         "strings":"off"
     },
+
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+
+    "files.restoreUndoStack": true,
     "files.eol": "auto",
     "files.insertFinalNewline": false,
     "files.trimTrailingWhitespace": true,
@@ -85,22 +93,26 @@
     "files.refactoring.autoSave": false,
     "files.enableTrash": true,
 
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
+    // new window start page
+    "workbench.startupEditor": "none",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.tips.enabled": false,
 
-    "workbench.startupEditor": "newUntitledFile",
+    // terminal
+    "terminal.integrated.enableVisualBell": false,
     "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.drawBoldTextInBrightColors": false,
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
-    "git.terminalAuthentication": false,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.persistentSessionScrollback": 0,
+    "debug.internalConsoleOptions": "neverOpen",
 
     // source control
     "diffEditor.ignoreTrimWhitespace": false,
+    "git.confirmSync": false,
     "git.ignoreMissingGitWarning": true,
-
+    "git.terminalAuthentication": false,
 
     // updates
     "update.mode": "manual",
@@ -111,6 +123,7 @@
     "telemetry.telemetryLevel": "off",
     "remote.WSL.downloadInBackground": false,
     "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "workbench.enableExperiments": false,
 
     // extensions -> vim
     "editor.cursorBlinking": "solid",
@@ -136,73 +149,14 @@
     ],
 
     // other
-    "files.restoreUndoStack": true,
-    "workbench.tips.enabled": false,
     "workbench.localHistory.enabled": false,
     "workbench.editor.sharedViewState": false,
     "workbench.editor.restoreViewState": false,
-    "debug.internalConsoleOptions": "neverOpen",
     "window.autoDetectHighContrast": false,
     "editor.accessibilitySupport": "off",
     "extensions.ignoreRecommendations": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.enableExperiments": false,
     "window.restoreWindows": "none",
-    "debug.javascript.codelens.npmScripts": "never",
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "svelte.plugin.html.completions.enable": false,
-    "svelte.plugin.html.tagComplete.enable": false,
-    "svelte.enable-ts-plugin": true,
-    // "powershell.enableReferencesCodeLens": false,
-    // "powershell.promptToUpdatePowerShell": false,
-    // "liveServer.settings.donotShowInfoMsg": true,
-    "git.confirmSync": false,
-    "editor.minimap.enabled": false,
-    "accessibility.signals.terminalBell": {
-        "sound": "off"
-    },
-    "terminal.integrated.enableVisualBell": false,
-    "workbench.editor.tabActionCloseVisibility": false,
-    "workbench.editor.empty.hint": "hidden",
-
-
-    "workbench.editor.editorActionsLocation": "default",
-
-    "workbench.activityBar.location": "hidden",
-
-//     "svelte.ask-to-enable-ts-plugin": false,
-//     "svelte.enable-ts-plugin": false,
-//     // eslint
-//     "eslint.validate": [
-//         "javascript",
-//         "svelte",
-//         "typescript"
-//     ],
-//     "svelte.plugin.html.tagComplete.enable": false,
-
-//     "svelte.plugin.svelte.format.config.singleQuote": true,
-//     "svelte.plugin.html.tagComplete.enable": false,
-//     "svelte.plugin.svelte.format.config.printWidth": 100,
-//    "[svelte]": {
-//      "editor.defaultFormatter": "svelte.svelte-vscode"
-//     },
-
-//     "python.languageServer": "Pylance",
-//     "python.terminal.activateEnvironment": false,
-//     "python.analysis.autoImportCompletions": false,
-//     "pyright.disableLanguageServices": true,
-
-//     "python.defaultInterpreterPath": ".\\.venv\\Scripts\\python.exe",
-//     "python.languageServer": "Jedi",
-//     "python.analysis.diagnosticMode": "workspace",
-
-//     "python.linting.pylintEnabled": true,
-//     "python.linting.pylintArgs": [
-//         "--disable=C0111", // missing-docstring
-//         "--disable=R0903",
-//         "--disable=C0103", // invalid-name
-//         // "--disable=C0114", // missing-module-docstring
-//         // "--disable=C0116", // missing-function-docstring
-//     ],
-
+    "html.autoClosingTags": false,
 }
