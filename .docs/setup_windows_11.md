@@ -62,3 +62,15 @@ copy-item ~\GitHub\dotfiles\vscode\keybindings.json ~\AppData\Roaming\Code\User\
 winget install -e --id sylikc.JPEGView
 copy-item -path ~\GitHub\dotfiles\JPEGView\JPEGView.ini -destination ~\AppData\Roaming\JPEGView\JPEGView.ini
 ```
+
+### 3.6 install Python
+```powershell
+winget install -e --id Python.Python.3.11
+```
+
+### 3.7 install node.js
+```powershell
+winget install Schniz.fnm
+fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm use --install-if-missing 22
+```
