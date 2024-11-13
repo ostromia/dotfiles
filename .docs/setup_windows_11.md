@@ -8,12 +8,11 @@ winget install -e --id Microsoft.Powershell
 
 ### 2 install and configure Git
 ```powershell
-winget install -e --id Microsoft.Powershell
 winget install -e --id Git.Git
 git config --global user.email "66202981+berkay-yalin@users.noreply.github.com"
 git config --global user.name "berkay-yalin"
 winget install -e --id GitHub.cli
-gh auth
+gh auth login
 ```
 
 ### 3.1 clone dotfiles repository
@@ -52,6 +51,8 @@ Invoke-WebRequest -Uri ((Invoke-RestMethod -Uri $url).assets[0].browser_download
 ### 3.4 install and configure Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
+# open vscode for a second to create the Code folder in AppData
+code; Start-Sleep -Seconds 1; Stop-Process -Name "Code"
 copy-item ~\GitHub\dotfiles\vscode\settings.json ~\AppData\Roaming\Code\User\settings.json
 copy-item ~\GitHub\dotfiles\vscode\keybindings.json ~\AppData\Roaming\Code\User\keybindings.json
 ```
