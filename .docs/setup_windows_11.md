@@ -1,5 +1,24 @@
 ## Set up Windows 11
-- personal notes on automating the installation and configuration of certain software on Windows 11
+
+personal notes on automating the installation and configuration of certain software on Windows 11
+
+### setup user folders
+
+probably shouldnt be doing this but it works :/
+
+```powershell
+rm ~\Documents\ -Recurse -Force
+cmd.exe /c "mklink /J C:\Users\berka\Documents C:\Users\berka\OneDrive\Documents"
+
+rm ~\Music\ -Recurse -Force
+cmd.exe /c "mklink /J C:\Users\berka\Music C:\Users\berka\OneDrive\Music"
+
+rm ~\Pictures\ -Recurse -Force
+cmd.exe /c "mklink /J C:\Users\berka\Pictures C:\Users\berka\OneDrive\Pictures"
+
+rm ~\Videos\ -Recurse -Force
+cmd.exe /c "mklink /J C:\Users\berka\Videos C:\Users\berka\OneDrive\Videos"
+```
 
 ### 1 install PowerShell
 ```powershell
