@@ -4,18 +4,20 @@ trying to figure out how VimScript works
 
 ## Software
 
-| Software                                             | Source Code                                |
-|------------------------------------------------------|--------------------------------------------|
-| [a-Shell](https://holzschu.github.io/a-Shell_iOS/)   | https://github.com/holzschu/a-shell        |
-| [AutoHotKey](https://autohotkey.com/)                | https://github.com/AutoHotkey/AutoHotkey   |
-| [Bash](https://www.gnu.org/software/bash/)           | https://git.savannah.gnu.org/cgit/bash.git |
-| [Git](https://git-scm.com/)                          | https://git.kernel.org/pub/scm/git/git.git |
-| [Neovim](https://neovim.io/)                         | https://github.com/neovim/neovim           |
-| [PowerShell](https://microsoft.com/PowerShell)       | https://github.com/PowerShell/PowerShell   |
-| [tmux](https://tmux.github.io/)                      | https://github.com/tmux/tmux               |
-| [Vifm](https://vifm.info/)                           | https://github.com/vifm/vifm               |
-| [Visual Studio Code](https://code.visualstudio.com/) | https://github.com/microsoft/vscode        |
-| [WezTerm](https://wezfurlong.org/wezterm/index.html) | https://github.com/wez/wezterm             |
+| Software                                             | Source Code                                  |
+|------------------------------------------------------|----------------------------------------------|
+| [a-Shell](https://holzschu.github.io/a-Shell_iOS/)   | <https://github.com/holzschu/a-shell>        |
+| [AutoHotKey](https://autohotkey.com/)                | <https://github.com/AutoHotkey/AutoHotkey>   |
+| [Bash](https://www.gnu.org/software/bash/)           | <https://git.savannah.gnu.org/cgit/bash.git> |
+| [Git](https://git-scm.com/)                          | <https://git.kernel.org/pub/scm/git/git.git> |
+| [JPEGView](https://github.com/sylikc/jpegview)       | <https://github.com/sylikc/jpegview>         |
+| [Neovim](https://neovim.io/)                         | <https://github.com/neovim/neovim>           |
+| [PowerShell](https://microsoft.com/PowerShell)       | <https://github.com/PowerShell/PowerShell>   |
+| [tmux](https://tmux.github.io/)                      | <https://github.com/tmux/tmux>               |
+| [Vifm](https://vifm.info/)                           | <https://github.com/vifm/vifm>               |
+| [Visual Studio Code](https://code.visualstudio.com/) | <https://github.com/microsoft/vscode>        |
+| [WezTerm](https://wezfurlong.org/wezterm/index.html) | <https://github.com/wez/wezterm>             |
+
 
 ## Neovim Plugins
 
@@ -43,12 +45,11 @@ winget install -e --id Microsoft.Powershell
 
 ### 2 install and configure Git
 ```powershell
-winget install -e --id Microsoft.Powershell
 winget install -e --id Git.Git
 git config --global user.email "66202981+berkay-yalin@users.noreply.github.com"
 git config --global user.name "berkay-yalin"
 winget install -e --id GitHub.cli
-gh auth
+gh auth login
 ```
 
 ### 3.1 clone dotfiles repository
@@ -87,6 +88,8 @@ Invoke-WebRequest -Uri ((Invoke-RestMethod -Uri $url).assets[0].browser_download
 ### 3.4 install and configure Visual Studio Code
 ```powershell
 winget install -e --id Microsoft.VisualStudioCode
+# open vscode for a second to create the Code folder in AppData
+code; Start-Sleep -Seconds 1; Stop-Process -Name "Code"
 copy-item ~\GitHub\dotfiles\vscode\settings.json ~\AppData\Roaming\Code\User\settings.json
 copy-item ~\GitHub\dotfiles\vscode\keybindings.json ~\AppData\Roaming\Code\User\keybindings.json
 ```
@@ -95,5 +98,17 @@ copy-item ~\GitHub\dotfiles\vscode\keybindings.json ~\AppData\Roaming\Code\User\
 ```powershell
 winget install -e --id sylikc.JPEGView
 copy-item -path ~\GitHub\dotfiles\JPEGView\JPEGView.ini -destination ~\AppData\Roaming\JPEGView\JPEGView.ini
+```
+
+### 3.6 install Python
+```powershell
+winget install -e --id Python.Python.3.11
+```
+
+### 3.7 install node.js
+```powershell
+winget install Schniz.fnm
+fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm use --install-if-missing 22
 ```
 
