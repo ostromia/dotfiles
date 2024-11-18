@@ -1,5 +1,7 @@
 require('nvim-tree').setup {
-    sort_by = "type",
+    sort = {
+        sorter = "filetype"
+    },
 
     view = {
         width = 20,
