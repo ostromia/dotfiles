@@ -1,3 +1,19 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
+end
+vim.opt.rtp:prepend(lazypath)
+
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -37,4 +53,34 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "*",
   command = "setlocal formatoptions-=cro",
 })
+
+require('lazy').setup({
+    -- theme
+    "navarasu/onedark.nvim",
+    "nvim-tree/nvim-web-devicons",
+
+    -- workbench
+    "nvim-tree/nvim-tree.lua",
+    "romgrk/barbar.nvim",
+    "nvim-lualine/lualine.nvim",
+
+    -- other
+    "junegunn/fzf",
+    "numToStr/Comment.nvim",
+    "norcalli/nvim-colorizer.lua",
+
+    -- -- treesitter
+    -- "nvim-treesitter/nvim-treesitter",
+    -- "nvim-treesitter/nvim-treesitter-textobjects",
+    -- "m-demare/hlargs.nvim",
+
+    -- -- lsp & linters
+    -- "neovim/nvim-lspconfig",
+    -- "mfussenegger/nvim-lint",
+    -- "dstein64/vim-startuptime",
+})
+
+require("keybindings")
+-- require("lsp")
+require("theme")
 
