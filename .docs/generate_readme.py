@@ -15,7 +15,7 @@ def set_section_title_and_description(readmeMD):
     readmeMD.write("# dotfiles\n\ntrying to figure out how VimScript works\n\n")
 
 def set_section_software(readmeMD, cwd):
-    with open(cwd + r"\software.md", "r") as sectionMD:
+    with open(cwd + r"/software.md", "r") as sectionMD:
         readmeMD.write(sectionMD.read())
         readmeMD.write("\n\n")
 
@@ -40,17 +40,25 @@ def set_section_neovim_plugins(readmeMD, cwd):
 
     initVIM.close()
 
+def set_section_setup_macos(markdownFile):
+    cwd = os.path.dirname(__file__)
+    with open(cwd + r"/setup_macos.md") as file:
+        markdownFile.write(file.read())
+
+    markdownFile.write("\n")
+
 def set_section_setup_windows_11(markdownFile):
     cwd = os.path.dirname(__file__)
-    with open(cwd + r"\setup_windows_11.md") as file:
+    with open(cwd + r"/setup_windows_11.md") as file:
         markdownFile.write(file.read())
 
     markdownFile.write("\n")
 
 if __name__ == "__main__":
     cwd = os.path.dirname(__file__)
-    with open( cwd + r"\..\README.md", "w+" ) as readmeMD:
+    with open( cwd + r"/../README.md", "w+" ) as readmeMD:
         set_section_title_and_description(readmeMD)
         set_section_software(readmeMD, cwd)
-        set_section_neovim_plugins(readmeMD, cwd)
+        # set_section_neovim_plugins(readmeMD, cwd)
+        set_section_setup_macos(readmeMD)
         set_section_setup_windows_11(readmeMD)
