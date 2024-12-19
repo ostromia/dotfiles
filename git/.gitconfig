@@ -1,0 +1,10 @@
+[user]
+	name = ostromia
+	email = 66202981+ostromia@users.noreply.github.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[advice]
+	statusHints = false
+
