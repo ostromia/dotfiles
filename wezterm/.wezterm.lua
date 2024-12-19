@@ -1,28 +1,20 @@
 local wezterm = require("wezterm")
 config = wezterm.config_builder()
-config.check_for_updates = false
 
-config.default_prog = {"C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-NoLogo"}
-config.launch_menu = {
-    { label = "pwsh.exe", args = { "pwsh.exe", "-NoLogo" } },
-    { label = "wsl.exe",  args = { "wsl.exe" }             }
-}
+-- general
+config.check_for_updates = false
+config.native_macos_fullscreen_mode = true
+config.enable_scroll_bar = true
 
 -- key bindings
 config.keys = {
-    { key = "p", mods = "ALT", action = wezterm.action.ActivateCommandPalette },
+    { key = "p", mods = "CMD", action = wezterm.action.ActivateCommandPalette },
+    { key = "h", mods = "CMD", action = wezterm.action{ ActivateTabRelative = -1 } },
+    { key = "l", mods = "CMD", action = wezterm.action{ ActivateTabRelative =  1 } },
 }
 
-for i = 1, 8 do
-  table.insert(config.keys, {
-    key = tostring(i),
-    mods = "ALT",
-    action = wezterm.action.ActivateTab(i - 1),
-  })
-end
-
 -- general font
-config.font_size = 9.5
+config.font_size = 14.0
 config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
@@ -36,6 +28,10 @@ config.colors = {
 }
 
 -- window
+config.window_frame = {
+    font_size = 14.0,
+    font = wezterm.font { family = "JetBrains Mono", weight = "Regular" }
+}
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = { left = 0, bottom = 0, top = 0, right = 0 }
 
@@ -48,11 +44,8 @@ config.show_new_tab_button_in_tab_bar = false
 config.show_tab_index_in_tab_bar = true
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-    return { { Text = " " .. tab.active_pane.title .. " " } }    
+    return { { Text = " " .. tab.active_pane.title .. " " } }
 end)
-
--- scrollbar
-config.enable_scroll_bar = true
 
 return config
 
