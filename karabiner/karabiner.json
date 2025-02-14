@@ -8,6 +8,27 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "WezTerm: map left command to alt",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.github.wez.wezterm"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_option" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Pages: command + h @ control + shift + tab",
                         "manipulators": [
                             {

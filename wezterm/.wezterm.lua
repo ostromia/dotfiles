@@ -8,9 +8,13 @@ config.enable_scroll_bar = true
 
 -- key bindings
 config.keys = {
-    { key = "p", mods = "CMD", action = wezterm.action.ActivateCommandPalette },
-    { key = "h", mods = "CMD", action = wezterm.action{ ActivateTabRelative = -1 } },
-    { key = "l", mods = "CMD", action = wezterm.action{ ActivateTabRelative =  1 } },
+    { key = "t", mods = "ALT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
+    { key = "w", mods = "ALT", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
+
+    { key = "p", mods = "ALT", action = wezterm.action.ActivateCommandPalette },
+
+    { key = "h", mods = "ALT", action = wezterm.action{ActivateTabRelative = -1} },
+    { key = "l", mods = "ALT", action = wezterm.action{ActivateTabRelative =  1} },
 }
 
 -- general font
