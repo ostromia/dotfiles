@@ -5,8 +5,9 @@ require('nvim-web-devicons').setup {}
 
 require('onedark').setup {
     style = 'dark',
-
-    code_style = { comments = 'none' },
+    code_style = {
+        comments = 'none'
+    },
 }
-require('onedark').load()
 
+require('onedark').load()

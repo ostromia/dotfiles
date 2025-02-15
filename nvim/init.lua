@@ -54,6 +54,7 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal formatoptions-=cro",
 })
 
+-- load plugins
 require('lazy').setup({
     -- theme
     "navarasu/onedark.nvim",
@@ -68,19 +69,7 @@ require('lazy').setup({
     "junegunn/fzf",
     "numToStr/Comment.nvim",
     "norcalli/nvim-colorizer.lua",
-
-    -- -- treesitter
-    -- "nvim-treesitter/nvim-treesitter",
-    -- "nvim-treesitter/nvim-treesitter-textobjects",
-    -- "m-demare/hlargs.nvim",
-
-    -- -- lsp & linters
-    -- "neovim/nvim-lspconfig",
-    -- "mfussenegger/nvim-lint",
-    -- "dstein64/vim-startuptime",
 })
 
 require("keybindings")
--- require("lsp")
 require("theme")
-

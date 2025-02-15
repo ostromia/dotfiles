@@ -31,18 +31,13 @@ require('nvim-tree').setup {
 }
 
 -- keybindings
-local map = vim.keymap.set
-local input = vim.api.nvim_input
-
-map('n', '<D-e>', function()
+vim.keymap.set('n', '<D-e>', function()
     local name = vim.api.nvim_buf_get_name(0)
     if string.find(name, 'NvimTree') then
-        input('<C-w>l')
+        vim.api.nvim_input('<C-w>l')
     else
-        input(':NvimTreeFocus<CR>')
+        vim.api.nvim_input(':NvimTreeFocus<CR>')
     end
 end)
 
-map('n', '<D-E>', ':NvimTreeToggle<CR>')
-map('n', '<leader>ff', '<CMD>NvimTreeFindFile<CR>')
-
+vim.keymap.set('n', '<D-E>', ':NvimTreeToggle<CR>')

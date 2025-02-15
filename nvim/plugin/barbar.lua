@@ -4,11 +4,26 @@ require('bufferline').setup {
 
     icons = {
         button = false,
-        modified = { button = false },
-        filetype = { enabled = false },
 
-        separator = { left = '', right = '' },
-        inactive = { separator = { left = '', right = '' } }
+        modified = {
+            button = false
+        },
+
+        filetype = {
+            enabled = false
+        },
+
+        separator = {
+            left = '',
+            right = ''
+        },
+
+        inactive = {
+            separator = {
+                left = '',
+                right = ''
+            }
+        }
     }
 }
 
@@ -33,8 +48,5 @@ nvim_tree_events.subscribe('TreeClose', function()
 end)
 
 -- keybindings
-local map = vim.keymap.set
-map({'n', 'v', 'i'}, '<D-l>', ':BufferNext<CR>')
-map({'n', 'v', 'i'}, '<D-h>', ':BufferPrevious<CR>')
-map('n', '<D-q>', ':BufferClose<CR>')
-
+vim.keymap.set({'n', 'v', 'i'}, '<D-l>', ':BufferNext<CR>')
+vim.keymap.set({'n', 'v', 'i'}, '<D-h>', ':BufferPrevious<CR>')
