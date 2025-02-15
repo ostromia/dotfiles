@@ -34,7 +34,7 @@ require('nvim-tree').setup {
 local map = vim.keymap.set
 local input = vim.api.nvim_input
 
-map('n', '<A-e>', function()
+map('n', '<D-e>', function()
     local name = vim.api.nvim_buf_get_name(0)
     if string.find(name, 'NvimTree') then
         input('<C-w>l')
@@ -43,6 +43,6 @@ map('n', '<A-e>', function()
     end
 end)
 
-map('n', '<A-E>', ':NvimTreeToggle<CR>')
+map('n', '<D-E>', ':NvimTreeToggle<CR>')
 map('n', '<leader>ff', '<CMD>NvimTreeFindFile<CR>')
 

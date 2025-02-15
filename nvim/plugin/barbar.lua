@@ -34,7 +34,7 @@ end)
 
 -- keybindings
 local map = vim.keymap.set
-map({'n', 'v', 'i'}, '<A-l>', ':BufferNext<CR>')
-map({'n', 'v', 'i'}, '<A-h>', ':BufferPrevious<CR>')
-map('n', '<A-q>', ':BufferClose<CR>')
+map({'n', 'v', 'i'}, '<D-l>', ':BufferNext<CR>')
+map({'n', 'v', 'i'}, '<D-h>', ':BufferPrevious<CR>')
+map('n', '<D-q>', ':BufferClose<CR>')
 

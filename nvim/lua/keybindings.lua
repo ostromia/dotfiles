@@ -4,13 +4,13 @@ local input = vim.api.nvim_input
 
 map('n', ';', ':', {noremap=true})
 
-map({'n', 'v', 'i'}, '<A-a>', '<Esc>')
+map({'n', 'v', 'i'}, '<D-a>', '<Esc>')
 
 map('n', 'w', 'b')
 
-map('n', '<A-o>', ":FZF<CR>")
+map('n', '<D-o>', ":FZF<CR>")
 
-map({'n', 'v', 'i'}, '<A-w>', '<C-w>')
+map({'n', 'v', 'i'}, '<D-w>', '<C-w>')
 
 -- copy & paste to system clipboard
 map({'n', 'v'}, '<S-y>', '"+y')
