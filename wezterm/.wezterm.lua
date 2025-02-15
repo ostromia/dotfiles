@@ -1,10 +1,10 @@
 local wezterm = require("wezterm")
-config = wezterm.config_builder()
+local config = wezterm.config_builder()
 
 -- general
 config.check_for_updates = false
-config.native_macos_fullscreen_mode = true
-config.enable_scroll_bar = true
+config.enable_scroll_bar = false
+config.default_prog = {"pwsh.exe", "-NoLogo"}
 
 -- key bindings
 config.keys = {
@@ -13,12 +13,22 @@ config.keys = {
 
     { key = "p", mods = "ALT", action = wezterm.action.ActivateCommandPalette },
 
-    { key = "h", mods = "ALT", action = wezterm.action{ActivateTabRelative = -1} },
-    { key = "l", mods = "ALT", action = wezterm.action{ActivateTabRelative =  1} },
+    { key = "h", mods = "ALT|SHIFT", action = wezterm.action{ActivateTabRelative = -1} },
+    { key = "l", mods = "ALT|SHIFT", action = wezterm.action{ActivateTabRelative =  1} },
+
+    { key = "1", mods = "ALT", action = wezterm.action.ActivateTab(0) },
+    { key = "2", mods = "ALT", action = wezterm.action.ActivateTab(1) },
+    { key = "3", mods = "ALT", action = wezterm.action.ActivateTab(2) },
+    { key = "4", mods = "ALT", action = wezterm.action.ActivateTab(3) },
+    { key = "5", mods = "ALT", action = wezterm.action.ActivateTab(4) },
+    { key = "6", mods = "ALT", action = wezterm.action.ActivateTab(5) },
+    { key = "7", mods = "ALT", action = wezterm.action.ActivateTab(6) },
+    { key = "8", mods = "ALT", action = wezterm.action.ActivateTab(7) },
+    { key = "9", mods = "ALT", action = wezterm.action.ActivateTab(8) },
 }
 
 -- general font
-config.font_size = 14.0
+config.font_size = 10.0
 config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
@@ -26,16 +36,20 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.colors = {
     tab_bar = {
         background = "black",
-        active_tab = { bg_color = "black", fg_color = "white" },
-        inactive_tab = { bg_color = "black", fg_color = "grey" }
+
+        active_tab = {
+            bg_color = "black",
+            fg_color = "white"
+        },
+
+        inactive_tab = {
+            bg_color = "black",
+            fg_color = "grey"
+        }
     }
 }
 
 -- window
-config.window_frame = {
-    font_size = 14.0,
-    font = wezterm.font { family = "JetBrains Mono", weight = "Regular" }
-}
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = { left = 0, bottom = 0, top = 0, right = 0 }
 
