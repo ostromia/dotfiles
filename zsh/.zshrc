@@ -7,6 +7,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 lss() {
+    BLUE='\033[34m'
+    NC='\033[0m'
+
     folders=()
     files=()
 
@@ -22,7 +25,7 @@ lss() {
     folders=$(echo $folders | sort -f)
 
     if [[ -n "$folders" ]]; then
-        echo $folders
+        printf "${BLUE}%s${NC}\n" "$folders"
     fi
 
     files=$(printf "%s\n" "${files[@]}")
