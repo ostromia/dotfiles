@@ -31,6 +31,8 @@ lss() {
     files=$(printf "%s\n" "${files[@]}")
     files=$(echo $files | sort -f)
 
+    files=$(printf "%s\n" "${files[@]}" | awk -F. '{ if (NF > 1) ext=$NF; else ext=""; print ext "\t" $0 }' | sort -f | cut -f2-)
+
     if [[ -n "$files" ]]; then
         echo $files
     fi
