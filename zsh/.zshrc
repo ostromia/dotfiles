@@ -21,10 +21,14 @@ lss() {
     folders=$(printf "%s\n" "${folders[@]}")
     folders=$(echo $folders | sort -f)
 
-    echo $folders
+    if [[ -n "$folders" ]]; then
+        echo $folders
+    fi
 
     files=$(printf "%s\n" "${files[@]}")
     files=$(echo $files | sort -f)
 
-    echo $files
+    if [[ -n "$files" ]]; then
+        echo $files
+    fi
 }
