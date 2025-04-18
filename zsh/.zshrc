@@ -6,6 +6,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
+
 lss() {
     BLUE='\033[34m'
     NC='\033[0m'
@@ -30,10 +32,10 @@ lss() {
 
     files=$(printf "%s\n" "${files[@]}")
     files=$(echo $files | sort -f)
-
     files=$(printf "%s\n" "${files[@]}" | awk -F. '{ if (NF > 1) ext=$NF; else ext=""; print ext "\t" $0 }' | sort -f | cut -f2-)
 
     if [[ -n "$files" ]]; then
         echo $files
     fi
 }
+
