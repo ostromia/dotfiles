@@ -27,8 +27,6 @@
 
     { "key": "cmd+n", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
     { "key": "cmd+q", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
-    { "key": "cmd+q", "command": "workbench.action.closeActiveEditor",     "when": "editorTextFocus" },
-
     { "key": "cmd+h", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
     { "key": "cmd+l", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" }
 ]
