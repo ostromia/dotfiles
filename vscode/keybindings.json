@@ -9,10 +9,10 @@
 
     { "key": "cmd+a", "command": "extension.vim_ctrl+[" },
 
-    { "key": "cmd+n", "command": "workbench.action.files.newUntitledFile", "when": "editorTextFocus"},
+    { "key": "cmd+n", "command": "workbench.action.files.newUntitledFile", "when": "editorTextFocus" },
     { "key": "cmd+q", "command": "workbench.action.closeActiveEditor",     "when": "editorTextFocus" },
-    { "key": "cmd+l", "command": "workbench.action.nextEditor",            "when": "editorTextFocus" },
-    { "key": "cmd+h", "command": "workbench.action.previousEditor",        "when": "editorTextFocus" },
+    { "key": "cmd+l", "command": "workbench.action.nextEditor"                                       },
+    { "key": "cmd+h", "command": "workbench.action.previousEditor"                                   },
 
     { "key": "cmd+e",       "command": "workbench.action.focusSideBar"                                   },
     { "key": "cmd+e",       "command": "workbench.action.focusActiveEditorGroup", "when": "sideBarFocus" },
