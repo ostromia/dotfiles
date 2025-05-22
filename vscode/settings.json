@@ -148,6 +148,15 @@
         { "before": ["<S-Tab>"], "commands": ["outdent"] },
     ],
 
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["p"], "commands": [ "editor.action.clipboardPasteAction", "extension.vim_escape"] },
+    ],
+
+    "vim.visualModeKeyBindingsNonRecursive": [
+        { "before": ["p"], "commands": [ "editor.action.clipboardPasteAction", "extension.vim_escape"] },
+        { "before": ["y"], "commands": [ "editor.action.clipboardCopyAction", "extension.vim_escape"] }
+    ],
+
     // other
     "workbench.localHistory.enabled": false,
     "workbench.editor.sharedViewState": false,
