@@ -83,6 +83,14 @@
         "strings": "off"
     },
 
+    // prettier formatting
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "prettier.printWidth": 200,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+
     "files.restoreUndoStack": true,
     "files.eol": "auto",
     "files.insertFinalNewline": false,
