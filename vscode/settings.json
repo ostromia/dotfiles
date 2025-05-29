@@ -6,7 +6,7 @@
     "window.zoomLevel": -0.5,
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#0000",
-        "focusBorder": "#0000",
+        "focusBorder": "#0000"
     },
 
     // title bar
@@ -21,6 +21,7 @@
 
     // tab bar
     "breadcrumbs.enabled": false,
+    "workbench.editor.enablePreview": false,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.labelFormat": "default",
@@ -31,7 +32,7 @@
 
     // explorer
     "explorer.sortOrder": "type",
-	"explorer.autoReveal": false,
+    "explorer.autoReveal": false,
     "explorer.excludeGitIgnore": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -77,13 +78,10 @@
     "editor.parameterHints.enabled": false,
     "editor.suggestOnTriggerCharacters": false,
     "editor.quickSuggestions": {
-        "other":"off",
-        "comments":"off",
-        "strings":"off"
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
     },
-
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
 
     "files.restoreUndoStack": true,
     "files.eol": "auto",
@@ -134,27 +132,36 @@
     "vim.handleKeys": {
         "<C-n>": false,
         "<C-z>": false,
-        "<C-y>": false,
+        "<C-y>": false
     },
 
     "vim.normalModeKeyBindings": [
         { "before": ["w"], "after": ["b"] },
-        { "before": [";"], "after": [":"] },
+        { "before": [";"], "after": [":"] }
     ],
 
     "vim.visualModeKeyBindings": [
         { "before": ["w"], "after": ["b"] },
         { "before": ["Tab"], "commands": ["tab"] },
-        { "before": ["<S-Tab>"], "commands": ["outdent"] },
+        { "before": ["<S-Tab>"], "commands": ["outdent"] }
     ],
 
     "vim.normalModeKeyBindingsNonRecursive": [
-        { "before": ["p"], "commands": [ "editor.action.clipboardPasteAction", "extension.vim_escape"] },
+        {
+            "before": ["p"],
+            "commands": ["editor.action.clipboardPasteAction", "extension.vim_escape"]
+        }
     ],
 
     "vim.visualModeKeyBindingsNonRecursive": [
-        { "before": ["p"], "commands": [ "editor.action.clipboardPasteAction", "extension.vim_escape"] },
-        { "before": ["y"], "commands": [ "editor.action.clipboardCopyAction", "extension.vim_escape"] }
+        {
+            "before": ["p"],
+            "commands": ["editor.action.clipboardPasteAction", "extension.vim_escape"]
+        },
+        {
+            "before": ["y"],
+            "commands": ["editor.action.clipboardCopyAction", "extension.vim_escape"]
+        }
     ],
 
     // other
@@ -203,5 +210,5 @@
     "rust-analyzer.inlayHints.renderColons": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": true,
-    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true,
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true
 }
