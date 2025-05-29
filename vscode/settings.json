@@ -131,7 +131,7 @@
     "workbench.welcomePage.walkthroughs.openOnInstall": false,
     "workbench.enableExperiments": false,
 
-    // extensions -> vim
+    // extensions -> Vim
     "editor.cursorBlinking": "solid",
     "vim.useSystemClipboard": true,
     "vim.autoindent": false,
@@ -171,6 +171,26 @@
             "commands": ["editor.action.clipboardCopyAction", "extension.vim_escape"]
         }
     ],
+
+    // extensions -> Code Spell Checker
+    "cSpell.language": "en-GB",
+    "cSpell.languageSettings": [
+        {
+            "languageId": "*",
+            "enabled": false
+        },
+        {
+            "languageId": "markdown",
+            "enabled": true
+        }
+    ],
+
+    // extensions -> markdownlint
+    "markdownlint.config": {
+        "MD007": {
+            "indent": 4
+        }
+    }
 
     // other
     "workbench.localHistory.enabled": false,
