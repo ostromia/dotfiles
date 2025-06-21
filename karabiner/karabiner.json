@@ -8,6 +8,37 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "mission control movement",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Pages: command + shift + v @ option + shift + command + v",
                         "manipulators": [
                             {
@@ -86,30 +117,25 @@
                         ]
                     },
                     {
-                        "description": "mission control movement",
+                        "description": "Safari: command + d @ File > Open Location...",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["right_command"] }
-                                },
-                                "to": [
+                                "conditions": [
                                     {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["control"]
+                                        "bundle_identifiers": [
+                                            "com.apple.Safari"
+                                        ],
+                                        "type": "frontmost_application_if"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["right_command"] }
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["command"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["control"]
+                                        "key_code": "l",
+                                        "modifiers": ["command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -135,32 +161,6 @@
                                 "to": [
                                     {
                                         "key_code": "d",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Safari: command + d @ File > Open Location...",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.apple.Safari"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "l",
                                         "modifiers": ["command"]
                                     }
                                 ],
@@ -315,7 +315,7 @@
                         ]
                     },
                     {
-                        "description": "Google Chrome: command + k @ up_arrow",
+                        "description": "Chrome: command + k @ up_arrow",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -336,7 +336,7 @@
                         ]
                     },
                     {
-                        "description": "Google Chrome: command + j @ down_arrow",
+                        "description": "Chrome: command + j @ down_arrow",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -357,7 +357,7 @@
                         ]
                     },
                     {
-                        "description": "Google Chrome: command + l @ command + shift + ]",
+                        "description": "Chrome: command + l @ command + shift + ]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -383,7 +383,7 @@
                         ]
                     },
                     {
-                        "description": "Google Chrome: command + h @ command + shift + [",
+                        "description": "Chrome: command + h @ command + shift + [",
                         "manipulators": [
                             {
                                 "conditions": [
