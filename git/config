@@ -3,7 +3,7 @@
 	email = 66202981+ostromia@users.noreply.github.com
 [core]
 	editor = nvim
-	excludesFile = ~/.gitignore
+	excludesFile = ~/.config/git/ignore
 [init]
 	defaultBranch = main
 [advice]
