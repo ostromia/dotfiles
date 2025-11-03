@@ -1,13 +1,8 @@
+
 HISTFILE="$XDG_DATA_HOME/zsh/zsh_history"
 ZSH_SESSION_DIR="$XDG_DATA_HOME/zsh/zsh_sessions"
 
 PROMPT='%F{magenta}%~%f '
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-. "$HOME/.local/bin/env"
-
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
@@ -41,4 +36,3 @@ lss() {
         echo $files
     fi
 }
-
