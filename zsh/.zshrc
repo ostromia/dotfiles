@@ -1,3 +1,6 @@
+HISTFILE="$XDG_DATA_HOME/zsh/zsh_history"
+ZSH_SESSION_DIR="$XDG_DATA_HOME/zsh/zsh_sessions"
+
 PROMPT='%F{magenta}%~%f '
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
