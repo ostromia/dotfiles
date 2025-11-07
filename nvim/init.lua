@@ -15,7 +15,6 @@ require("options")
 require('lazy').setup({
     -- theme
     "navarasu/onedark.nvim",
-    "nvim-tree/nvim-web-devicons",
 
     -- workbench
     "nvim-tree/nvim-tree.lua",
