@@ -11,22 +11,19 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("options")
+require("keybindings")
 
 require('lazy').setup({
-    -- theme
     "navarasu/onedark.nvim",
+    
+    "nvim-telescope/telescope.nvim",
+    "nvim-telescope/telescope-file-browser.nvim",
 
-    -- workbench
-    "nvim-tree/nvim-tree.lua",
-    "romgrk/barbar.nvim",
     "nvim-lualine/lualine.nvim",
 
-    -- other
-    "junegunn/fzf",
     "numToStr/Comment.nvim",
     "norcalli/nvim-colorizer.lua",
 })
 
-require("keybindings")
 require("theme")
 

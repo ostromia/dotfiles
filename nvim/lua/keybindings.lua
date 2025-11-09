@@ -4,8 +4,6 @@ vim.keymap.set('n', ';', ':')
 
 vim.keymap.set({'n', 'v', 'i'}, '<D-a>', '<Esc>')
 
-vim.keymap.set('n', '<D-o>', ":FZF<CR>")
-
 vim.keymap.set('n', 'w', 'b')
 
 vim.keymap.set({"n", "v"}, "d", '"+d', { noremap = true })
