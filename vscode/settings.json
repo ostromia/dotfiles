@@ -21,7 +21,7 @@
 
     // tab bar
     "breadcrumbs.enabled": false,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "workbench.editor.wrapTabs": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.labelFormat": "default",
@@ -190,7 +190,7 @@
         "MD007": {
             "indent": 4
         }
-    }
+    },
 
     // other
     "workbench.localHistory.enabled": false,
@@ -238,5 +238,5 @@
     "rust-analyzer.inlayHints.renderColons": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.hideClosureInitialization": true,
-    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": true,
 }
