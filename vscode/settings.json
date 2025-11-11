@@ -192,6 +192,10 @@
         }
     },
 
+    // Features > Chat
+    "chat.agent.enabled": false,
+    "chat.disableAIFeatures": true,
+
     // other
     "workbench.localHistory.enabled": false,
     "workbench.editor.sharedViewState": false,
