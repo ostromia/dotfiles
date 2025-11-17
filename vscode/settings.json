@@ -206,14 +206,5 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "window.restoreWindows": "none",
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "html.autoClosingTags": false,
-
-    "zig.zls.enabled": "on",
-    "zig.zls.inlayHintsExcludeSingleArgument": false,
-    "zig.zls.inlayHintsHideRedundantParamNames": false,
-    "zig.zls.inlayHintsHideRedundantParamNamesLastToken": false,
-    "zig.zls.inlayHintsShowBuiltin": false,
-    "zig.zls.inlayHintsShowParameterName": false,
-    "zig.zls.inlayHintsShowStructLiteralFieldType": false,
-    "zig.zls.inlayHintsShowVariableTypeHints": false,
+    "html.autoClosingTags": false
 }
