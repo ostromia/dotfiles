@@ -2,26 +2,23 @@ import sys
 from pathlib import Path
 import shutil
 
-def install(software):
-	for item in software:
-		source = Path(item["source"]).expanduser()
-		target = Path(item["target"]).expanduser()
+def copy(src: Path, dst: Path) -> None:
+	source = Path(src).expanduser()
+	target = Path(dst).expanduser()
 
-		if source.is_dir():
-			shutil.copytree(source, target, dirs_exist_ok=True)
-		else:
-			target.parent.mkdir(parents=True, exist_ok=True)
-			shutil.copy2(source, target)
+	if src.is_file():
+		target.parent.mkdir(parents=True, exist_ok=True)
+		shutil.copy2(source, target)
+	else:
+		shutil.copytree(source, target, dirs_exist_ok=True)
 
-def backup(software):
-	for item in software:
-		source = Path(item["source"]).expanduser()
-		target = Path(item["target"]).expanduser()
+def install(software: list[dict[str, Path]]):
+	for i in software:
+		copy(i["source"], i["target"])
 
-		if source.is_dir():
-			shutil.copytree(target, source, dirs_exist_ok=True)
-		else:
-			shutil.copy2(target, source)
+def backup(software: list[dict[str, Path]]):
+	for i in software:
+		copy(i["target"], i["source"])
 
 if __name__ == "__main__":
 	software = [
@@ -53,23 +50,32 @@ if __name__ == "__main__":
 			"source": "~/GitHub/dotfiles/vscode/settings.json",
 			"target": "~/Library/Application Support/Code/User/settings.json"
 		},
-   		{
+		{
 			"source": "~/GitHub/dotfiles/zsh/.zprofile",
 			"target": "~/.zprofile"
 		},
-   		{
+		{
 			"source": "~/GitHub/dotfiles/zsh/.zshenv",
 			"target": "~/.zshenv"
 		},
-   		{
+		{
 			"source": "~/GitHub/dotfiles/zsh/.zshrc",
 			"target": "~/.zshrc"
 		},
-   		{
+		{
 			"source": "~/GitHub/dotfiles/zsh/lss.lua",
 			"target": "~/.config/zsh/lss.lua"
 		}
 	]
+
+	software2 = []
+
+	for i in software:
+		j = {
+			"source": Path(i["source"]).expanduser(),
+			"target": Path(i["target"]).expanduser()
+		}
+		software2.append(j)
 
 	if len(sys.argv) != 2:
 		sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
@@ -77,6 +83,6 @@ if __name__ == "__main__":
 	argument = sys.argv[1].lower()
 
 	if argument == "install":
-		install(software)
+		install(software2)
 	elif argument == "backup":
-		backup(software)
+		backup(software2)
