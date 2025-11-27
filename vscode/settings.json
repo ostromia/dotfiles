@@ -206,5 +206,8 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "window.restoreWindows": "none",
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "html.autoClosingTags": false
+    "html.autoClosingTags": false,
+
+    "ty.inlayHints.callArgumentNames": false,
+    "ty.inlayHints.variableTypes": false
 }
