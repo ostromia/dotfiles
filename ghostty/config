@@ -22,4 +22,5 @@ keybind=super+digit_6=goto_tab:6
 keybind=super+digit_7=goto_tab:7
 keybind=super+digit_8=goto_tab:8
 keybind=super+digit_9=goto_tab:9
+keybind=super+digit_0=goto_tab:10
 
