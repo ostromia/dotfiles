@@ -13,9 +13,6 @@ keybind=super+v=paste_from_clipboard
 keybind=super+t=new_tab
 keybind=super+w=close_tab
 
-keybind=super+l=next_tab
-keybind=super+h=previous_tab
-
 keybind=super+digit_1=goto_tab:1
 keybind=super+digit_2=goto_tab:2
 keybind=super+digit_3=goto_tab:3
@@ -25,3 +22,4 @@ keybind=super+digit_6=goto_tab:6
 keybind=super+digit_7=goto_tab:7
 keybind=super+digit_8=goto_tab:8
 keybind=super+digit_9=goto_tab:9
+
