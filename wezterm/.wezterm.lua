@@ -35,7 +35,7 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 -- general colors
 config.colors = {
     tab_bar = {
-        background = "black",
+        background = "#202020",
 
         active_tab = {
             bg_color = "black",
@@ -43,7 +43,7 @@ config.colors = {
         },
 
         inactive_tab = {
-            bg_color = "black",
+            bg_color = "#202020",
             fg_color = "grey"
         }
     }
