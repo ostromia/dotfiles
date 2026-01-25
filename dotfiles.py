@@ -1,4 +1,5 @@
 import sys
+import platform
 from pathlib import Path
 import shutil
 
@@ -28,7 +29,7 @@ def backup(software: list[dict[str, Path]]):
         copy(i["target"], i["source"])
 
 if __name__ == "__main__":
-    software = [
+    software_macos = [
         {
             "source": "~/GitHub/dotfiles/ghostty/config",
             "target": "~/.config/ghostty/config"
@@ -74,6 +75,19 @@ if __name__ == "__main__":
             "target": "~/.config/zsh/lss.lua"
         }
     ]
+
+    software_windows = [
+        {
+            "source": r"~\GitHub\dotfiles\csgo\autoexec.cfg",
+            "target": r"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\autoexec.cfg"
+        },
+        {
+            "source": r"~\GitHub\dotfiles\tf2\autoexec.cfg",
+            "target": r"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\cfg\autoexec.cfg"
+        }
+    ]
+
+    software = software_windows if platform.system() == "Windows" else software_macos
 
     software2 = []
 
