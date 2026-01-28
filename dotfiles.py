@@ -1,5 +1,6 @@
 import sys
 import platform
+import json
 from pathlib import Path
 import shutil
 
@@ -29,65 +30,9 @@ def backup(software: list[dict[str, Path]]):
         copy(i["target"], i["source"])
 
 if __name__ == "__main__":
-    software_macos = [
-        {
-            "source": "~/GitHub/dotfiles/ghostty/config",
-            "target": "~/.config/ghostty/config"
-        },
-        {
-            "source": "~/GitHub/dotfiles/git/",
-            "target": "~/.config/git/"
-        },
-        {
-            "source": "~/GitHub/dotfiles/karabiner/karabiner.json",
-            "target": "~/.config/karabiner/karabiner.json"
-        },
-        {
-            "source": "~/GitHub/dotfiles/npm/",
-            "target": "~/.config/npm/"
-        },
-        {
-            "source": "~/GitHub/dotfiles/nvim/",
-            "target": "~/.config/nvim/"
-        },
-        {
-            "source": "~/GitHub/dotfiles/vscode/keybindings.json",
-            "target": "~/Library/Application Support/Code/User/keybindings.json"
-        },
-        {
-            "source": "~/GitHub/dotfiles/vscode/settings.json",
-            "target": "~/Library/Application Support/Code/User/settings.json"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/.zprofile",
-            "target": "~/.zprofile"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/.zshenv",
-            "target": "~/.zshenv"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/.zshrc",
-            "target": "~/.zshrc"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/lss.lua",
-            "target": "~/.config/zsh/lss.lua"
-        }
-    ]
-
-    software_windows = [
-        {
-            "source": r"~\GitHub\dotfiles\csgo\autoexec.cfg",
-            "target": r"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg\autoexec.cfg"
-        },
-        {
-            "source": r"~\GitHub\dotfiles\tf2\autoexec.cfg",
-            "target": r"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf\cfg\autoexec.cfg"
-        }
-    ]
-
-    software = software_windows if platform.system() == "Windows" else software_macos
+    with open("dotfiles.json") as file:
+        software = json.load(file)
+        software = software["windows"] if platform.system() == "Windows" else software["macos"]
 
     software2 = []
 
