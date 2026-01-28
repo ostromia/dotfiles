@@ -34,14 +34,11 @@ if __name__ == "__main__":
         software = json.load(file)
         software = software["windows"] if platform.system() == "Windows" else software["macos"]
 
-    software2 = []
-
-    for i in software:
-        j = {
-            "source": Path(i["source"]).expanduser(),
-            "target": Path(i["target"]).expanduser()
-        }
-        software2.append(j)
+        for index, item in enumerate(software):
+            software[index] = {
+                "source": Path(item["source"]).expanduser(),
+                "target": Path(item["target"]).expanduser()
+            }
 
     if len(sys.argv) != 2:
         sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
@@ -49,6 +46,6 @@ if __name__ == "__main__":
     argument = sys.argv[1].lower()
 
     if argument == "install":
-        install(software2)
+        install(software)
     elif argument == "backup":
-        backup(software2)
+        backup(software)
