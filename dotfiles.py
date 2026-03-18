@@ -11,7 +11,7 @@ def copy(src: Path, dst: Path) -> None:
     if not dst.exists():
         dst.parent.mkdir(parents=True, exist_ok=True)
 
-    if src.is_file() != dst.is_file() or src.is_dir() != dst.is_dir():
+    if (src.is_file() and dst.is_dir()) or (src.is_dir() and dst.is_file()):
         raise ValueError("Both file arguments must be the same type")
 
     if src.is_file():
