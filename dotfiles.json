@@ -47,6 +47,10 @@
     ],
     "windows": [
         {
+            "source": "~\\GitHub\\dotfiles\\powershell\\profile.ps1",
+            "target": "~\\OneDrive\\Documents\\PowerShell\\profile.ps1"
+        },
+        {
             "source": "~\\GitHub\\dotfiles\\wezterm\\.wezterm.lua",
             "target": "~\\.wezterm.lua"
         },
