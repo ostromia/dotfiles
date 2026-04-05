@@ -1,28 +1,17 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({{ "Failed to clone lazy.nvim:\n", "ErrorMsg" }, { out, "WarningMsg" }, { "\nPress any key to exit..." }}, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
-
 require("options")
 require("keybindings")
 
-require('lazy').setup({
-    "navarasu/onedark.nvim",
+vim.pack.add({
+    "https://github.com/navarasu/onedark.nvim",
     
-    "nvim-telescope/telescope.nvim",
-    "nvim-telescope/telescope-file-browser.nvim",
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/nvim-telescope/telescope.nvim",
+    "https://github.com/nvim-telescope/telescope-file-browser.nvim",
 
-    "nvim-lualine/lualine.nvim",
+    "https://github.com/nvim-lualine/lualine.nvim",
 
-    "numToStr/Comment.nvim",
-    "norcalli/nvim-colorizer.lua",
+    "https://github.com/numToStr/Comment.nvim",
+    "https://github.com/norcalli/nvim-colorizer.lua",
 })
 
 require("theme")
