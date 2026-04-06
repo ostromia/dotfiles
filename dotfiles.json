@@ -47,20 +47,20 @@
     ],
     "windows": [
         {
-            "source": "~\\GitHub\\dotfiles\\powershell\\profile.ps1",
-            "target": "~\\OneDrive\\Documents\\PowerShell\\profile.ps1"
+            "source": "~/GitHub/dotfiles/powershell/profile.ps1",
+            "target": "~/OneDrive/Documents/PowerShell/profile.ps1"
         },
         {
-            "source": "~\\GitHub\\dotfiles\\wezterm\\.wezterm.lua",
-            "target": "~\\.wezterm.lua"
+            "source": "~/GitHub/dotfiles/wezterm/.wezterm.lua",
+            "target": "~/.wezterm.lua"
         },
         {
-            "source": "~\\GitHub\\dotfiles\\csgo\\autoexec.cfg",
-            "target": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\cfg\\autoexec.cfg"
+            "source": "~/GitHub/dotfiles/csgo/autoexec.cfg",
+            "target": "C:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg"
         },
         {
-            "source": "~\\GitHub\\dotfiles\\tf2\\autoexec.cfg",
-            "target": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Team Fortress 2\\tf\\cfg\\autoexec.cfg"
+            "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
+            "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
         }
     ]
 }
