@@ -65,6 +65,11 @@
         {
             "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
             "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
+        },
+        {
+            "source": "~/GitHub/dotfiles/vlc/vlcrc",
+            "target": "~/AppData/Roaming/vlc/vlcrc"
         }
     ]
 }
+
