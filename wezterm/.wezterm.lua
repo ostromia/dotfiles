@@ -60,10 +60,27 @@ config.tab_bar_at_bottom = false
 config.hide_tab_bar_if_only_one_tab = true
 config.show_new_tab_button_in_tab_bar = false
 config.show_tab_index_in_tab_bar = true
+config.tab_max_width = 60
+
+wezterm.on("augment-command-palette", function(window, pane)
+    return {
+        {
+            brief = "Rename tab",
+            icon = "md_rename_box",
+            action = wezterm.action.PromptInputLine({
+                description = "Enter new tab name:",
+                action = wezterm.action_callback(function(window, pane, line)
+                    if line then
+                        window:active_tab():set_title(line)
+                    end
+                end),
+            }),
+        },
+    }
+end)
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-    local index = tab.tab_index + 1
-    return { { Text = " " .. index .. " " .. tab.active_pane.title .. " " } }
+    return { { Text " " .. tab.tab_index + 1 .. " " .. tab.active_pane.title .. " " } }
 end)
 
 return config
