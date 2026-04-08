@@ -62,7 +62,8 @@ config.show_new_tab_button_in_tab_bar = false
 config.show_tab_index_in_tab_bar = true
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-    return { { Text = " " .. tab.active_pane.title .. " " } }
+    local index = tab.tab_index + 1
+    return { { Text = " " .. index .. " " .. tab.active_pane.title .. " " } }
 end)
 
 return config
