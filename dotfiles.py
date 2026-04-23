@@ -1,8 +1,82 @@
 import sys
 import platform
-import json
 from pathlib import Path
 import shutil
+
+SOFTWARE = {
+    "macos": [
+        {
+            "source": "~/GitHub/dotfiles/ghostty/config",
+            "target": "~/.config/ghostty/config"
+        },
+        {
+            "source": "~/GitHub/dotfiles/git/",
+            "target": "~/.config/git/"
+        },
+        {
+            "source": "~/GitHub/dotfiles/karabiner/karabiner.json",
+            "target": "~/.config/karabiner/karabiner.json"
+        },
+        {
+            "source": "~/GitHub/dotfiles/npm/",
+            "target": "~/.config/npm/"
+        },
+        {
+            "source": "~/GitHub/dotfiles/nvim/",
+            "target": "~/.config/nvim/"
+        },
+        {
+            "source": "~/GitHub/dotfiles/vscode/keybindings.json",
+            "target": "~/Library/Application Support/Code/User/keybindings.json"
+        },
+        {
+            "source": "~/GitHub/dotfiles/vscode/settings.json",
+            "target": "~/Library/Application Support/Code/User/settings.json"
+        },
+        {
+            "source": "~/GitHub/dotfiles/zsh/.zprofile",
+            "target": "~/.zprofile"
+        },
+        {
+            "source": "~/GitHub/dotfiles/zsh/.zshenv",
+            "target": "~/.zshenv"
+        },
+        {
+            "source": "~/GitHub/dotfiles/zsh/.zshrc",
+            "target": "~/.zshrc"
+        },
+        {
+            "source": "~/GitHub/dotfiles/zsh/lss.lua",
+            "target": "~/.config/zsh/lss.lua"
+        }
+    ],
+    "windows": [
+        {
+            "source": "~/GitHub/dotfiles/powershell/profile.ps1",
+            "target": "~/OneDrive/Documents/PowerShell/profile.ps1"
+        },
+        {
+            "source": "~/GitHub/dotfiles/wezterm/.wezterm.lua",
+            "target": "~/.wezterm.lua"
+        },
+        {
+            "source": "~/GitHub/dotfiles/nvim",
+            "target": "~/AppData/Local/nvim"
+        },
+        {
+            "source": "~/GitHub/dotfiles/csgo/autoexec.cfg",
+            "target": "C:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg"
+        },
+        {
+            "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
+            "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
+        },
+        {
+            "source": "~/GitHub/dotfiles/vlc/vlcrc",
+            "target": "~/AppData/Roaming/vlc/vlcrc"
+        }
+    ]
+}
 
 def copy(src: Path, dst: Path) -> None:
     if not src.exists():
@@ -30,15 +104,13 @@ def backup(software: list[dict[str, Path]]):
         copy(i["target"], i["source"])
 
 if __name__ == "__main__":
-    with open("dotfiles.json") as file:
-        software = json.load(file)
-        software = software["windows"] if platform.system() == "Windows" else software["macos"]
+    software = SOFTWARE["windows"] if platform.system() == "Windows" else SOFTWARE["macos"]
 
-        for index, item in enumerate(software):
-            software[index] = {
-                "source": Path(item["source"]).expanduser(),
-                "target": Path(item["target"]).expanduser()
-            }
+    for index, item in enumerate(software):
+        software[index] = {
+            "source": Path(item["source"]).expanduser(),
+            "target": Path(item["target"]).expanduser()
+        }
 
     if len(sys.argv) != 2:
         sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
