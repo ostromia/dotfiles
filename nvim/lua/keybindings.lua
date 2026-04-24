@@ -13,4 +13,9 @@ vim.keymap.set({"n", "v"}, "d", '"+d', { noremap = true })
 vim.keymap.set({"n", "v"}, "y", '"+y', { noremap = true })
 vim.keymap.set({"n", "v"}, "p", '"+p', { noremap = true })
 
+-- lsp
+vim.keymap.set("n", "<leader>ll", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>l[", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<leader>l]", vim.diagnostic.goto_next)
+
 return M
