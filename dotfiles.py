@@ -46,8 +46,8 @@ SOFTWARE: dict[str, list[dict[str, str]]] = {
             "target": "~/.zshrc"
         },
         {
-            "source": "~/GitHub/dotfiles/zsh/lss.lua",
-            "target": "~/.config/zsh/lss.lua"
+            "source": "~/GitHub/dotfiles/zsh/lss.py",
+            "target": "~/.config/zsh/lss.py"
         }
     ],
     "windows": [

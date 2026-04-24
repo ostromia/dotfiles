@@ -5,5 +5,5 @@ PROMPT='%F{magenta}%~%f '
 
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
-alias lss="lua $XDG_CONFIG_HOME/zsh/lss.lua"
+alias lss="python3 $XDG_CONFIG_HOME/zsh/lss.py \$PWD"
 
