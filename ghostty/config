@@ -5,8 +5,6 @@ keybind = clear
 
 keybind = global:cmd+backquote=toggle_quick_terminal
 
-keybind=super+p=toggle_command_palette
-
 keybind=super+c=copy_to_clipboard
 keybind=super+v=paste_from_clipboard
 
