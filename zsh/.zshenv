@@ -7,3 +7,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
+
+export PATH="$HOME/.local/bin:$PATH"
+
