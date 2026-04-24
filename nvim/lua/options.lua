@@ -22,7 +22,7 @@ vim.o.listchars = "eol:$,tab:>-,space:·"
 
 vim.wo.signcolumn = "yes"
 vim.wo.numberwidth = 2
-vim.o.colorcolumn = "79"
+vim.o.colorcolumn = "80"
 
 vim.o.termguicolors = true
 
