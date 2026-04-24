@@ -26,8 +26,14 @@ local function python_environment()
             end
         end
     else
-        vim.lsp.enable("ruff")
-        vim.lsp.enable("ty")
+        local root = vim.fn.getcwd()
+        for _, name in ipairs({ "ruff", "ty" }) do
+            local venv_bin = root .. "/.venv/bin/" .. name
+            if vim.fn.executable(venv_bin) == 1 then
+                vim.lsp.config(name, { cmd = { venv_bin, "server" } })
+            end
+            vim.lsp.enable(name)
+        end
     end
     python_environment_state = not python_environment_state
 end
