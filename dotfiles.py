@@ -3,7 +3,7 @@ import platform
 from pathlib import Path
 import shutil
 
-SOFTWARE = {
+SOFTWARE: dict[str, list[dict[str, str]]] = {
     "macos": [
         {
             "source": "~/GitHub/dotfiles/ghostty/config",
@@ -104,13 +104,13 @@ def backup(software: list[dict[str, Path]]):
         copy(i["target"], i["source"])
 
 if __name__ == "__main__":
-    software = SOFTWARE["windows"] if platform.system() == "Windows" else SOFTWARE["macos"]
-
-    for index, item in enumerate(software):
-        software[index] = {
+    software = [
+        {
             "source": Path(item["source"]).expanduser(),
             "target": Path(item["target"]).expanduser()
         }
+        for item in (SOFTWARE["windows"] if platform.system() == "Windows" else SOFTWARE["macos"])
+    ]
 
     if len(sys.argv) != 2:
         sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
