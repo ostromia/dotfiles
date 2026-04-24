@@ -24,7 +24,7 @@ SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = {
         {
             "source": "~/GitHub/dotfiles/nvim/",
             "target": "~/.config/nvim/",
-            "include": ["lua", "plugin", "init.lua"]
+            "include": ["lsp", "lua", "plugin", "init.lua"]
         },
         {
             "source": "~/GitHub/dotfiles/vscode/",
