@@ -15,6 +15,7 @@ function M.toggle()
     else
         vim.treesitter.start()
     end
+    vim.bo.syntax = "off"
     state = not state
 end
 
@@ -22,6 +23,7 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "python",
     callback = function()
         vim.treesitter.start()
+        vim.bo.syntax = "off"
     end
 })
 
