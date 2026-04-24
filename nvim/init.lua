@@ -9,10 +9,13 @@ vim.pack.add({
 
     "https://github.com/numToStr/Comment.nvim",
     "https://github.com/norcalli/nvim-colorizer.lua",
+
+    "https://github.com/romus204/tree-sitter-manager.nvim"
 })
 
 require("options")
 require("keybindings")
 require("lsp")
+require("treesitter")
 
 require("theme")
