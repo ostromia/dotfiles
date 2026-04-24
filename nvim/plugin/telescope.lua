@@ -17,7 +17,23 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fb', builtin.buffers)
 vim.keymap.set('n', '<leader>fh', builtin.help_tags)
 
+local python_environment_state = false
+local function python_environment()
+    if python_environment_state then
+        for _, name in ipairs({ "ruff", "ty" }) do
+            for _, client in ipairs(vim.lsp.get_clients({ name = name })) do
+                client:stop()
+            end
+        end
+    else
+        vim.lsp.enable("ruff")
+        vim.lsp.enable("ty")
+    end
+    python_environment_state = not python_environment_state
+end
+
 local lsp_commands = {
+    { name = "Python Environment", action = python_environment },
 }
 
 local function command_palette()
