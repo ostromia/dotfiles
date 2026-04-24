@@ -3,7 +3,7 @@ import platform
 from pathlib import Path
 import shutil
 
-SOFTWARE: dict[str, list[dict[str, str]]] = {
+SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = {
     "macos": [
         {
             "source": "~/GitHub/dotfiles/ghostty/config",
@@ -23,27 +23,18 @@ SOFTWARE: dict[str, list[dict[str, str]]] = {
         },
         {
             "source": "~/GitHub/dotfiles/nvim/",
-            "target": "~/.config/nvim/"
+            "target": "~/.config/nvim/",
+            "include": ["lua", "plugin", "init.lua"]
         },
         {
-            "source": "~/GitHub/dotfiles/vscode/keybindings.json",
-            "target": "~/Library/Application Support/Code/User/keybindings.json"
+            "source": "~/GitHub/dotfiles/vscode/",
+            "target": "~/Library/Application Support/Code/User/",
+            "include": ["keybindings.json", "settings.json"]
         },
         {
-            "source": "~/GitHub/dotfiles/vscode/settings.json",
-            "target": "~/Library/Application Support/Code/User/settings.json"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/.zprofile",
-            "target": "~/.zprofile"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/.zshenv",
-            "target": "~/.zshenv"
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/.zshrc",
-            "target": "~/.zshrc"
+            "source": "~/GitHub/dotfiles/zsh/",
+            "target": "~",
+            "include": [".zprofile", ".zshenv", ".zshrc"]
         },
         {
             "source": "~/GitHub/dotfiles/zsh/lss.py",
@@ -78,7 +69,12 @@ SOFTWARE: dict[str, list[dict[str, str]]] = {
     ]
 }
 
-def copy(src: Path, dst: Path) -> None:
+def copy(
+		src: Path,
+		dst: Path,
+		include: list[str] | None = None,
+		exclude: list[str] | None = None,
+	) -> None:
     if not src.exists():
         raise FileNotFoundError(f"No such file or directory: {src}")
 
@@ -91,26 +87,67 @@ def copy(src: Path, dst: Path) -> None:
     if src.is_file():
         shutil.copy2(src, dst)
     else:
-        shutil.copytree(src, dst, dirs_exist_ok=True)
+        if include is not None and exclude is not None:
+            raise ValueError("Cannot specify both 'include' and 'exclude'")
+
+        if include is not None:
+            dst.mkdir(parents=True, exist_ok=True)
+            for file in include:
+                if (src / file).is_file():
+                    shutil.copy2(src / file, dst / file)
+                else:
+                    shutil.copytree(src / file, dst / file, dirs_exist_ok=True)
+        elif exclude is not None:
+            dst.mkdir(parents=True, exist_ok=True)
+            for file in src.iterdir():
+                if file.name not in exclude:
+                    if file.is_file():
+                        shutil.copy2(file, dst / file.name)
+                    else:
+                        shutil.copytree(file, dst / file.name, dirs_exist_ok=True)
+        else:
+            shutil.copytree(src, dst, dirs_exist_ok=True)
 
     print(f"{src} -> {dst}")
 
-def install(software: list[dict[str, Path]]):
-    for i in software:
-        copy(i["source"], i["target"])
+def log(software: list[dict[str, Path | list[str]]]) -> None:
+    for i, item in enumerate(software):
+        print(f"[{i}]")
+        for key, value in item.items():
+            print(f"  {key}: {value}")
 
-def backup(software: list[dict[str, Path]]):
+def install(software: list[dict[str, Path | list[str]]]):
     for i in software:
-        copy(i["target"], i["source"])
+        copy(
+            i["source"],
+            i["target"],
+            include=i.get("include"),
+            exclude=i.get("exclude"),
+        )
+
+def backup(software: list[dict[str, Path | list[str]]]):
+    for i in software:
+        copy(
+            i["target"],
+            i["source"],
+            include=i.get("include"),
+            exclude=i.get("exclude"),
+        )
 
 if __name__ == "__main__":
-    software = [
-        {
-            "source": Path(item["source"]).expanduser(),
-            "target": Path(item["target"]).expanduser()
+    software2 = SOFTWARE["windows"] if platform.system() == "Windows" else SOFTWARE["macos"]
+    software3 = []
+
+    for i in software2:
+        entry = {
+            "source": Path(i["source"]).expanduser(),
+            "target": Path(i["target"]).expanduser(),
         }
-        for item in (SOFTWARE["windows"] if platform.system() == "Windows" else SOFTWARE["macos"])
-    ]
+        if "include" in i:
+            entry["include"] = i["include"]
+        if "exclude" in i:
+            entry["exclude"] = i["exclude"]
+        software3.append(entry)
 
     if len(sys.argv) != 2:
         sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
@@ -118,6 +155,6 @@ if __name__ == "__main__":
     argument = sys.argv[1].lower()
 
     if argument == "install":
-        install(software)
+        install(software3)
     elif argument == "backup":
-        backup(software)
+        backup(software3)
