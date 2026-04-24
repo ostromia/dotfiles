@@ -17,4 +17,5 @@ vim.pack.add({
 require("theme")
 
 vim.lsp.enable('ruff')
+vim.lsp.enable('ty')
 
