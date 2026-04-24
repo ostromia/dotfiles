@@ -1,9 +1,6 @@
-require("options")
-require("keybindings")
-
 vim.pack.add({
     "https://github.com/navarasu/onedark.nvim",
-    
+
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/nvim-telescope/telescope.nvim",
     "https://github.com/nvim-telescope/telescope-file-browser.nvim",
@@ -14,5 +11,8 @@ vim.pack.add({
     "https://github.com/norcalli/nvim-colorizer.lua",
 })
 
-require("theme")
+require("options")
+require("keybindings")
+require("lsp")
 
+require("theme")
