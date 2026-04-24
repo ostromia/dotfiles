@@ -8,6 +8,7 @@ telescope.action_state = require("telescope.actions.state")
 
 local mod = require("keybindings").mod
 local lsp = require("lsp")
+local treesitter = require("treesitter")
 
 telescope.setup({
     extensions = {
@@ -25,6 +26,8 @@ vim.keymap.set('n', '<leader>fh', telescope.builtin.help_tags)
 
 local commands = {
     { name = "Language Server Protocol", action = lsp.toggle },
+    { name = "Tree-sitter Parser Manager", action = vim.cmd.TSManager },
+    { name = "Tree-sitter", action = treesitter.toggle },
 }
 
 local function command_palette()
