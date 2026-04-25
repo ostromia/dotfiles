@@ -15,5 +15,5 @@ require("options")
 require("keybindings")
 require("lsp")
 require("treesitter")
-
 require("theme")
+
