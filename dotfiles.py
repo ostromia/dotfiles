@@ -65,6 +65,10 @@ SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = {
         {
             "source": "~/GitHub/dotfiles/vlc/vlcrc",
             "target": "~/AppData/Roaming/vlc/vlcrc"
+        },
+        {
+            "source": "~/GitHub/dotfiles/autohotkey/",
+            "target": "~/OneDrive/Documents/AutoHotkey/"
         }
     ]
 }
