@@ -41,34 +41,67 @@ SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = {
             "target": "~/.config/zsh/lss.py"
         }
     ],
+
     "windows": [
         {
-            "source": "~/GitHub/dotfiles/powershell/profile.ps1",
-            "target": "~/OneDrive/Documents/PowerShell/profile.ps1"
+            "source": "~/GitHub/dotfiles/autohotkey/",
+            "target": "~/OneDrive/Documents/AutoHotkey/"
         },
+
         {
-            "source": "~/GitHub/dotfiles/wezterm/.wezterm.lua",
-            "target": "~/.wezterm.lua"
+            "source": "~/GitHub/dotfiles/FilePilot/FPilot-Config.json",
+            "target": "~/AppData/Roaming/Voidstar/FilePilot/FPilot-Config.json"
         },
+
+        {
+            "source": "~/GitHub/dotfiles/git/",
+            "target": "~/.config/git/"
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/jpegview/JPEGView.ini",
+            "target": "~/AppData/Roaming/JPEGView/JPEGView.ini"
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/npm/",
+            "target": "~/.config/npm/"
+        },
+
         {
             "source": "~/GitHub/dotfiles/nvim",
             "target": "~/AppData/Local/nvim"
         },
+
         {
-            "source": "~/GitHub/dotfiles/csgo/autoexec.cfg",
-            "target": "C:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg"
+            "source": "~/GitHub/dotfiles/powershell/profile.ps1",
+            "target": "~/OneDrive/Documents/PowerShell/profile.ps1"
         },
-        {
-            "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
-            "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
-        },
+
         {
             "source": "~/GitHub/dotfiles/vlc/vlcrc",
             "target": "~/AppData/Roaming/vlc/vlcrc"
         },
+
         {
-            "source": "~/GitHub/dotfiles/autohotkey/",
-            "target": "~/OneDrive/Documents/AutoHotkey/"
+            "source": "~/GitHub/dotfiles/vscode/",
+            "target": "~/AppData/Roaming/Code/User/",
+            "include": ["keybindings.json", "settings.json"]
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/wezterm/.wezterm.lua",
+            "target": "~/.wezterm.lua"
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/csgo/autoexec.cfg",
+            "target": "C:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg"
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
+            "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
         }
     ]
 }
