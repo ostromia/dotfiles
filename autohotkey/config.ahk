@@ -13,8 +13,8 @@
     !k::Up
     !l::^Tab
     !a::SendInput "{Esc}"    ; Escape
-    !w::SendInput "^t"       ; New Tab
-    !q::SendInput "^w"       ; Close Tab
+    !t::SendInput "^t"       ; New Tab
+    !w::SendInput "^w"       ; Close Tab
     !f::SendInput "^f"       ; Search
     !g::SendInput "^h"       ; History
 
