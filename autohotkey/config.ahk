@@ -1,10 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-CoordMode "Mouse", "Screen"
-SCREENWIDTH := SysGet(78)
-SCREENHEIGHT := SysGet(79)
-
 <^>!u::{
     Send "{Shift down}{left 4}{Shift up}^c{Del 4}"
     Sleep 10
@@ -19,20 +15,6 @@ SCREENHEIGHT := SysGet(79)
     !a::SendInput "{Esc}"    ; Escape
     !w::SendInput "^t"       ; New Tab
     !q::SendInput "^w"       ; Close Tab
-    !e::SendInput "^+t"      ; Reopen closed tab
-    !p::SendInput "^{Space}" ; Quick Commands
     !f::SendInput "^f"       ; Search
     !g::SendInput "^h"       ; History
-
-#HotIf WinActive("ahk_exe java.exe")
-    !h::SendInput "^+{TAB}"
-    !l::SendInput "^{Tab}"
-
-    !q::SendInput "^w"
-
-    !b::SendInput "^b"
-    
-    !+e::SendInput "{F6}"
-    !j::SendInput "{F7}"
-    !m::SendInput "{F8}"
 
