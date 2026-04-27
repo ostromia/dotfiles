@@ -1,6 +1,9 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
+; #Include commandpalette.ahk
+; #Include ucker.ahk
+
 <^>!u::{
     Send "{Shift down}{left 4}{Shift up}^c{Del 4}"
     Sleep 10
