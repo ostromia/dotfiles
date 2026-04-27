@@ -8,6 +8,8 @@ $env:XDG_STATE_HOME  = "$env:USERPROFILE/.local/state"
 [System.Environment]::SetEnvironmentVariable("XDG_DATA_HOME",   "$env:USERPROFILE/.local/share", "User")
 [System.Environment]::SetEnvironmentVariable("XDG_STATE_HOME",  "$env:USERPROFILE/.local/state", "User")
 
+[System.Environment]::SetEnvironmentVariable("NPM_CONFIG_USERCONFIG", "$env:USERPROFILE/.config/npm/npmrc", "User")
+
 function Prompt {
     $cwd = (Get-Location).Path
     $osc7 = "`e]7;file:///$($cwd -replace '\\', '/')`a"
