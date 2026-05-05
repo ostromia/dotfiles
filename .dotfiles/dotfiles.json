@@ -105,6 +105,11 @@
         {
             "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
             "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/zsh/lss.py",
+            "target": "~/OneDrive/Documents/PowerShell/lss.py"
         }
     ]
 }

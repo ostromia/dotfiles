@@ -10,6 +10,10 @@ $env:XDG_STATE_HOME  = "$env:USERPROFILE/.local/state"
 
 [System.Environment]::SetEnvironmentVariable("NPM_CONFIG_USERCONFIG", "$env:USERPROFILE/.config/npm/npmrc", "User")
 
+function lss {
+    python "$env:USERPROFILE/OneDrive/Documents/PowerShell/lss.py" $PWD
+}
+
 function Prompt {
     $cwd = (Get-Location).Path
     $osc7 = "`e]7;file:///$($cwd -replace '\\', '/')`a"
