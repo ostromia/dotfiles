@@ -50,12 +50,6 @@ def copy(
 
     print(f"{src} -> {dst}")
 
-def log(software: list[dict[str, Path | list[str]]]) -> None:
-    for i, item in enumerate(software):
-        print(f"[{i}]")
-        for key, value in item.items():
-            print(f"  {key}: {value}")
-
 def install(software: list[dict[str, Path | list[str]]]):
     for i in software:
         copy(
