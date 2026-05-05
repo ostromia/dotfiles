@@ -4,11 +4,6 @@ import platform
 from pathlib import Path
 import shutil
 
-CWD = Path(__file__).resolve().parent
-
-with open(CWD / ".dotfiles" / "dotfiles.json") as f:
-    SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = json.load(f)
-
 def copy(
 		src: Path,
 		dst: Path,
@@ -68,20 +63,26 @@ def backup(software: list[dict[str, Path | list[str]]]):
             exclude=i.get("exclude"),
         )
 
-if __name__ == "__main__":
-    software2 = SOFTWARE["windows"] if platform.system() == "Windows" else SOFTWARE["macos"]
-    software3 = []
+def get_dotfile_paths():
+    CWD = Path(__file__).resolve().parent
 
-    for i in software2:
-        entry = {
+    with open(CWD / ".dotfiles" / "dotfiles.json") as f:
+        dotfiles = json.load(f)
+
+    dotfiles = dotfiles["windows" if platform.system() == "Windows" else "macos"]
+
+    return [
+        {
+            **i,
             "source": Path(i["source"]).expanduser(),
             "target": Path(i["target"]).expanduser(),
         }
-        if "include" in i:
-            entry["include"] = i["include"]
-        if "exclude" in i:
-            entry["exclude"] = i["exclude"]
-        software3.append(entry)
+
+        for i in dotfiles
+    ]
+
+if __name__ == "__main__":
+    dotfiles = get_dotfile_paths()
 
     if len(sys.argv) != 2:
         sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
@@ -89,7 +90,7 @@ if __name__ == "__main__":
     argument = sys.argv[1].lower()
 
     if argument == "install":
-        install(software3)
+        install(dotfiles)
     elif argument == "backup":
-        backup(software3)
+        backup(dotfiles)
 
