@@ -84,13 +84,17 @@ def get_dotfile_paths():
 if __name__ == "__main__":
     dotfiles = get_dotfile_paths()
 
-    if len(sys.argv) != 2:
+    if len(sys.argv) > 2:
         sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
 
-    argument = sys.argv[1].lower()
+    argument = sys.argv[1].lower() if len(sys.argv) == 2 else "install"
 
     if argument == "install":
         install(dotfiles)
+
     elif argument == "backup":
         backup(dotfiles)
+
+    else:
+        sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
 
