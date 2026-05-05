@@ -72,7 +72,8 @@
 
         {
             "source": "~/GitHub/dotfiles/nvim",
-            "target": "~/AppData/Local/nvim"
+            "target": "~/.config/nvim/",
+            "include": ["lsp", "lua", "plugin", "init.lua"]
         },
 
         {
