@@ -108,8 +108,9 @@
         },
 
         {
-            "source": "~/GitHub/dotfiles/zsh/lss.py",
-            "target": "~/OneDrive/Documents/PowerShell/lss.py"
+            "source": "~/GitHub/dotfiles/zsh/",
+            "target": "~/OneDrive/Documents/PowerShell/",
+            "include": ["lss.py", "gitdirty.py"]
         }
     ]
 }
