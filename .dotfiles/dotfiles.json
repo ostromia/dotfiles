@@ -39,8 +39,9 @@
         },
 
         {
-            "source": "~/GitHub/dotfiles/zsh/lss.py",
-            "target": "~/.config/zsh/lss.py"
+            "source": "~/GitHub/dotfiles/zsh/",
+            "target": "~/.config/zsh/",
+            "include": ["lss.py", "gitdirty.py"]
         }
     ],
 

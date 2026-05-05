@@ -6,4 +6,4 @@ PROMPT='%F{magenta}%~%f '
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 alias lss="python3 $XDG_CONFIG_HOME/zsh/lss.py \$PWD"
-
+alias gitdirty="python3 $XDG_CONFIG_HOME/zsh/gitdirty.py \$PWD"
