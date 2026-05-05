@@ -1,110 +1,13 @@
+import json
 import sys
 import platform
 from pathlib import Path
 import shutil
 
-SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = {
-    "macos": [
-        {
-            "source": "~/GitHub/dotfiles/ghostty/config",
-            "target": "~/.config/ghostty/config"
-        },
-        {
-            "source": "~/GitHub/dotfiles/git/",
-            "target": "~/.config/git/"
-        },
-        {
-            "source": "~/GitHub/dotfiles/karabiner/karabiner.json",
-            "target": "~/.config/karabiner/karabiner.json"
-        },
-        {
-            "source": "~/GitHub/dotfiles/npm/",
-            "target": "~/.config/npm/"
-        },
-        {
-            "source": "~/GitHub/dotfiles/nvim/",
-            "target": "~/.config/nvim/",
-            "include": ["lsp", "lua", "plugin", "init.lua"]
-        },
-        {
-            "source": "~/GitHub/dotfiles/vscode/",
-            "target": "~/Library/Application Support/Code/User/",
-            "include": ["keybindings.json", "settings.json"]
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/",
-            "target": "~",
-            "include": [".zprofile", ".zshenv", ".zshrc"]
-        },
-        {
-            "source": "~/GitHub/dotfiles/zsh/lss.py",
-            "target": "~/.config/zsh/lss.py"
-        }
-    ],
+CWD = Path(__file__).resolve().parent
 
-    "windows": [
-        {
-            "source": "~/GitHub/dotfiles/autohotkey/",
-            "target": "~/OneDrive/Documents/AutoHotkey/"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/FilePilot/FPilot-Config.json",
-            "target": "~/AppData/Roaming/Voidstar/FilePilot/FPilot-Config.json"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/git/",
-            "target": "~/.config/git/"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/jpegview/JPEGView.ini",
-            "target": "~/AppData/Roaming/JPEGView/JPEGView.ini"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/npm/",
-            "target": "~/.config/npm/"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/nvim",
-            "target": "~/AppData/Local/nvim"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/powershell/profile.ps1",
-            "target": "~/OneDrive/Documents/PowerShell/profile.ps1"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/vlc/vlcrc",
-            "target": "~/AppData/Roaming/vlc/vlcrc"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/vscode/",
-            "target": "~/AppData/Roaming/Code/User/",
-            "include": ["keybindings.json", "settings.json"]
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/wezterm/.wezterm.lua",
-            "target": "~/.wezterm.lua"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/csgo/autoexec.cfg",
-            "target": "C:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg"
-        },
-
-        {
-            "source": "~/GitHub/dotfiles/tf2/autoexec.cfg",
-            "target": "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
-        }
-    ]
-}
+with open(CWD / ".dotfiles" / "dotfiles.json") as f:
+    SOFTWARE: dict[str, list[dict[str, str | list[str]]]] = json.load(f)
 
 def copy(
 		src: Path,
