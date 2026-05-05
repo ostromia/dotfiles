@@ -54,6 +54,8 @@ def install(software: list[dict[str, Path | list[str]]]):
             exclude=i.get("exclude"),
         )
 
+    tweaks(software)
+
 def backup(software: list[dict[str, Path | list[str]]]):
     for i in software:
         copy(
@@ -62,6 +64,20 @@ def backup(software: list[dict[str, Path | list[str]]]):
             include=i.get("include"),
             exclude=i.get("exclude"),
         )
+
+def tweaks(software: list[dict[str, Path | list[str]]]):
+    if platform.system() != "Windows":
+        return
+
+    vscode = next(
+        d for d in software
+        if d["source"].name == "vscode"
+    )
+
+    keybindings = vscode["target"] / "keybindings.json"
+    content = keybindings.read_text(encoding="utf-8")
+    content = content.replace("cmd+", "alt+")
+    keybindings.write_text(content, encoding="utf-8")
 
 def get_dotfile_paths():
     CWD = Path(__file__).resolve().parent
