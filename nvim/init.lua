@@ -5,7 +5,6 @@ vim.pack.add({
 
     "https://github.com/nvim-lualine/lualine.nvim",
 
-    "https://github.com/numToStr/Comment.nvim",
     "https://github.com/norcalli/nvim-colorizer.lua",
 
     "https://github.com/romus204/tree-sitter-manager.nvim"
