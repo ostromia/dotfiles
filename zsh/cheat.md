@@ -17,3 +17,11 @@ list outdated casks:
 upgrade outdated casks:
 `brew upgrade --cask [<name>]`
 
+## 7zz
+
+encrypt:
+`7zz a -p -mhe=on <destination> <target>`
+
+decrypt:
+`7zz x <target>`
+
