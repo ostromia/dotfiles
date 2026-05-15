@@ -152,6 +152,10 @@ keybindings:
   - commands: ['toggle-fullscreen']
     bindings: ['win+alt+f']
 
+  # Close focused window.
+  - commands: ['close']
+    bindings: ['win+alt+shift+q']
+
   # # Shift focus in a given direction.
   # - commands: ['focus --direction left']
   #   bindings: ['alt+h', 'alt+left']
@@ -211,9 +215,6 @@ keybindings:
   # - commands: ['toggle-minimized']
   #   bindings: ['alt+m']
   #
-  # # Close focused window.
-  # - commands: ['close']
-  #   bindings: ['alt+shift+q']
   #
   # # Kill GlazeWM process safely.
   # - commands: ['wm-exit']
