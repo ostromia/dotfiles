@@ -62,6 +62,11 @@
         },
 
         {
+            "source": "~/GitHub/dotfiles/glazewm/config.yaml",
+            "target": "~/.glzr/glazewm/config.yaml"
+        },
+
+        {
             "source": "~/GitHub/dotfiles/jpegview/JPEGView.ini",
             "target": "~/AppData/Roaming/JPEGView/JPEGView.ini"
         },
