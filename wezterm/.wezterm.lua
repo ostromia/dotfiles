@@ -13,8 +13,8 @@ config.keys = {
 
     { key = "p", mods = "ALT", action = wezterm.action.ActivateCommandPalette },
 
-    { key = "h", mods = "ALT|SHIFT", action = wezterm.action{ActivateTabRelative = -1} },
-    { key = "l", mods = "ALT|SHIFT", action = wezterm.action{ActivateTabRelative =  1} },
+    { key = "h", mods = "ALT", action = wezterm.action{ActivateTabRelative = -1} },
+    { key = "l", mods = "ALT", action = wezterm.action{ActivateTabRelative =  1} },
 
     { key = "1", mods = "ALT", action = wezterm.action.ActivateTab(0) },
     { key = "2", mods = "ALT", action = wezterm.action.ActivateTab(1) },
