@@ -5,6 +5,13 @@
 *RAlt::Send "{Blind}{LCtrl up}{LWin down}{LAlt down}"
 *RAlt up::Send "{Blind}{LWin up}{LAlt up}"
 
+GlazeWM(args) {
+    Run('"C:\Program Files\glzr.io\GlazeWM\cli\glazewm.exe" ' args,,'Hide')
+}
+
+#!h::GlazeWM("command focus --prev-workspace")
+#!l::GlazeWM("command focus --next-workspace")
+
 #HotIf WinActive("ahk_exe chrome.exe")
     !h::^+Tab
     !j::Down
