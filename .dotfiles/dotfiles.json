@@ -41,7 +41,7 @@
         {
             "source": "~/GitHub/dotfiles/zsh/",
             "target": "~/.config/zsh/",
-            "include": ["lss.py", "gitdirty.py"]
+            "include": ["lss.py", "gitdirty.py", "cheat.py", "cheat.md"]
         }
     ],
 

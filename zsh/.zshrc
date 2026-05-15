@@ -7,6 +7,7 @@ alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 alias lss="python3 $XDG_CONFIG_HOME/zsh/lss.py \$PWD"
 alias gitdirty="python3 $XDG_CONFIG_HOME/zsh/gitdirty.py \$PWD"
+alias cheat="python3 $XDG_CONFIG_HOME/zsh/cheat.py \$PWD"
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
