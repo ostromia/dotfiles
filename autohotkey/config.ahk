@@ -1,8 +1,9 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-; #Include commandpalette.ahk
-; #Include ucker.ahk
+; Set Alt Gr to Alt + Win
+*RAlt::Send "{Blind}{LCtrl up}{LWin down}{LAlt down}"
+*RAlt up::Send "{Blind}{LWin up}{LAlt up}"
 
 <^>!u::{
     Send "{Shift down}{left 4}{Shift up}^c{Del 4}"
