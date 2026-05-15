@@ -5,6 +5,14 @@
 *RAlt::Send "{Blind}{LCtrl up}{LWin down}{LAlt down}"
 *RAlt up::Send "{Blind}{LWin up}{LAlt up}"
 
+^!t:: {
+    hwnd := WinExist("ahk_class Shell_TrayWnd")
+    if DllCall("IsWindowVisible", "Ptr", hwnd)
+        WinHide("ahk_class Shell_TrayWnd")
+    else
+        WinShow("ahk_class Shell_TrayWnd")
+}
+
 GlazeWM(args) {
     Run('"C:\Program Files\glzr.io\GlazeWM\cli\glazewm.exe" ' args,,'Hide')
 }
