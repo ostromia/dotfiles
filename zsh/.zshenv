@@ -11,4 +11,5 @@ export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 export PATH="$HOME/.local/bin:$PATH"
 
 export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
 
