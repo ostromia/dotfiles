@@ -1,8 +1,11 @@
 [
     { "key": "cmd+p", "command": "workbench.action.showCommands" },
+    { "key": "cmd+j", "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
+    { "key": "cmd+k", "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
+
     { "key": "cmd+o", "command": "workbench.action.quickOpen"    },
 
-    { "key": "cmd+j", "command": "workbench.action.togglePanel"  },
+    // { "key": "cmd+j", "command": "workbench.action.togglePanel"  },
 
     { "key": "cmd+s", "command": "editor.action.triggerSuggest"  },
     { "key": "k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible" },
