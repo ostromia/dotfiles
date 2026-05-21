@@ -29,8 +29,8 @@
     { "key": "cmd+shift+5", "command": "workbench.view.extensions" },
     { "key": "cmd+shift+6", "command": "workbench.view.remote"     },
 
-    { "key": "cmd+n", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
-    { "key": "cmd+q", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+    { "key": "cmd+t", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
+    { "key": "cmd+w", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
     { "key": "cmd+h", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
     { "key": "cmd+l", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" }
 ]
