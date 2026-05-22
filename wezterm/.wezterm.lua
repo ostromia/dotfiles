@@ -80,7 +80,7 @@ wezterm.on("augment-command-palette", function(window, pane)
 end)
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-    return { { Text " " .. tab.tab_index + 1 .. " " .. tab.active_pane.title .. " " } }
+    return { { Text = " " .. tab.tab_index + 1 .. " " .. tab.active_pane.title .. " " } }
 end)
 
 return config
