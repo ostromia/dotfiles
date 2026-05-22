@@ -1,4 +1,5 @@
 from pathlib import Path
+import subprocess
 import sys
 
 folders = []
@@ -14,6 +15,17 @@ if __name__ == "__main__":
     path = Path(sys.argv[1])
     folders = []
     files = []
+
+    if len(sys.argv) != 2:
+        result = subprocess.run(
+            ["ls", *sys.argv[2:]],
+            capture_output=True,
+            text=True
+        )
+
+        print(result.stdout)
+
+        sys.exit()
 
     for i in path.iterdir():
         if i.is_dir():
