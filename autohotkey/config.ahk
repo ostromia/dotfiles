@@ -11,6 +11,8 @@ F1::{
 }
 
 <!a::Send "{LCtrl down}a{LCtrl up}"
+<!c::Send "{LCtrl down}c{LCtrl up}"
+<!v::Send "{LCtrl down}v{LCtrl up}"
 
 ; Set Alt Gr to Alt + Win
 *RAlt::Send "{Blind}{LCtrl up}{LWin down}{LAlt down}"
