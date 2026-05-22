@@ -1,6 +1,17 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
+; # Win
+; ! Alt
+; ^ Ctrl
+; + Shift
+
+F1::{
+    KeyHistory
+}
+
+<!a::Send "{LCtrl down}a{LCtrl up}"
+
 ; Set Alt Gr to Alt + Win
 *RAlt::Send "{Blind}{LCtrl up}{LWin down}{LAlt down}"
 *RAlt up::Send "{Blind}{LWin up}{LAlt up}"
