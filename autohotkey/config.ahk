@@ -6,6 +6,8 @@
 ; ^ Ctrl
 ; + Shift
 
+CapsLock::Esc
+
 F1::{
     KeyHistory
 }
