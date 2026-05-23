@@ -66,6 +66,9 @@
     "workbench.editor.useModal": "off",
     "workbench.editor.wrapTabs": true,
 
+    // Chat
+    "chat.disableAIFeatures": true,
+
     // OTHER
 
     // title bar
@@ -206,10 +209,6 @@
             "indent": 4
         }
     },
-
-    // Features > Chat
-    "chat.agent.enabled": false,
-    "chat.disableAIFeatures": true,
 
     // other
     "workbench.localHistory.enabled": false,
