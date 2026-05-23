@@ -215,23 +215,7 @@
 
     "typescript.tsdk": "./node_modules/typescript/lib",
 
-    "html.autoClosingTags": false,
+    "html.autoClosingTags": false
 
     // end
-
-    // title bar
-    "window.menuBarVisibility": "visible",
-    "window.enableMenuBarMnemonics": false,
-    "window.customMenuBarAltFocus": false,
-
-    // updates
-    "update.enableWindowsBackgroundUpdates": false,
-    "remote.WSL.downloadInBackground": false
-
-    // extensions -> Vim
-
-    // extensions -> Code Spell Checker
-
-    // "ty.inlayHints.callArgumentNames": false,
-    // "ty.inlayHints.variableTypes": false,
 }
