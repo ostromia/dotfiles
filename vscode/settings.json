@@ -1,9 +1,46 @@
 {
+    // Text Editor > Cursor
+    "editor.cursorBlinking": "solid",
+
+    // Text Editor > Font
+    "editor.fontFamily": "Menlo",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 12,
+    "editor.fontVariations": false,
+    "editor.fontWeight": "normal",
+
+    // Text Editor > Formatting
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+
+    // Text Editor > Diff Editor
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    // Text Editor > Minimap
+    "editor.minimap.enabled": false,
+
+    // Text Editor > Suggestions
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
+    "editor.suggestOnTriggerCharacters": false,
+
+    // Text Editor > Files
+    "files.autoSave": "off",
+    "files.enableTrash": true,
+    "files.insertFinalNewline": true,
+    "files.refactoring.autoSave": false,
+    "files.restoreUndoStack": true,
+    "files.trimFinalNewlines": false,
+    "files.trimTrailingWhitespace": true,
+
+    // OTHER
+
     // theme
     "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vs-seti",
-    "editor.fontFamily": "'Consolas NF'",
-    "window.zoomLevel": -0.5,
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#0000",
         "focusBorder": "#0000"
@@ -50,14 +87,10 @@
     "editor.folding": true,
     "editor.glyphMargin": false,
     "scm.diffDecorations": "all",
-
-    // editor
-    "editor.fontSize": 15,
     "editor.rulers": [79, 100],
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,
-    "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
     "editor.guides.indentation": false,
     "editor.scrollBeyondLastLine": false,
@@ -75,29 +108,11 @@
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
 
-    "editor.parameterHints.enabled": false,
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.quickSuggestions": {
-        "other": "off",
-        "comments": "off",
-        "strings": "off"
-    },
-
     // prettier formatting
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
     "prettier.printWidth": 200,
     "prettier.tabWidth": 4,
     "prettier.useTabs": false,
-
-    "files.restoreUndoStack": true,
-    "files.eol": "auto",
-    "files.insertFinalNewline": false,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": false,
-    "files.refactoring.autoSave": false,
-    "files.enableTrash": true,
 
     // new window start page
     "workbench.startupEditor": "none",
@@ -115,7 +130,6 @@
     "debug.internalConsoleOptions": "neverOpen",
 
     // source control
-    "diffEditor.ignoreTrimWhitespace": false,
     "git.confirmSync": false,
     "git.ignoreMissingGitWarning": true,
     "git.terminalAuthentication": false,
@@ -132,7 +146,6 @@
     "workbench.enableExperiments": false,
 
     // extensions -> Vim
-    "editor.cursorBlinking": "solid",
     "vim.useSystemClipboard": true,
     "vim.autoindent": false,
     "vim.enableNeovim": false,
@@ -208,6 +221,9 @@
     "typescript.tsdk": "./node_modules/typescript/lib",
     "html.autoClosingTags": false,
 
-    "ty.inlayHints.callArgumentNames": false,
-    "ty.inlayHints.variableTypes": false
+    // "ty.inlayHints.callArgumentNames": false,
+    // "ty.inlayHints.variableTypes": false,
+    "terminal.integrated.initialHint": false,
+    "workbench.settings.showAISearchToggle": false,
+    "workbench.editor.useModal": "off"
 }
