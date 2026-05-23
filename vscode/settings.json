@@ -126,6 +126,13 @@
     "terminal.integrated.persistentSessionScrollback": 0,
     "terminal.integrated.shellIntegration.decorationsEnabled": "never",
 
+    // Application > Update
+    "update.mode": "none",
+
+    // Application > Telemetry
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+
     // title bar
     "window.menuBarVisibility": "visible",
     "window.enableMenuBarMnemonics": false,
@@ -157,10 +164,7 @@
     "git.terminalAuthentication": false,
 
     // updates
-    "update.mode": "manual",
-    "update.showReleaseNotes": true,
     "update.enableWindowsBackgroundUpdates": false,
-    "telemetry.telemetryLevel": "off",
     "remote.WSL.downloadInBackground": false,
 
     // extensions -> Vim
