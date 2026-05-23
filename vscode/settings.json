@@ -1,4 +1,15 @@
 {
+    // Text Editor
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.codeLens": false,
+    "editor.colorDecorators": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.folding": true,
+    "editor.guides.indentation": false,
+
     // Text Editor > Cursor
     "editor.cursorBlinking": "solid",
 
@@ -36,6 +47,13 @@
     "files.trimFinalNewlines": false,
     "files.trimTrailingWhitespace": true,
 
+    // Workbench
+    "workbench.enableExperiments": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.localHistory.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+
     // Workbench > Appearance
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
@@ -66,17 +84,17 @@
     "workbench.editor.useModal": "off",
     "workbench.editor.wrapTabs": true,
 
+    // Window
+    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "windowed",
+    "window.restoreWindows": "none",
+    "window.title": "${activeEditorMedium}",
+
     // Chat
     "chat.disableAIFeatures": true,
 
-    // OTHER
-
     // title bar
-    "window.title": "${activeEditorMedium}",
-    "window.titleBarStyle": "custom",
     "window.menuBarVisibility": "visible",
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "window.customMenuBarAltFocus": false,
 
@@ -91,38 +109,24 @@
 
     // gutter
     "editor.lineNumbers": "relative",
-    "editor.folding": true,
-    "editor.glyphMargin": false,
     "scm.diffDecorations": "all",
     "editor.rulers": [79, 100],
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
-    "editor.detectIndentation": false,
     "editor.stickyScroll.enabled": false,
-    "editor.guides.indentation": false,
     "editor.scrollBeyondLastLine": false,
-    "editor.colorDecorators": false,
 
     "editor.renderWhitespace": "none",
     "editor.occurrencesHighlight": "off",
-    "editor.autoClosingQuotes": "never",
-    "editor.autoClosingBrackets": "never",
-    "editor.autoSurround": "never",
-    "editor.bracketPairColorization.enabled": false,
-    "editor.codeLens": false,
 
     "editor.lightbulb.enabled": "off",
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
 
     // prettier formatting
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.printWidth": 200,
     "prettier.tabWidth": 4,
     "prettier.useTabs": false,
-
-    // new window start page
-    "workbench.startupEditor": "none",
 
     // terminal
     "terminal.integrated.enableVisualBell": false,
@@ -147,8 +151,6 @@
     "extensions.autoCheckUpdates": false,
     "telemetry.telemetryLevel": "off",
     "remote.WSL.downloadInBackground": false,
-    "workbench.welcomePage.walkthroughs.openOnInstall": false,
-    "workbench.enableExperiments": false,
 
     // extensions -> Vim
     "vim.useSystemClipboard": true,
@@ -209,13 +211,7 @@
             "indent": 4
         }
     },
-
-    // other
-    "workbench.localHistory.enabled": false,
-    "window.autoDetectHighContrast": false,
-    "editor.accessibilitySupport": "off",
     "extensions.ignoreRecommendations": true,
-    "window.restoreWindows": "none",
     "typescript.tsdk": "./node_modules/typescript/lib",
     "html.autoClosingTags": false,
 
