@@ -133,6 +133,9 @@
     "telemetry.feedback.enabled": false,
     "telemetry.telemetryLevel": "off",
 
+    // Security > Workspace
+    "security.workspace.trust.enabled": false,
+
     // title bar
     "window.menuBarVisibility": "visible",
     "window.enableMenuBarMnemonics": false,
