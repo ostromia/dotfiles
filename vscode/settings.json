@@ -36,36 +36,46 @@
     "files.trimFinalNewlines": false,
     "files.trimTrailingWhitespace": true,
 
-    // OTHER
-
-    // theme
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.iconTheme": "vs-seti",
+    // Workbench > Appearance
+    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "scrollbar.shadow": "#0000",
         "focusBorder": "#0000"
     },
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.editor.decorations.colors": false,
+    "workbench.iconTheme": "vs-seti",
+    "workbench.sideBar.location": "right",
+    "workbench.tips.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "none",
+
+    // Workbench > Breadcrumbs
+    "breadcrumbs.enabled": false,
+
+    // Workbench > Editor Management
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.sharedViewState": false,
+    "workbench.editor.showIcons": false,
+    "workbench.editor.tabActionCloseVisibility": false,
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.useModal": "off",
+    "workbench.editor.wrapTabs": true,
+
+    // OTHER
 
     // title bar
     "window.title": "${activeEditorMedium}",
     "window.titleBarStyle": "custom",
     "window.menuBarVisibility": "visible",
-    "window.customTitleBarVisibility": "never",
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "window.customMenuBarAltFocus": false,
-
-    // tab bar
-    "breadcrumbs.enabled": false,
-    "workbench.editor.enablePreview": true,
-    "workbench.editor.wrapTabs": true,
-    "workbench.editor.tabSizing": "fit",
-    "workbench.editor.labelFormat": "default",
-    "workbench.editor.tabActionCloseVisibility": false,
-    "workbench.editor.showIcons": false,
-    "workbench.editor.decorations.colors": false,
-    "workbench.editor.decorations.badges": false,
 
     // explorer
     "explorer.sortOrder": "type",
@@ -73,12 +83,6 @@
     "explorer.excludeGitIgnore": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-
-    "workbench.editor.editorActionsLocation": "default",
-    "workbench.activityBar.location": "hidden",
-    "workbench.tree.enableStickyScroll": false,
-    "workbench.tree.indent": 16,
-    "workbench.tree.renderIndentGuides": "none",
     "explorer.decorations.colors": true,
     "explorer.decorations.badges": false,
 
@@ -116,8 +120,6 @@
 
     // new window start page
     "workbench.startupEditor": "none",
-    "workbench.editor.empty.hint": "hidden",
-    "workbench.tips.enabled": false,
 
     // terminal
     "terminal.integrated.enableVisualBell": false,
@@ -211,19 +213,14 @@
 
     // other
     "workbench.localHistory.enabled": false,
-    "workbench.editor.sharedViewState": false,
-    "workbench.editor.restoreViewState": false,
     "window.autoDetectHighContrast": false,
     "editor.accessibilitySupport": "off",
     "extensions.ignoreRecommendations": true,
-    "workbench.settings.enableNaturalLanguageSearch": false,
     "window.restoreWindows": "none",
     "typescript.tsdk": "./node_modules/typescript/lib",
     "html.autoClosingTags": false,
 
     // "ty.inlayHints.callArgumentNames": false,
     // "ty.inlayHints.variableTypes": false,
-    "terminal.integrated.initialHint": false,
-    "workbench.settings.showAISearchToggle": false,
-    "workbench.editor.useModal": "off"
+    "terminal.integrated.initialHint": false
 }
