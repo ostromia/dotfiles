@@ -5,7 +5,7 @@
 
     { "key": "cmd+o", "command": "workbench.action.quickOpen"    },
 
-    { "key": "cmd+q", "command": "workbench.action.togglePanel"  },
+    { "key": "cmd+r", "command": "workbench.action.togglePanel"  },
 
     { "key": "cmd+s", "command": "editor.action.triggerSuggest"  },
     { "key": "k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible" },
