@@ -122,7 +122,7 @@
         {
             "source": "~/GitHub/dotfiles/zsh/",
             "target": "~/OneDrive/Documents/PowerShell/",
-            "include": ["lss.py", "gitdirty.py"]
+            "include": ["ls.py", "gitdirty.py"]
         }
     ]
 }
