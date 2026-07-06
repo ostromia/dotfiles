@@ -1,3 +1,8 @@
+.external-link {
+    background-image: none;
+    padding-right: 0px;
+}
+
 /* nonsense */
 /* .workspace-leaf-content[data-type="file-explorer"] .nav-header, */
 /* .sidebar-toggle-button.mod-right,
