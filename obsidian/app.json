@@ -1,1 +1,13 @@
-{}
+{
+  "livePreview": false,
+  "readableLineLength": false,
+  "showIndentGuide": false,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./@images",
+  "showUnsupportedFiles": true,
+  "promptDelete": false,
+  "trashOption": "local",
+  "showInlineTitle": false
+}
