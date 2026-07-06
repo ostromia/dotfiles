@@ -1,0 +1,56 @@
+/* nonsense */
+/* .workspace-leaf-content[data-type="file-explorer"] .nav-header, */
+/* .sidebar-toggle-button.mod-right,
+.workspace-tab-header-tab-list,
+.workspace-tab-header-spacer,
+.workspace-tab-header-new-tab {
+    display: none !important;
+} */
+
+/* .external-link {
+    text-decoration: none !important;
+    background-image: none;
+    padding-right: 0px;
+} */
+
+/* .cm-formatting-list.cm-formatting-list-ul, .markdown-rendered .list-bullet {
+    margin-right: 8px;
+} */
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+/* mjx-math {
+  font-size: 125% !important;
+} */
+
+
+/* .cm-formatting-list.cm-formatting-list-ul {
+	margin-right: 8px;
+}
+.markdown-rendered .list-bullet {
+	margin-right: 8px;
+}
+
+.workspace-ribbon {
+    display: none;
+} */
+
+/* .side-dock-actions, .side-dock-settings { */
+    /* display: none; */
+/* } */
+
+
+
+/* .markdown-rendered button.copy-code-button { */
+    /* display: none; */
+/* } */
+
+/* .markdown-preview-view code { */
+	/* white-space: pre; */
+/* } *
