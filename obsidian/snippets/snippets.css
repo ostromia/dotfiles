@@ -1,4 +1,6 @@
-.external-link {
+.external-link,
+.cm-formatting.cm-formatting-link.cm-link.cm-url {
+    text-decoration: none;
     background-image: none;
     padding-right: 0px;
 }
@@ -10,12 +12,6 @@
 .workspace-tab-header-spacer,
 .workspace-tab-header-new-tab {
     display: none !important;
-} */
-
-/* .external-link {
-    text-decoration: none !important;
-    background-image: none;
-    padding-right: 0px;
 } */
 
 /* .cm-formatting-list.cm-formatting-list-ul, .markdown-rendered .list-bullet {
