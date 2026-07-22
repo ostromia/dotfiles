@@ -8,6 +8,58 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Open Claude by right command + c",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Claude.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Open Ghostty by right command + g",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Ghostty.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Open Visual Studio Code by right command + v",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Visual Studio Code.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Open Safari by right command + s",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Safari.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "mission control movement",
                         "manipulators": [
                             {
