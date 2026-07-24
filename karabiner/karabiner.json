@@ -8,6 +8,19 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Open Finder by right command + f",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/System/Library/CoreServices/Finder.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Open Claude by right command + c",
                         "manipulators": [
                             {
