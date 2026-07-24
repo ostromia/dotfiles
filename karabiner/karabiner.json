@@ -8,6 +8,24 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Show Desktop by right command + d",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Open Finder by right command + f",
                         "manipulators": [
                             {
