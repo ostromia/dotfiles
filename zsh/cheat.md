@@ -25,3 +25,7 @@ encrypt:
 decrypt:
 `7zz x <target>`
 
+## qpdf
+
+split the first and last page:
+`qpdf input.pdf --pages . 2-r2 -- output.pdf`
