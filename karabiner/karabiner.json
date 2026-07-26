@@ -125,6 +125,15 @@
                         "description": "left_command + h @ command + shift + [",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.apple.Safari",
+                                            "org.chromium.Chromium"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": { "mandatory": ["left_command"] }
@@ -143,6 +152,15 @@
                         "description": "left_command + l @ command + shift + ]",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.apple.Safari",
+                                            "org.chromium.Chromium"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": { "mandatory": ["left_command"] }
