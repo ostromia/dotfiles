@@ -129,7 +129,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "com.apple.Safari",
-                                            "org.chromium.Chromium"
+                                            "org.chromium.Chromium",
+                                            "com.apple.Preview"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -156,7 +157,8 @@
                                     {
                                         "bundle_identifiers": [
                                             "com.apple.Safari",
-                                            "org.chromium.Chromium"
+                                            "org.chromium.Chromium",
+                                            "com.apple.Preview"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
