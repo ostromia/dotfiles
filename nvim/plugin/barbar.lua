@@ -1,4 +1,6 @@
-require('bufferline').setup {
+local mod = require("keybindings").mod
+
+require('barbar').setup {
     animation = false,
     maximum_padding = 0,
 
@@ -27,26 +29,6 @@ require('bufferline').setup {
     }
 }
 
--- ensure tabs begin with the shown buffer
-local nvim_tree_events = require('nvim-tree.events')
-local bufferline_api = require('bufferline.api')
-
-local function get_tree_size()
-    return require'nvim-tree.view'.View.width
-end
-
-nvim_tree_events.subscribe('TreeOpen', function()
-    bufferline_api.set_offset(get_tree_size())
-end)
-
-nvim_tree_events.subscribe('Resize', function()
-    bufferline_api.set_offset(get_tree_size())
-end)
-
-nvim_tree_events.subscribe('TreeClose', function()
-    bufferline_api.set_offset(0)
-end)
-
 -- keybindings
-vim.keymap.set({'n', 'v', 'i'}, '<D-l>', ':BufferNext<CR>')
-vim.keymap.set({'n', 'v', 'i'}, '<D-h>', ':BufferPrevious<CR>')
+vim.keymap.set({"n", "v", "i"}, "<" .. mod .. "-h>", ":BufferPrevious<CR>", { noremap = true, silent = true })
+vim.keymap.set({"n", "v", "i"}, "<" .. mod .. "-l>", ":BufferNext<CR>", { noremap = true, silent = true })
