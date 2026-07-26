@@ -3,6 +3,7 @@ vim.pack.add({
     "https://github.com/nvim-telescope/telescope.nvim",
     "https://github.com/nvim-telescope/telescope-file-browser.nvim",
 
+    "https://github.com/romgrk/barbar.nvim",
     "https://github.com/nvim-lualine/lualine.nvim",
 
     "https://github.com/norcalli/nvim-colorizer.lua",
