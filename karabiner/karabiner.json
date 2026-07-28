@@ -8,6 +8,19 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Open Spotify by right command + z",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Spotify.app" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Open Google Chrome by right command + a",
                         "manipulators": [
                             {
