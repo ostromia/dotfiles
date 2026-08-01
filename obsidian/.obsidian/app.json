@@ -1,0 +1,11 @@
+{
+  "livePreview": false,
+  "showIndentGuide": false,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./@assets",
+  "showUnsupportedFiles": true,
+  "promptDelete": false,
+  "showInlineTitle": false
+}
