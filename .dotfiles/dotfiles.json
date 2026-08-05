@@ -39,6 +39,12 @@
         },
 
         {
+            "source": "~/GitHub/dotfiles/zed/",
+            "target": "~/.config/zed/",
+            "include": ["keymap.json", "settings.json"]
+        },
+
+        {
             "source": "~/GitHub/dotfiles/zsh/",
             "target": "~/.config/zsh/",
             "include": ["ls.py", "gitdirty.py", "cheat.py", "cheat.md"]
