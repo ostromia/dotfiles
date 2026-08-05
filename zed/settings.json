@@ -1,6 +1,7 @@
 // https://zed.dev/docs/configuring-zed
 
 {
+  "scroll_beyond_last_line": "off",
   "diff_view_style": "split",
   "tab_bar": {
     "show_tab_bar_buttons": false,
