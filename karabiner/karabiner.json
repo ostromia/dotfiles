@@ -91,14 +91,14 @@
                         ]
                     },
                     {
-                        "description": "Open Visual Studio Code by right command + v",
+                        "description": "Open Zed by right command + v",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": { "mandatory": ["right_command"] }
                                 },
-                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Visual Studio Code.app" } } }],
+                                "to": [{ "software_function": { "open_application": { "file_path": "/Applications/Zed.app" } } }],
                                 "type": "basic"
                             }
                         ]
