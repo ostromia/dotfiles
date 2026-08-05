@@ -1,21 +1,30 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
+// https://zed.dev/docs/key-bindings
+
 [
-  {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
+	// navigating buffers
+	{
+		"context": "Editor",
+			"bindings": {
+			    "cmd-l": "pane::ActivateNextItem",
+			    "cmd-h": "pane::ActivatePreviousItem"
+			}
+	},
+
+	// vim forwards and backwards
+	{
+		"context": "VimControl && !menu",
+		"bindings": {
+			"w": "vim::PreviousWordStart",
+			"e": "vim::NextWordStart"
+		}
     },
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    },
-  },
+
+    // tab and shift-tab to control indentation
+	{
+	   	"context": "vim_mode == visual && !menu",
+	   	"bindings": {
+	  		"tab": ["workspace::SendKeystrokes", "> g v"],
+	       	"shift-tab": ["workspace::SendKeystrokes", "< g v"]
+	   	}
+	}
 ]
