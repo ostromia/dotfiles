@@ -1,6 +1,10 @@
 // https://zed.dev/docs/configuring-zed
 
 {
+  "git_panel": {
+    "group_by": "status",
+    "tree_view": false
+  },
   "scroll_beyond_last_line": "off",
   "diff_view_style": "split",
   "tab_bar": {
@@ -63,7 +67,7 @@
   "show_completions_on_input": false,
   "auto_indent_on_paste": false,
   "use_auto_surround": false,
-  "show_whitespaces": "none",
+  "show_whitespaces": "all",
   "ensure_final_newline_on_save": true,
   "indent_guides": {
     "enabled": false

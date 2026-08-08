@@ -15,7 +15,7 @@
 		"context": "VimControl && !menu",
 		"bindings": {
 			"w": "vim::PreviousWordStart",
-			"e": "vim::NextWordStart"
+			"e": "vim::NextWordEnd"
 		}
     },
 
