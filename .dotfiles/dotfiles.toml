@@ -1,0 +1,78 @@
+[autohotkey]
+source = "~/GitHub/dotfiles/autohotkey/"
+target.windows = "~/.config/autohotkey/"
+
+[csgo]
+source = "~/GitHub/dotfiles/csgo/autoexec.cfg"
+target.windows = "C:/Program Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg"
+
+[filepilot]
+source = "~/GitHub/dotfiles/filepilot/FPilot-Config.json"
+target.windows = "~/AppData/Roaming/Voidstar/FilePilot/FPilot-Config.json"
+
+[ghostty]
+source = "~/GitHub/dotfiles/ghostty/config"
+target.macos = "~/.config/ghostty/config"
+
+[git]
+source = "~/GitHub/dotfiles/git/"
+target = "~/.config/git/"
+
+[glazewm]
+source = "~/GitHub/dotfiles/glazewm/config.yaml"
+target.windows = "~/.glzr/glazewm/config.yaml"
+
+[jpegview]
+source = "~/GitHub/dotfiles/jpegview/JPEGView.ini"
+target.windows = "~/AppData/Roaming/JPEGView/JPEGView.ini"
+
+[karabiner]
+source = "~/GitHub/dotfiles/karabiner/karabiner.json"
+target.macos = "~/.config/karabiner/karabiner.json"
+
+[npm]
+source = "~/GitHub/dotfiles/npm/"
+target = "~/.config/npm/"
+
+[nvim]
+source = "~/GitHub/dotfiles/nvim/"
+target = "~/.config/nvim/"
+
+[powershell]
+source = "~/GitHub/dotfiles/powershell/profile.ps1"
+target.windows = "~/Documents/PowerShell/profile.ps1"
+
+[scripts]
+source = "~/GitHub/dotfiles/zsh/"
+target.macos = "~/.config/zsh/"
+target.windows = "~/Documents/PowerShell/"
+include = ["ls.py", "gitdirty.py", "cheat.py", "cheat.md"]
+
+[tf2]
+source = "~/GitHub/dotfiles/tf2/autoexec.cfg"
+target.windows = "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
+
+[vlc]
+source = "~/GitHub/dotfiles/vlc/vlcrc"
+target.windows = "~/AppData/Roaming/vlc/vlcrc"
+
+[vscode]
+source = "~/GitHub/dotfiles/vscode/"
+target.macos = "~/Library/Application Support/Code/User/"
+target.windows = "~/AppData/Roaming/Code/User/"
+include = ["keybindings.json", "settings.json"]
+
+[wezterm]
+source = "~/GitHub/dotfiles/wezterm/.wezterm.lua"
+target.windows = "~/.wezterm.lua"
+
+[zed]
+source = "~/GitHub/dotfiles/zed/"
+target.macos = "~/.config/zed/"
+target.windows = "~/AppData/Roaming/Zed/"
+include = ["keymap.json", "settings.json"]
+
+[zsh]
+source = "~/GitHub/dotfiles/zsh/"
+target.macos = "~"
+include = [".zprofile", ".zshenv", ".zshrc"]
