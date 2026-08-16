@@ -1,4 +1,4 @@
-import json
+import tomllib
 import sys
 import platform
 from pathlib import Path
@@ -80,37 +80,49 @@ def tweaks(software: list[dict[str, Path | list[str]]]):
     keybindings.write_text(content, encoding="utf-8")
 
 def get_dotfile_paths():
+    # TODO rewrite
+
     CWD = Path(__file__).resolve().parent
 
-    with open(CWD / ".dotfiles" / "dotfiles.json") as f:
-        dotfiles = json.load(f)
+    with open(CWD / ".dotfiles" / "dotfiles.toml", "rb") as f:
+        dotfiles = tomllib.load(f)
 
-    dotfiles = dotfiles["windows" if platform.system() == "Windows" else "macos"]
+    # OS =
+    system = "windows" if platform.system() == "Windows" else "macos"
 
-    return [
-        {
-            **i,
+    result = []
+
+    for i in dotfiles.values():
+        target = i["target"]
+
+        if isinstance(target, dict):
+            if system not in target:
+                continue
+            target = target[system]
+
+        # :(
+        result.append({
+            **{k: v for k, v in i.items() if k not in ("source", "target")},
             "source": Path(i["source"]).expanduser(),
-            "target": Path(i["target"]).expanduser(),
-        }
+            "target": Path(target).expanduser(),
+        })
 
-        for i in dotfiles
-    ]
+    return result
+
+def check_command_usage_and_return_argv_1():
+    match sys.argv[1:]:
+        case []:
+            return "install"
+        case [i] if i.lower() in ("install", "backup"):
+            return i.lower()
+    sys.exit(f"Usage: {sys.argv[0]} <install|backup>")
 
 if __name__ == "__main__":
+    argument = check_command_usage_and_return_argv_1()
     dotfiles = get_dotfile_paths()
-
-    if len(sys.argv) > 2:
-        sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
-
-    argument = sys.argv[1].lower() if len(sys.argv) == 2 else "install"
 
     if argument == "install":
         install(dotfiles)
-
-    elif argument == "backup":
-        backup(dotfiles)
-
     else:
-        sys.exit(f"Usage: {sys.argv[0]} [install|backup]")
+        backup(dotfiles)
 
