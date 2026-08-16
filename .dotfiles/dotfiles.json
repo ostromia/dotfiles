@@ -122,7 +122,13 @@
         {
             "source": "~/GitHub/dotfiles/zsh/",
             "target": "~/OneDrive/Documents/PowerShell/",
-            "include": ["ls.py", "gitdirty.py"]
+            "include": ["ls.py", "gitdirty.py", "cheat.py", "cheat.md"]
+        },
+
+        {
+            "source": "~/GitHub/dotfiles/zed/",
+            "target": "~/AppData/Roaming/Zed/",
+            "include": ["keymap.json", "settings.json"]
         }
     ]
 }
