@@ -6,14 +6,14 @@
     "editor.bracketPairColorization.enabled": false,
     "editor.codeLens": false,
     "editor.colorDecorators": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.folding": true,
     "editor.guides.indentation": false,
     "editor.insertSpaces": true,
     "editor.lightbulb.enabled": "off",
     "editor.lineNumbers": "relative",
     "editor.occurrencesHighlight": "off",
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "editor.rulers": [80, 100],
     "editor.scrollBeyondLastLine": false,
     "editor.stickyScroll.enabled": false,
@@ -33,7 +33,7 @@
 
     // Text Editor > Formatting
     "editor.formatOnPaste": false,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
 
     // Text Editor > Diff Editor
     "diffEditor.ignoreTrimWhitespace": false,
@@ -245,4 +245,48 @@
     "editor.linkedEditing": false,
 
     // end 2
+
+    // "editor.suggest.showMethods": false,
+    // "editor.suggest.showFunctions": false,
+    // "editor.suggest.showConstructors": false,
+    // "editor.suggest.showDeprecated": false,
+    // "editor.suggest.showFields": false,
+    // "editor.suggest.showVariables": false,
+    // "editor.suggest.showClasses": false,
+    // "editor.suggest.showStructs": false,
+    // "editor.suggest.showInterfaces": false,
+    // "editor.suggest.showModules": false,
+    // "editor.suggest.showProperties": false,
+    // "editor.suggest.showEvents": false,
+    // "editor.suggest.showOperators": false,
+    // "editor.suggest.showUnits": false,
+    // "editor.suggest.showValues": false,
+    // "editor.suggest.showConstants": false,
+    // "editor.suggest.showEnums": false,
+    // "editor.suggest.showEnumMembers": false,
+    // "editor.suggest.showKeywords": false,
+    // "editor.suggest.showWords": false,
+    // "editor.suggest.showColors": false,
+    // "editor.suggest.showFiles": false,
+    // "editor.suggest.showReferences": false,
+    // "editor.suggest.showFolders": false,
+    // "editor.suggest.showTypeParameters": false,
+    // "editor.suggest.showSnippets": false,
+    // "editor.suggest.showIssues": false,
+    // "editor.suggest.showUsers": false,
+    // "editor.parameterHints.enabled": false,
+    // "editor.inlineSuggest.enabled": false,
+
+    "[ahk2]": {
+        // this is ridiculous
+        "editor.formatOnSave": false,
+
+        "editor.quickSuggestions": {
+            "other": "off",
+            "comments": "off",
+            "strings": "off"
+        }
+    },
+
+    // end 3
 }
