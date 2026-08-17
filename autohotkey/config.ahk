@@ -46,3 +46,10 @@ GlazeWM(args) {
     !f::SendInput "^f"       ; Search
     !g::SendInput "^h"       ; History
 
+#HotIf WinActive("ahk_exe FPilot.exe")
+    !h::^+Tab
+    !j::Down
+    !k::Up
+    !l::^Tab
+    !p::^+p
+    !o::^p
