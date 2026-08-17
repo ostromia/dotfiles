@@ -48,8 +48,12 @@ GlazeWM(args) {
 
 #HotIf WinActive("ahk_exe FPilot.exe")
     !h::^+Tab
+    !+h::!Left
     !j::Down
     !k::Up
     !l::^Tab
+    !+l::!Right
     !p::^+p
     !o::^p
+    !w::^w
+    !t::^t
