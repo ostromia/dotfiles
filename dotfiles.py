@@ -3,6 +3,7 @@ import sys
 import platform
 from pathlib import Path
 import shutil
+import subprocess
 
 def copy(
 		src: Path,
@@ -78,6 +79,20 @@ def tweaks(software: list[dict[str, Path | list[str]]]):
     content = keybindings.read_text(encoding="utf-8")
     content = content.replace("cmd+", "alt+")
     keybindings.write_text(content, encoding="utf-8")
+
+    autohotkey = next(
+        d for d in software
+        if d["source"].name == "autohotkey"
+    )
+
+    config_file = autohotkey["target"] / "config.ahk"
+
+    subprocess.Popen(
+        [
+            Path(r"~\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey64.exe").expanduser(),
+            Path(r"~\.config\autohotkey\config.ahk").expanduser()
+        ]
+    )
 
 def get_dotfile_paths():
     # TODO rewrite
