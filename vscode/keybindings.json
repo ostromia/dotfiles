@@ -1,13 +1,11 @@
 [
-    // cmd+w → close tab
+	// cmd + t > open tab
+    { "key": "cmd+t", "command": "workbench.action.files.newUntitledFile" },
+
+    // cmd+w > close tab
     { "key": "cmd+w", "command": "workbench.action.closeActiveEditor" },
 
-    // { "key": "cmd+w", "command": "workbench.action.closeActiveEditor",     "when": "editorTextFocus" },
-
-    // { "key": "cmd+w", "command": "workbench.action.closePanel",        "when": "panelFocus"        },
-    // { "key": "cmd+w", "command": "workbench.action.closeAuxiliaryBar", "when": "auxiliaryBarFocus" },
-    // { "key": "cmd+w", "command": "-workbench.action.closeWindow"                                   },
-
+	// other
     { "key": "cmd+p", "command": "workbench.action.showCommands" },
     { "key": "cmd+j", "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
     { "key": "cmd+k", "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
@@ -22,7 +20,6 @@
 
     { "key": "cmd+a", "command": "extension.vim_ctrl+[" },
 
-    { "key": "cmd+t", "command": "workbench.action.files.newUntitledFile", "when": "editorTextFocus" },
     { "key": "cmd+l", "command": "workbench.action.nextEditor"                                       },
     { "key": "cmd+h", "command": "workbench.action.previousEditor"                                   },
 
@@ -37,7 +34,6 @@
     { "key": "cmd+shift+5", "command": "workbench.view.extensions" },
     { "key": "cmd+shift+6", "command": "workbench.view.remote"     },
 
-    { "key": "cmd+t", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
     { "key": "cmd+h", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
     { "key": "cmd+l", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
 ]
