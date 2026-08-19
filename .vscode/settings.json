@@ -1,16 +1,18 @@
 {
-  "files.associations": {
-    "vscode/keybindings.json": "jsonc",
-    "vscode/settings.json": "jsonc"
-  },
-  "json.schemas": [
-    {
-      "fileMatch": ["/vscode/keybindings.json"],
-      "url": "vscode://schemas/keybindings"
-    },
-    {
-      "fileMatch": ["/vscode/settings.json"],
-      "url": "vscode://schemas/settings/user"
-    }
-  ]
+	"files.associations": {
+		"vscode/keybindings.json": "jsonc",
+		"vscode/settings.json": "jsonc"
+	},
+
+	"json.schemas": [
+		{
+			"fileMatch": [ "/vscode/keybindings.json" ],
+			"url": "vscode://schemas/keybindings"
+		},
+
+		{
+			"fileMatch": [ "/vscode/settings.json" ],
+			"url": "vscode://schemas/settings/user"
+		}
+	]
 }
