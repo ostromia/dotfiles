@@ -87,6 +87,11 @@
     "workbench.editor.decorations.badges": false,
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.labelFormat": "default",
+    "workbench.editor.languageDetection": false,
+	"workbench.editor.languageDetectionHints": {
+		"untitledEditors": false,
+		"notebookEditors": false
+	},
     "workbench.editor.restoreViewState": false,
     "workbench.editor.sharedViewState": false,
     "workbench.editor.showIcons": false,
@@ -238,8 +243,6 @@
     "tinymist.completion.postfix": false,
     "tinymist.inlayHints.packageVersionStatus": false,
     "tinymist.compileStatus": "disable",
-
-    "workbench.editor.languageDetection": false,
 
     // end
 
