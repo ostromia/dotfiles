@@ -6,10 +6,10 @@
     "editor.bracketPairColorization.enabled": false,
     "editor.codeLens": false,
     "editor.colorDecorators": false,
-    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": false,
     "editor.folding": true,
     "editor.guides.indentation": false,
-    "editor.insertSpaces": true,
+    "editor.insertSpaces": false,
     "editor.lightbulb.enabled": "off",
     "editor.lineNumbers": "relative",
     "editor.occurrencesHighlight": "off",
@@ -27,7 +27,7 @@
     // Text Editor > Font
     "editor.fontFamily": "Menlo",
     "editor.fontLigatures": false,
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
     "editor.fontVariations": false,
     "editor.fontWeight": "normal",
 
@@ -147,6 +147,10 @@
     // Security > Workspace
     "security.workspace.trust.enabled": false,
 
+
+
+
+
     // Extensions
     "prettier.printWidth": 200,
     "prettier.tabWidth": 4,
@@ -226,7 +230,7 @@
     "tinymist.inlayHints.packageVersionStatus": false,
     "tinymist.compileStatus": "disable",
 
-    "workbench.editor.languageDetection": false,
+    // "workbench.editor.languageDetection": false,
 
     // end
 
