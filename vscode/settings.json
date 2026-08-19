@@ -147,9 +147,18 @@
     // Security > Workspace
     "security.workspace.trust.enabled": false,
 
+    // !formatting
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
 
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
 
+	"json.format.keepLines": true,
 
+	// END END END
 
     // Extensions
     "prettier.printWidth": 200,
@@ -230,7 +239,7 @@
     "tinymist.inlayHints.packageVersionStatus": false,
     "tinymist.compileStatus": "disable",
 
-    // "workbench.editor.languageDetection": false,
+    "workbench.editor.languageDetection": false,
 
     // end
 
