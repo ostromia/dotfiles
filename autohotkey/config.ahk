@@ -35,6 +35,19 @@ GlazeWM(args) {
 #!h::GlazeWM("command focus --prev-workspace")
 #!l::GlazeWM("command focus --next-workspace")
 
+; temporarily window keybinds
+<!1::Send "{LAlt up}{LWin down}1{LWin up}"
+<!2::Send "{LAlt up}{LWin down}2{LWin up}"
+<!3::Send "{LAlt up}{LWin down}3{LWin up}"
+<!4::Send "{LAlt up}{LWin down}4{LWin up}"
+<!5::Send "{LAlt up}{LWin down}5{LWin up}"
+<!6::Send "{LAlt up}{LWin down}6{LWin up}"
+<!7::Send "{LAlt up}{LWin down}7{LWin up}"
+<!8::Send "{LAlt up}{LWin down}8{LWin up}"
+<!9::Send "{LAlt up}{LWin down}9{LWin up}"
+<!0::Send "{LAlt up}{LWin down}0{LWin up}"
+
+; Helium
 #HotIf WinActive("ahk_exe chrome.exe")
     !h::^+Tab
     !j::Down
@@ -46,6 +59,7 @@ GlazeWM(args) {
     !f::SendInput "^f"       ; Search
     !g::SendInput "^h"       ; History
 
+; File Pilot
 #HotIf WinActive("ahk_exe FPilot.exe")
     !h::^+Tab
     !+h::!Left
@@ -57,3 +71,4 @@ GlazeWM(args) {
     !o::^p
     !w::^w
     !t::^t
+
