@@ -5,6 +5,12 @@
     // cmd+w > close tab
     { "key": "cmd+w", "command": "workbench.action.closeActiveEditor" },
 
+	// suggestions
+    { "key": "cmd+s", "command": "editor.action.triggerSuggest"  },
+    { "key": "k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible" },
+    { "key": "j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible" },
+	{ "key": "enter", "command": "acceptAlternativeSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
+
 	// other
     { "key": "cmd+p", "command": "workbench.action.showCommands" },
     { "key": "cmd+j", "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
@@ -14,9 +20,6 @@
 
     { "key": "cmd+r", "command": "workbench.action.togglePanel"  },
 
-    { "key": "cmd+s", "command": "editor.action.triggerSuggest"  },
-    { "key": "k", "command": "selectPrevSuggestion", "when": "suggestWidgetVisible" },
-    { "key": "j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible" },
 
     { "key": "cmd+a", "command": "extension.vim_ctrl+[" },
 
