@@ -155,10 +155,24 @@
 	// !formatting
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features",
+
+		"editor.quickSuggestions": {
+			"other": "off",
+			"comments": "off",
+			"strings": "off",
+		},
+		"editor.suggestOnTriggerCharacters": false,
 	},
 
 	"[jsonc]": {
 		"editor.defaultFormatter": "vscode.json-language-features",
+
+		"editor.quickSuggestions": {
+			"other": "off",
+			"comments": "off",
+			"strings": "off",
+		},
+		"editor.suggestOnTriggerCharacters": false,
 	},
 
 	"json.format.keepLines": true,
@@ -297,11 +311,5 @@
 		// this is ridiculous
 		"editor.formatOnSave": false,
 
-		"editor.quickSuggestions": {
-			"other": "off",
-			"comments": "off",
-			"strings": "off"
-		}
-	},
-
+	}
 }
