@@ -11,14 +11,21 @@
 	{ "key": "j", "command": "selectNextSuggestion", "when": "suggestWidgetVisible" },
 	{ "key": "enter", "command": "acceptAlternativeSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
 
+	// terminal
+	{ "key": "cmd+i", "command": "workbench.action.togglePanel" },
+	{ "key": "cmd+t", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
+	{ "key": "cmd+w", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+	{ "key": "cmd+j", "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u001b[B" }, "when": "terminalFocus" },
+	{ "key": "cmd+k", "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u001b[A" }, "when": "terminalFocus" },
+	{ "key": "cmd+h", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
+	{ "key": "cmd+l", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+
 	// other
 	{ "key": "cmd+p", "command": "workbench.action.showCommands" },
 	{ "key": "cmd+j", "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
 	{ "key": "cmd+k", "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
 
 	{ "key": "cmd+o", "command": "workbench.action.quickOpen" },
-
-	{ "key": "cmd+r", "command": "workbench.action.togglePanel" },
 
 	{ "key": "cmd+a", "command": "extension.vim_ctrl+[" },
 
@@ -35,7 +42,4 @@
 	{ "key": "cmd+shift+4", "command": "workbench.view.debug" },
 	{ "key": "cmd+shift+5", "command": "workbench.view.extensions" },
 	{ "key": "cmd+shift+6", "command": "workbench.view.remote" },
-
-	{ "key": "cmd+h", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
-	{ "key": "cmd+l", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
 ]
