@@ -11,8 +11,8 @@
 	{ "key": "cmd+w", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
 	{ "key": "cmd+j", "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u001b[B" }, "when": "terminalFocus" },
 	{ "key": "cmd+k", "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u001b[A" }, "when": "terminalFocus" },
-	{ "key": "cmd+h", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
-	{ "key": "cmd+l", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+	{ "key": "cmd+h", "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u001b[D" }, "when": "terminalFocus" },
+	{ "key": "cmd+l", "command": "workbench.action.terminal.sendSequence", "args": { "text": "\u001b[C" }, "when": "terminalFocus" },
 
 	// suggestions
 	{ "key": "cmd+s", "command": "editor.action.triggerSuggest" },
