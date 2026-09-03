@@ -39,8 +39,9 @@ source = "~/GitHub/dotfiles/nvim/"
 target = "~/.config/nvim/"
 
 [powershell]
-source = "~/GitHub/dotfiles/powershell/profile.ps1"
-target.windows = "~/Documents/PowerShell/profile.ps1"
+source = "~/GitHub/dotfiles/powershell/"
+target.windows = "~/Documents/PowerShell/"
+include = ["profile.ps1", "setup.ps1"]
 
 [scripts]
 source = "~/GitHub/dotfiles/zsh/"
