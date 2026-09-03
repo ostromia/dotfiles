@@ -1,5 +1,7 @@
-function lss {
-    python "$env:USERPROFILE/OneDrive/Documents/PowerShell/lss.py" $PWD
+Remove-Item alias:ls -Force -ErrorAction SilentlyContinue
+
+function ls {
+    python "$env:USERPROFILE\\Documents\\PowerShell\\ls.py" $pwd @args
 }
 
 function gitdirty {
