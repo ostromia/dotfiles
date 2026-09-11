@@ -1,0 +1,4 @@
+[
+    { "key": "cmd+p", "command": "workbench.action.showCommands" }
+]
+

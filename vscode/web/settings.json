@@ -1,0 +1,8 @@
+{
+    "window.menuBarVisibility": "visible",
+    "window.commandCenter": false,
+    "window.title": "${activeEditorMedium}",
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.location": "hidden"
+}
+
