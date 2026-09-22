@@ -27,7 +27,7 @@
 	// Text Editor > Font
 	"editor.fontFamily": "Menlo",
 	"editor.fontLigatures": false,
-	"editor.fontSize": 18,
+	"editor.fontSize": 16,
 	"editor.fontVariations": false,
 	"editor.fontWeight": "normal",
 
@@ -311,5 +311,6 @@
 		// this is ridiculous
 		"editor.formatOnSave": false,
 
-	}
+	},
+	"svelte.enable-ts-plugin": true
 }
