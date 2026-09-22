@@ -1,3 +1,7 @@
+[aerospace]
+source = "~/GitHub/dotfiles/aerospace/aerospace.toml"
+target.macos = "~/.config/aerospace/aerospace.toml"
+
 [autohotkey]
 source = "~/GitHub/dotfiles/autohotkey/"
 target.windows = "~/.config/autohotkey/"

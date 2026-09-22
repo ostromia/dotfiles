@@ -1,0 +1,29 @@
+config-version = 2
+key-mapping.preset = 'qwerty'
+
+start-at-login = true
+auto-reload-config = true
+
+# https://nikitabobko.github.io/AeroSpace/commands
+after-startup-command = []
+
+# https://nikitabobko.github.io/AeroSpace/guide#normalization
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'vertical'
+
+persistent-workspaces = [
+	"Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+	"A", "S", "D", "F", "G",
+	"Z", "X", "C", "V", "B", "N", "M"
+]
+
+accordion-padding     = 0
+gaps.inner.horizontal = 0
+gaps.inner.vertical   = 0
+gaps.outer.left       = 0
+gaps.outer.bottom     = 0
+gaps.outer.top        = 0
+gaps.outer.right      = 0
