@@ -11,8 +11,8 @@ after-startup-command = []
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-default-root-container-layout = 'tiles'
-default-root-container-orientation = 'vertical'
+default-root-container-layout = 'accordion'
+default-root-container-orientation = 'horizontal'
 
 persistent-workspaces = [
 	"Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
