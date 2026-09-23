@@ -26,6 +26,10 @@ target = "~/.config/git/"
 source = "~/GitHub/dotfiles/glazewm/config.yaml"
 target.windows = "~/.glzr/glazewm/config.yaml"
 
+[hammerspoon]
+source = "~/GitHub/dotfiles/hammerspoon/"
+target.macos = "~/.config/hammerspoon/"
+
 [jpegview]
 source = "~/GitHub/dotfiles/jpegview/JPEGView.ini"
 target.windows = "~/AppData/Roaming/JPEGView/JPEGView.ini"
