@@ -12,11 +12,12 @@ function AeroSpaceMenuBar()
 
 	hs.task.new(
 		"/usr/bin/osascript",
-		nil,
-		{
-			"-e",
-			'tell application "System Events" to tell process "AeroSpace" to click menu bar item 1 of menu bar 2'
-		}
+		function(exitCode, stdOut, stdErr)
+			print("exitCode:", exitCode)
+			print("stdOut:", stdOut)
+			print("stdErr:", stdErr)
+		end,
+		{ os.getenv("HOME") .. "/.config/applescript/aerospace-menubar.applescript" }
 	):start()
 end
 
