@@ -312,5 +312,7 @@
 		"editor.formatOnSave": false,
 
 	},
-	"svelte.enable-ts-plugin": true
+	"svelte.enable-ts-plugin": true,
+
+	"workbench.experimental.modernUI": false
 }
