@@ -299,7 +299,7 @@
 					},
 
 					{
-						"description": "left_command + h @ command + shift + [",
+						"description": "tab movement",
 						"manipulators": [
 							{
 								"conditions": [
@@ -316,13 +316,8 @@
 								"from": { "key_code": "h", "modifiers": { "mandatory": ["left_command"] } },
 								"to": [ { "key_code": "open_bracket", "modifiers": ["command", "shift"] } ],
 								"type": "basic"
-							}
-						]
-					},
+							},
 
-					{
-						"description": "left_command + l @ command + shift + ]",
-						"manipulators": [
 							{
 								"conditions": [
 									{
