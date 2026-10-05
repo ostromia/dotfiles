@@ -40,4 +40,8 @@
 
 	// vim
 	{ "key": "cmd+a", "command": "extension.vim_ctrl+[" },
+
+	// markdown preview
+	{ "key": "cmd+i", "command": "markdown.showPreview", "when": "editorLangId == markdown" },
+	{ "key": "cmd+i", "command": "markdown.showSource", "when": "markdownPreviewFocus" }
 ]

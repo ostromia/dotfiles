@@ -128,7 +128,7 @@
 
 	// Features > Extensions
 	"extensions.autoCheckUpdates": false,
-	"extensions.autoUpdate": false,
+	"extensions.autoUpdate": "off",
 	"extensions.ignoreRecommendations": true,
 
 	// Features > Terminal
