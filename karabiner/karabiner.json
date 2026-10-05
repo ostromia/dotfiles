@@ -304,7 +304,12 @@
 							{
 								"conditions": [
 									{
-										"bundle_identifiers": ["com.apple.Safari", "org.chromium.Chromium", "com.apple.Preview"],
+										"bundle_identifiers": [
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"net.imput.helium",
+											"com.apple.Preview"
+										],
 										"type": "frontmost_application_if"
 									}
 								],
@@ -321,7 +326,12 @@
 							{
 								"conditions": [
 									{
-										"bundle_identifiers": ["com.apple.Safari", "org.chromium.Chromium", "com.apple.Preview"],
+										"bundle_identifiers": [
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"net.imput.helium",
+											"com.apple.Preview"
+										],
 										"type": "frontmost_application_if"
 									}
 								],
@@ -338,7 +348,11 @@
 							{
 								"conditions": [
 									{
-										"bundle_identifiers": ["com.apple.Safari", "org.chromium.Chromium"],
+										"bundle_identifiers": [
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"net.imput.helium"
+										],
 										"type": "frontmost_application_if"
 									}
 								],
