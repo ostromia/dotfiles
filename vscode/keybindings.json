@@ -21,6 +21,8 @@
 	{ "key": "enter", "command": "acceptAlternativeSelectedSuggestion", "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus" },
 
 	// other
+	{ "key": "cmd+alt+shift+e", "command": "toggleexcludedfiles.toggle" },
+
 	{ "key": "cmd+p", "command": "workbench.action.showCommands" },
 	{ "key": "cmd+j", "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
 	{ "key": "cmd+k", "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
@@ -29,7 +31,7 @@
 
 	{ "key": "cmd+e", "command": "workbench.action.focusSideBar" },
 	{ "key": "cmd+e", "command": "workbench.action.focusActiveEditorGroup", "when": "sideBarFocus" },
-	{ "key": "cmd+shift+e", "command": "workbench.action.toggleSidebarVisibility" },
+	// { "key": "cmd+shift+e", "command": "workbench.action.toggleSidebarVisibility" },
 
 	{ "key": "cmd+shift+1", "command": "workbench.view.explorer" },
 	{ "key": "cmd+shift+2", "command": "workbench.view.search" },
