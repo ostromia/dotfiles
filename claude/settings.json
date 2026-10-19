@@ -1,0 +1,29 @@
+{
+    "permissions": {
+        "defaultMode": "dontAsk",
+
+        "additionalDirectories": [
+            "~/GitHub",
+            "~/Desktop"
+        ],
+
+        "allow": [
+            "Bash",
+            "Read(~/GitHub/**)",
+            "Edit(~/GitHub/**)",
+            "Read(~/Desktop/**)",
+            "Edit(~/Desktop/**)"
+            ]
+        },
+
+        "sandbox": {
+            "enabled": true,
+            "failIfUnavailable": true,
+            "allowUnsandboxedCommands": false,
+            "filesystem": {
+            "allowWrite": ["~/GitHub", "~/Desktop"],
+            "denyRead": ["~/"],
+            "allowRead": ["~/GitHub", "~/Desktop"]
+        }
+    }
+}

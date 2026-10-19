@@ -16,5 +16,5 @@ export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # https://github.com/anthropics/claude-code/issues/1455
-export CLAUDE_CONFIG_DIR="$XDG_CONFIG_HOME"/claude
-
+# launchctl setenv CLAUDE_CONFIG_DIR "$HOME/.config/claude"
+export CLAUDE_CONFIG_DIR="$HOME/.config/claude"
