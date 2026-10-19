@@ -3,6 +3,9 @@
     "window.commandCenter": false,
     "window.title": "${activeEditorMedium}",
     "breadcrumbs.enabled": false,
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+    "editor.stickyScroll.enabled": false,
+    "workbench.colorTheme": "Shopify Dark",
+    "explorer.autoReveal": false
 }
 
