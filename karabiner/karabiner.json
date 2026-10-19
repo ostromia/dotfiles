@@ -23,7 +23,7 @@
 
 							{
 									"from": { "key_code": "q", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace Q" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Q" } ],
 									"type": "basic"
 							},
 
@@ -35,7 +35,7 @@
 
 							{
 									"from": { "key_code": "w", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace W" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window W" } ],
 									"type": "basic"
 							},
 
@@ -47,7 +47,7 @@
 
 							{
 									"from": { "key_code": "e", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace E" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window E" } ],
 									"type": "basic"
 							},
 
@@ -59,7 +59,7 @@
 
 							{
 									"from": { "key_code": "r", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace R" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window R" } ],
 									"type": "basic"
 							},
 
@@ -71,7 +71,7 @@
 
 							{
 									"from": { "key_code": "t", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace T" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window T" } ],
 									"type": "basic"
 							},
 
@@ -83,7 +83,7 @@
 
 							{
 									"from": { "key_code": "y", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace Y" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Y" } ],
 									"type": "basic"
 							},
 
@@ -95,7 +95,7 @@
 
 							{
 									"from": { "key_code": "u", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace U" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window U" } ],
 									"type": "basic"
 							},
 
@@ -107,7 +107,7 @@
 
 							{
 									"from": { "key_code": "i", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace I" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window I" } ],
 									"type": "basic"
 							},
 
@@ -119,7 +119,7 @@
 
 							{
 									"from": { "key_code": "o", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace O" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window O" } ],
 									"type": "basic"
 							},
 
@@ -131,7 +131,7 @@
 
 							{
 									"from": { "key_code": "p", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace P" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window P" } ],
 									"type": "basic"
 							},
 
@@ -143,7 +143,7 @@
 
 							{
 									"from": { "key_code": "a", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace A" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window A" } ],
 									"type": "basic"
 							},
 
@@ -155,7 +155,7 @@
 
 							{
 									"from": { "key_code": "s", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace S" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window S" } ],
 									"type": "basic"
 							},
 
@@ -167,7 +167,7 @@
 
 							{
 									"from": { "key_code": "d", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace D" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window D" } ],
 									"type": "basic"
 							},
 
@@ -179,7 +179,7 @@
 
 							{
 									"from": { "key_code": "f", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace F" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window F" } ],
 									"type": "basic"
 							},
 
@@ -191,7 +191,19 @@
 
 							{
 									"from": { "key_code": "g", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace G" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window G" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "semicolon", "modifiers": { "mandatory": ["right_command"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace workspace ';'" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "semicolon", "modifiers": { "mandatory": ["right_command", "shift"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window ';'" } ],
 									"type": "basic"
 							},
 
@@ -203,7 +215,7 @@
 
 							{
 									"from": { "key_code": "z", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace Z" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window Z" } ],
 									"type": "basic"
 							},
 
@@ -215,7 +227,7 @@
 
 							{
 									"from": { "key_code": "x", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace X" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window X" } ],
 									"type": "basic"
 							},
 
@@ -227,7 +239,7 @@
 
 							{
 									"from": { "key_code": "c", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace C" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window C" } ],
 									"type": "basic"
 							},
 
@@ -239,7 +251,7 @@
 
 							{
 									"from": { "key_code": "v", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace V" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window V" } ],
 									"type": "basic"
 							},
 
@@ -251,7 +263,7 @@
 
 							{
 									"from": { "key_code": "b", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace B" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window B" } ],
 									"type": "basic"
 							},
 
@@ -263,7 +275,7 @@
 
 							{
 									"from": { "key_code": "n", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace N" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window N" } ],
 									"type": "basic"
 							},
 
@@ -275,7 +287,7 @@
 
 							{
 									"from": { "key_code": "m", "modifiers": { "mandatory": ["right_command", "shift"] } },
-									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace M" } ],
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window M" } ],
 									"type": "basic"
 							}
 						]
