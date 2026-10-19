@@ -5,7 +5,7 @@ PROMPT='%F{magenta}%~%f '
 
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
-alias ls="python3 $XDG_CONFIG_HOME/zsh/ls.py \$PWD"
+alias l="python3 $XDG_CONFIG_HOME/zsh/l.py \$PWD"
 alias gitdirty="python3 $XDG_CONFIG_HOME/zsh/gitdirty.py \$PWD"
 alias cheat="python3 $XDG_CONFIG_HOME/zsh/cheat.py \$PWD"
 

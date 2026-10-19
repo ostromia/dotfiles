@@ -59,7 +59,7 @@ include = ["profile.ps1", "setup.ps1"]
 source = "~/GitHub/dotfiles/zsh/"
 target.macos = "~/.config/zsh/"
 target.windows = "~/Documents/PowerShell/"
-include = ["ls.py", "gitdirty.py", "cheat.py", "cheat.md"]
+include = ["l.py", "gitdirty.py", "cheat.py", "cheat.md"]
 
 [tf2]
 source = "~/GitHub/dotfiles/tf2/autoexec.cfg"

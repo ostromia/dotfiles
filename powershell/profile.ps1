@@ -1,7 +1,5 @@
-Remove-Item alias:ls -Force -ErrorAction SilentlyContinue
-
-function ls {
-    python "$env:USERPROFILE\\Documents\\PowerShell\\ls.py" $pwd @args
+function l {
+    python "$env:USERPROFILE\\Documents\\PowerShell\\l.py" $pwd @args
 }
 
 function gitdirty {
