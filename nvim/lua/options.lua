@@ -29,6 +29,9 @@ vim.o.cursorline = true
 
 vim.o.showmode = false
 
+vim.o.title = true
+vim.o.titlestring = "%{expand('%:p') ==# '' ? 'nvim' : expand('%:p')}"
+
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "*",
     callback = function() vim.opt_local.formatoptions:remove({ "c", "r", "o" }) end

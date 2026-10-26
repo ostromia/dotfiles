@@ -19,3 +19,4 @@ $env.config.hooks.pre_execution = [{||
 }]
 
 alias l = nu --no-config-file ~/.config/nushell/l.nu
+alias nvim = ^open -na Ghostty --args $"--config-file=($nu.home-dir)/.config/ghostty/nvim" $"--working-directory=($env.PWD)" $"--command=(^which nvim | str trim)"
