@@ -24,8 +24,8 @@ source = "~/GitHub/dotfiles/filepilot/FPilot-Config.json"
 target.windows = "~/AppData/Roaming/Voidstar/FilePilot/FPilot-Config.json"
 
 [ghostty]
-source = "~/GitHub/dotfiles/ghostty/config"
-target.macos = "~/.config/ghostty/config"
+source = "~/GitHub/dotfiles/ghostty/"
+target.macos = "~/.config/ghostty/"
 
 [git]
 source = "~/GitHub/dotfiles/git/"
