@@ -18,3 +18,4 @@ $env.config.hooks.pre_execution = [{||
     print -n $"(ansi -e '1A')\r($style) ($dir) ($cmd)(ansi -e 'K')(ansi reset)\n"
 }]
 
+alias l = nu --no-config-file ~/.config/nushell/l.nu
