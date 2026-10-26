@@ -8,7 +8,10 @@ vim.pack.add({
 
     "https://github.com/norcalli/nvim-colorizer.lua",
 
-    "https://github.com/romus204/tree-sitter-manager.nvim"
+    "https://github.com/romus204/tree-sitter-manager.nvim",
+
+    "https://github.com/nvim-mini/mini.files",
+    "https://github.com/nvim-mini/mini.statusline"
 })
 
 require("options")

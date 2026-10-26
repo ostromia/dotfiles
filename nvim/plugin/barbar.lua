@@ -33,3 +33,5 @@ require('barbar').setup {
 vim.keymap.set({"n", "v", "i"}, "<" .. mod .. "-h>", ":BufferPrevious<CR>", { noremap = true, silent = true })
 -- defaults write -g NSUserKeyEquivalents -dict-add "Hide Ghostty" '@^~$h'
 vim.keymap.set({"n", "v", "i"}, "<" .. mod .. "-l>", ":BufferNext<CR>", { noremap = true, silent = true })
+vim.keymap.set({"n", "v", "i"}, "<" .. mod .. "-t>", "<Cmd>enew<CR>", { noremap = true, silent = true })
+vim.keymap.set({"n", "v", "i"}, "<" .. mod .. "-w>", "<Cmd>BufferClose<CR>", { noremap = true, silent = true })

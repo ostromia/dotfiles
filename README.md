@@ -1,3 +1,3 @@
 # dotfiles
 
-trying to figure out how VimScript works
+- Dotfiles managed via `./.dotfiles/dotfiles.toml` and `./dotfiles.py`.

@@ -19,7 +19,7 @@ telescope.setup({
     }
 })
 
-vim.keymap.set("n", "<" .. mod .. "-o>", telescope.extensions.file_browser.file_browser)
+vim.keymap.set("n", "<" .. mod .. "-e>", telescope.extensions.file_browser.file_browser)
 vim.keymap.set('n', '<leader>fg', telescope.builtin.live_grep)
 vim.keymap.set('n', '<leader>fb', telescope.builtin.buffers)
 vim.keymap.set('n', '<leader>fh', telescope.builtin.help_tags)
