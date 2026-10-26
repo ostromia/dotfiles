@@ -21,11 +21,12 @@ if __name__ == "__main__":
         else:
             files.append(i.name)
 
-    folders.sort()
-    files.sort()
+    folders.sort(key=str.lower)
+    files.sort(key=str.lower)
 
     for i in folders:
         print(f"{colors['blue']}{i}{colors['reset']}")
 
     for i in files:
         print(f"{colors['white']}{i}{colors['reset']}")
+
