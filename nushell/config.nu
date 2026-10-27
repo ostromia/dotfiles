@@ -25,4 +25,3 @@ def --env icloud [] {
 alias l = nu --no-config-file ~/.config/nushell/l.nu
 alias gitdirty = nu --no-config-file ~/.config/nushell/gitdirty.nu
 alias cheat = nu --no-config-file ~/.config/nushell/cheat.nu
-alias nvim = ^open -na Ghostty --args $"--config-file=($nu.home-dir)/.config/ghostty/nvim" $"--working-directory=($env.PWD)" $"--command=(^which nvim | str trim)"
