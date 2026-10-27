@@ -1,3 +1,4 @@
+command = /opt/homebrew/bin/nu --login --config ~/.config/nushell/config.nu --env-config ~/.config/nushell/env.nu
 confirm-close-surface = false
 font-feature = "-calt", "-liga", "-dlig"
 
