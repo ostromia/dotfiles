@@ -18,5 +18,17 @@ $env.config.hooks.pre_execution = [{||
     print -n $"(ansi -e '1A')\r($style) ($dir) ($cmd)(ansi -e 'K')(ansi reset)\n"
 }]
 
-alias l = nu --no-config-file ~/.config/nushell/l.nu
+def --env icloud [] {
+    cd $"($nu.home-dir)/Library/Mobile Documents/com~apple~CloudDocs"
+}
+
+def gitdirty [] {
+    ^python3 $"($env.XDG_CONFIG_HOME)/zsh/gitdirty.py" $env.PWD
+}
+
+def cheat [] {
+    ^python3 $"($env.XDG_CONFIG_HOME)/zsh/cheat.py" $env.PWD
+}
+
+alias l = nu--no-config-file ~/.config/nushell/l.nu
 alias nvim = ^open -na Ghostty --args $"--config-file=($nu.home-dir)/.config/ghostty/nvim" $"--working-directory=($env.PWD)" $"--command=(^which nvim | str trim)"
