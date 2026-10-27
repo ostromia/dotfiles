@@ -64,12 +64,6 @@ source = "~/GitHub/dotfiles/powershell/"
 target.windows = "~/Documents/PowerShell/"
 include = ["profile.ps1", "setup.ps1"]
 
-[scripts]
-source = "~/GitHub/dotfiles/zsh/"
-target.macos = "~/.config/zsh/"
-target.windows = "~/Documents/PowerShell/"
-include = ["l.py", "gitdirty.py", "cheat.py", "cheat.md"]
-
 [tf2]
 source = "~/GitHub/dotfiles/tf2/autoexec.cfg"
 target.windows = "C:/Program Files (x86)/Steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg"
