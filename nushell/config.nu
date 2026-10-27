@@ -22,13 +22,7 @@ def --env icloud [] {
     cd $"($nu.home-dir)/Library/Mobile Documents/com~apple~CloudDocs"
 }
 
-def gitdirty [] {
-    ^python3 $"($env.XDG_CONFIG_HOME)/zsh/gitdirty.py" $env.PWD
-}
-
-def cheat [] {
-    ^python3 $"($env.XDG_CONFIG_HOME)/zsh/cheat.py" $env.PWD
-}
-
-alias l = nu--no-config-file ~/.config/nushell/l.nu
+alias l = nu --no-config-file ~/.config/nushell/l.nu
+alias gitdirty = nu --no-config-file ~/.config/nushell/gitdirty.nu
+alias cheat = nu --no-config-file ~/.config/nushell/cheat.nu
 alias nvim = ^open -na Ghostty --args $"--config-file=($nu.home-dir)/.config/ghostty/nvim" $"--working-directory=($env.PWD)" $"--command=(^which nvim | str trim)"
