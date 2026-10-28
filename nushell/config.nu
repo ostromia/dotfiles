@@ -1,4 +1,5 @@
 $env.config.show_banner = false
+$env.config.ls.use_ls_colors = false
 
 $env.PROMPT_COMMAND = {|| $"(ansi purple)($env.PWD)(ansi reset)" }
 $env.PROMPT_INDICATOR = " "
