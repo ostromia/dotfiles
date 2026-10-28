@@ -1,12 +1,14 @@
 export def main [path: path = "."] {
-    let entries = ls --all --short-names $path | sort-by type
+    let entries = ls --all --short-names $path
+    let dirs = $entries | where type == dir | sort-by --ignore-case name | get name
+    let files = $entries | where type != dir | sort-by --ignore-case name | get name
+    let width = $dirs | each { str length } | append 0 | math max
+    let rows = [($dirs | length) ($files | length)] | math max
 
-    for i in ($entries | where type == dir | sort-by --ignore-case name) {
-        print $"(ansi blue)($i.name)(ansi reset)"
-    }
-
-    for i in ($entries | where type != dir | sort-by --ignore-case name) {
-        print $"(ansi white)($i.name)(ansi reset)"
+    for i in 0..<$rows {
+        let dir = $dirs | get --optional $i | default "" | fill --width $width
+        let file = $files | get --optional $i | default ""
+        print $"(ansi blue)($dir)(ansi reset)  (ansi white)($file)(ansi reset)"
     }
 }
 
