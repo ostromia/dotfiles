@@ -19,3 +19,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # launchctl setenv CLAUDE_CONFIG_DIR "$HOME/.config/claude"
 # ln -s ~/.config/claude ~/.claude
 export CLAUDE_CONFIG_DIR="$HOME/.config/claude"
+
+SHELL_SESSIONS_DISABLE=1
