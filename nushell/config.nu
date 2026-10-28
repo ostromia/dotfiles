@@ -8,6 +8,6 @@ def --env icloud [] {
     cd $"($nu.home-dir)/Library/Mobile Documents/com~apple~CloudDocs"
 }
 
-alias l = nu --no-config-file ~/.config/nushell/l.nu
-alias gitdirty = nu --no-config-file ~/.config/nushell/gitdirty.nu
-alias cheat = nu --no-config-file ~/.config/nushell/cheat.nu
+use l.nu
+use gitdirty.nu
+use cheat.nu

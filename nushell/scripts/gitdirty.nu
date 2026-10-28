@@ -1,4 +1,4 @@
-def main [path: path = "."] {
+export def main [path: path = "."] {
     let folders = (
         ls --all --full-paths $path
         | where type == dir

@@ -1,6 +1,6 @@
 const here = path self .
 
-def main [section: string] {
+export def main [section: string] {
     let lines = open --raw ($here | path join cheat.md) | lines | each { str trim }
 
     mut current = ""
