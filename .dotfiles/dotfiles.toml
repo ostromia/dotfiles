@@ -91,4 +91,4 @@ include = ["keymap.json", "settings.json"]
 [zsh]
 source = "~/GitHub/dotfiles/zsh/"
 target.macos = "~"
-include = [".zprofile", ".zshenv"]
+include = [".zprofile", ".zshenv", ".zshrc"]

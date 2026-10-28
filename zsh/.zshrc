@@ -1,0 +1,1 @@
+HISTFILE="$XDG_STATE_HOME/zsh_history"
