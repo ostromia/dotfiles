@@ -1,29 +1,31 @@
 {
+    "autoMemoryEnabled": false,
+
     "permissions": {
         "defaultMode": "dontAsk",
 
         "additionalDirectories": [
-            "~/GitHub",
+            "~/Github",
             "~/Desktop"
         ],
 
         "allow": [
             "Bash",
-            "Read(~/GitHub/**)",
-            "Edit(~/GitHub/**)",
+            "Read(~/Github/**)",
+            "Edit(~/Github/**)",
             "Read(~/Desktop/**)",
             "Edit(~/Desktop/**)"
-            ]
-        },
+        ]
+    },
 
-        "sandbox": {
-            "enabled": true,
-            "failIfUnavailable": true,
-            "allowUnsandboxedCommands": false,
-            "filesystem": {
-            "allowWrite": ["~/GitHub", "~/Desktop"],
+    "sandbox": {
+        "enabled": true,
+        "failIfUnavailable": true,
+        "allowUnsandboxedCommands": false,
+        "filesystem": {
+            "allowWrite": ["~/Github", "~/Desktop"],
             "denyRead": ["~/"],
-            "allowRead": ["~/GitHub", "~/Desktop"]
+            "allowRead": ["~/Github", "~/Desktop"]
         }
     }
 }
