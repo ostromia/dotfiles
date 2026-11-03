@@ -15,3 +15,5 @@
 [pull]
 	rebase = true
 
+# gh auth setup-git
+
