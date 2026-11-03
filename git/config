@@ -1,13 +1,17 @@
 [user]
-	name = Berkay Yalin
+	name = ostromia
 	email = 66202981+ostromia@users.noreply.github.com
+
 [core]
 	editor = nvim
 	excludesFile = ~/.config/git/ignore
+
 [init]
 	defaultBranch = main
+
 [advice]
 	statusHints = false
 
 [pull]
 	rebase = true
+
