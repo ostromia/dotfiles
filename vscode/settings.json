@@ -248,6 +248,7 @@
 	"js/ts.tsdk.path": "./node_modules/typescript/lib",
 
 	"html.autoClosingTags": false,
+	"html.autoCreateQuotes": false,
 	"[vhdl]": {
 		"editor.defaultFormatter": "HaarigerHarald.vhdl-formatter-pp",
 	},
@@ -311,6 +312,9 @@
 		// this is ridiculous
 		"editor.formatOnSave": false,
 
+	},
+	"[astro]": {
+		"editor.autoClosingQuotes": "never",
 	},
 	"svelte.enable-ts-plugin": true,
 
