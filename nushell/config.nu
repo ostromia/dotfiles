@@ -12,3 +12,4 @@ def --env icloud [] {
 use l.nu
 use gitdirty.nu
 use cheat.nu
+use g.nu
