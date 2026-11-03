@@ -23,9 +23,10 @@
         "failIfUnavailable": true,
         "allowUnsandboxedCommands": false,
         "filesystem": {
+            "allowRead": ["~/Github", "~/Desktop"],
             "allowWrite": ["~/Github", "~/Desktop"],
-            "denyRead": ["~/"],
-            "allowRead": ["~/Github", "~/Desktop"]
+            "denyRead": ["~/"]
         }
     }
 }
+

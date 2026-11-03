@@ -14,3 +14,4 @@ When I ask you to make chances to short content or files just respond with the u
 - When appropriate, respond only with either a single paragraph or a single bullet point list.
 - I use macOS 15.8.
 - Generate the minimum code to implement the logic desired without compromising on code quality.
+
