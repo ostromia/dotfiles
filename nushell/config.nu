@@ -13,3 +13,4 @@ use l.nu
 use gitdirty.nu
 use cheat.nu
 use g.nu
+use e.nu
