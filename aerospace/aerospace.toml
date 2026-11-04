@@ -32,4 +32,7 @@ on-window-detected = [
 	{ if = 'test %{app-bundle-id} = com.apple.archiveutility',        run = ['layout floating'] },
 	{ if = 'test %{app-bundle-id} = com.apple.calculator',            run = ['layout floating'] },
 	{ if = 'test %{app-bundle-id} = com.apple.systempreferences',     run = ['layout floating'] },
+
+	# don't remove (https://github.com/nikitabobko/AeroSpace/discussions/1830)
+	{ if = 'test %{app-bundle-id} = com.mitchellh.ghostty',           run = ['layout tiling'] },
 ]
