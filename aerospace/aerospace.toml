@@ -29,11 +29,7 @@ gaps.outer.top        = 0
 gaps.outer.right      = 0
 
 on-window-detected = [
-	{ if = 'test %{app-bundle-id} = com.anthropic.claudefordesktop', run = ['move-node-to-workspace --focus-follows-window C'] },
-	{ if = 'test %{app-bundle-id} = com.microsoft.VSCode',           run = ['move-node-to-workspace --focus-follows-window V'] },
-	{ if = 'test %{app-bundle-id} = net.imput.helium',               run = ['move-node-to-workspace --focus-follows-window S'] },
-	# { if = 'test %{app-bundle-id} = com.mitchellh.ghostty',          run = ["move-node-to-workspace --focus-follows-window ';'"] },
-	{ if = 'test %{app-bundle-id} = com.apple.mail',                 run = ['move-node-to-workspace --focus-follows-window M'] },
-	{ if = 'test %{app-bundle-id} = com.apple.Notes',                run = ['move-node-to-workspace --focus-follows-window N'] },
-	# { if = 'true',                                                   run = ['move-node-to-workspace --focus-follows-window Q'] },
+	{ if = 'test %{app-bundle-id} = com.apple.archiveutility',        run = ['layout floating'] },
+	{ if = 'test %{app-bundle-id} = com.apple.calculator',            run = ['layout floating'] },
+	{ if = 'test %{app-bundle-id} = com.apple.systempreferences',     run = ['layout floating'] },
 ]
