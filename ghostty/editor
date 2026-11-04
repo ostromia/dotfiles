@@ -1,2 +1,5 @@
 keybind = super+t=unbind
 keybind = super+w=unbind
+
+keybind = super+h=unbind
+keybind = super+l=unbind
