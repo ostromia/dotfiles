@@ -12,6 +12,121 @@
 
 			"complex_modifications": {
 				"rules": [
+
+					{
+						"description": "tab movement",
+						"manipulators": [
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"com.apple.finder",
+											"net.imput.helium",
+											"com.apple.Preview",
+
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"com.google.Chrome"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+								"from": { "key_code": "h", "modifiers": { "mandatory": ["left_command"] } },
+								"to": [ { "key_code": "open_bracket", "modifiers": ["command", "shift"] } ],
+								"type": "basic"
+							},
+
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"com.apple.finder",
+											"net.imput.helium",
+											"com.apple.Preview",
+
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"com.google.Chrome"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+								"from": { "key_code": "l", "modifiers": { "mandatory": ["left_command"] } },
+								"to": [ { "key_code": "close_bracket", "modifiers": ["command", "shift"] } ],
+								"type": "basic"
+							}
+						]
+					},
+
+					{
+						"description": "arrow keybinds",
+						"manipulators": [
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"com.apple.finder",
+											"net.imput.helium",
+											"com.apple.Preview",
+
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"com.google.Chrome"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+
+								"from": { "key_code": "k", "modifiers": { "mandatory": ["left_command"] } },
+								"to": [ { "key_code": "up_arrow" } ],
+								"type": "basic"
+							},
+
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"com.apple.finder",
+											"net.imput.helium",
+											"com.apple.Preview",
+
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"com.google.Chrome"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+
+								"from": { "key_code": "j", "modifiers": { "mandatory": ["left_command"] } },
+								"to": [ { "key_code": "down_arrow" } ],
+								"type": "basic"
+							}
+						]
+					},
+
+					{
+						"description": "browser keybinds",
+						"manipulators": [
+							{
+								"conditions": [
+									{
+										"bundle_identifiers": [
+											"net.imput.helium",
+											"com.apple.Safari",
+											"org.chromium.Chromium",
+											"com.google.Chrome"
+										],
+										"type": "frontmost_application_if"
+									}
+								],
+								"from": { "key_code": "d", "modifiers": { "mandatory": ["command"] } },
+								"to": [ { "key_code": "l", "modifiers": ["command"] } ],
+								"type": "basic"
+							}
+						]
+					},
+
 					{
 						"description": "Aerospace Workspace Keybinds",
 						"manipulators": [
@@ -291,135 +406,10 @@
 									"type": "basic"
 							}
 						]
-					},
-
-					{
-						"description": "mission control movement",
-						"manipulators": [
-							{
-								"from": { "key_code": "h", "modifiers": { "mandatory": ["right_command"] } },
-								"to": [ { "key_code": "left_arrow", "modifiers": ["control"] } ],
-								"type": "basic"
-							},
-
-							{
-								"from": { "key_code": "l", "modifiers": { "mandatory": ["right_command"] } },
-								"to": [ { "key_code": "right_arrow", "modifiers": ["control"] } ],
-								"type": "basic"
-							}
-						]
-					},
-
-					{
-						"description": "tab movement",
-						"manipulators": [
-							{
-								"conditions": [
-									{
-										"bundle_identifiers": [
-											"com.apple.Safari",
-											"org.chromium.Chromium",
-											"net.imput.helium",
-											"com.apple.Preview"
-										],
-										"type": "frontmost_application_if"
-									}
-								],
-								"from": { "key_code": "h", "modifiers": { "mandatory": ["left_command"] } },
-								"to": [ { "key_code": "open_bracket", "modifiers": ["command", "shift"] } ],
-								"type": "basic"
-							},
-
-							{
-								"conditions": [
-									{
-										"bundle_identifiers": [
-											"com.apple.Safari",
-											"org.chromium.Chromium",
-											"net.imput.helium",
-											"com.apple.Preview"
-										],
-										"type": "frontmost_application_if"
-									}
-								],
-								"from": { "key_code": "l", "modifiers": { "mandatory": ["left_command"] } },
-								"to": [ { "key_code": "close_bracket", "modifiers": ["command", "shift"] } ],
-								"type": "basic"
-							}
-						]
-					},
-
-					{
-						"description": "[Safari & Chromium] command + d @ File > Open Location...",
-						"manipulators": [
-							{
-								"conditions": [
-									{
-										"bundle_identifiers": [
-											"com.apple.Safari",
-											"org.chromium.Chromium",
-											"net.imput.helium"
-										],
-										"type": "frontmost_application_if"
-									}
-								],
-								"from": { "key_code": "d", "modifiers": { "mandatory": ["command"] } },
-								"to": [ { "key_code": "l", "modifiers": ["command"] } ],
-								"type": "basic"
-							}
-						]
-					},
-
-					{
-						"description": "[Safari & Chromium] command + k @ up_arrow",
-						"manipulators": [
-							{
-								"conditions": [
-									{
-										"bundle_identifiers": ["com.apple.Safari", "org.chromium.Chromium"],
-										"type": "frontmost_application_if"
-									}
-								],
-								"from": { "key_code": "k", "modifiers": { "mandatory": ["left_command"] } },
-								"to": [ { "key_code": "up_arrow" } ],
-								"type": "basic"
-							}
-						]
-					},
-
-					{
-						"description": "[Safari & Chromium] command + j @ down_arrow",
-						"manipulators": [
-							{
-								"conditions": [
-									{
-										"bundle_identifiers": ["com.apple.Safari", "org.chromium.Chromium"],
-										"type": "frontmost_application_if"
-									}
-								],
-								"from": { "key_code": "j", "modifiers": { "mandatory": ["left_command"] } },
-								"to": [ { "key_code": "down_arrow" } ],
-								"type": "basic"
-							}
-						]
-					},
-
-					{
-						"description": "Pages: command + shift + v @ option + shift + command + v",
-						"manipulators": [
-							{
-								"conditions": [
-									{
-										"bundle_identifiers": ["com.apple.iWork.Pages"],
-										"type": "frontmost_application_if"
-									}
-								],
-								"from": { "key_code": "v", "modifiers": { "mandatory": ["command", "shift"] } },
-								"to": [ { "key_code": "v", "modifiers": ["command", "shift", "option"] } ],
-								"type": "basic"
-							}
-						]
 					}
+
+
+
 				]
 			}
 		}
