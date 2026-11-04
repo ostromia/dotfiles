@@ -467,6 +467,17 @@
 									"type": "basic"
 							}
 						]
+					},
+
+					{
+						"description": "Aerospace Layout Keybinds",
+						"manipulators": [
+							{
+								"from": { "key_code": "slash", "modifiers": { "mandatory": ["right_command"] } },
+								"to": [ { "shell_command": "/opt/homebrew/bin/aerospace layout tiles accordion" } ],
+								"type": "basic"
+							}
+						]
 					}
 				]
 			}
