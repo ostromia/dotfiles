@@ -324,6 +324,54 @@
 							},
 
 							{
+									"from": { "key_code": "h", "modifiers": { "mandatory": ["right_command"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace workspace H" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "h", "modifiers": { "mandatory": ["right_command", "shift"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window H" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "j", "modifiers": { "mandatory": ["right_command"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace workspace J" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "j", "modifiers": { "mandatory": ["right_command", "shift"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window J" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "k", "modifiers": { "mandatory": ["right_command"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace workspace K" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "k", "modifiers": { "mandatory": ["right_command", "shift"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window K" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "l", "modifiers": { "mandatory": ["right_command"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace workspace L" } ],
+									"type": "basic"
+							},
+
+							{
+									"from": { "key_code": "l", "modifiers": { "mandatory": ["right_command", "shift"] } },
+									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace move-node-to-workspace --focus-follows-window L" } ],
+									"type": "basic"
+							},
+
+							{
 									"from": { "key_code": "semicolon", "modifiers": { "mandatory": ["right_command"] } },
 									"to": [ { "shell_command": "/opt/homebrew/bin/aerospace workspace ';'" } ],
 									"type": "basic"
