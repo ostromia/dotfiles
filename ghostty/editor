@@ -3,3 +3,5 @@ keybind = super+w=unbind
 
 keybind = super+h=unbind
 keybind = super+l=unbind
+
+# defaults write com.mitchellh.ghostty NSUserKeyEquivalents -dict-add "Hide Ghostty" "\0"
