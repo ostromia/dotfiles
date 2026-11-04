@@ -122,7 +122,7 @@
 										"type": "frontmost_application_if"
 									}
 								],
-								"from": { "key_code": "d", "modifiers": { "mandatory": ["command"] } },
+								"from": { "key_code": "d", "modifiers": { "mandatory": ["left_command"] } },
 								"to": [ { "key_code": "l", "modifiers": ["command"] } ],
 								"type": "basic"
 							}
